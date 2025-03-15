@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=9 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="Texture2D" uid="uid://bbeqv6xttila6" path="res://temp/button.png" id="2_fc0e3"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://crbe0agxb2nli" path="res://scenes/hammer/pick.tscn" id="4_7jktm"]
 [ext_resource type="PackedScene" uid="uid://d0et4vc24oa8h" path="res://scenes/hammer/hammer.tscn" id="4_eow3j"]
 [ext_resource type="Texture2D" uid="uid://dgvkcdq2ep601" path="res://temp/hammer.png" id="7_j5wjh"]
-[ext_resource type="PackedScene" uid="uid://dimxo0ae7osx2" path="res://levels/level_2.tscn" id="8_j5wjh"]
 [ext_resource type="PackedScene" uid="uid://bu1ci1jhpw4u5" path="res://game_over_screen.tscn" id="11_mfdv2"]
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("hud")]
@@ -69,5 +68,3 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_j5wjh")
 expand_mode = 1
-
-[node name="Node2D" parent="." instance=ExtResource("8_j5wjh")]

@@ -12,19 +12,20 @@ var hovered = false
 
 var is_ready = false
 
-func get_current_texture():
+func get_current_texture(frame):
 	var spriteFrames: SpriteFrames = animated_sprite_2d.get_sprite_frames()
-	return spriteFrames.get_frame_texture("default", max_health - health)
+	return spriteFrames.get_frame_texture("default", frame)
 	
 func _process(delta: float) -> void:
 	if is_ready:
 		if get_overlapping_areas().size() == 0:
-			Bus.on_game_over.emit(health, get_current_texture())
+			Bus.on_game_over.emit(health, get_current_texture( max_health - health))
 			self.queue_free()
 		
 func _ready() -> void:
-	await get_tree().process_frame
 	set_color()
+	
+	await get_tree().create_timer(0.1).timeout
 	is_ready = true
 	
 func set_hovered():
@@ -48,5 +49,7 @@ func take_damage():
 				var new_scene = rock_particle_scene.instantiate()
 				get_parent().add_child(new_scene)
 				new_scene.global_position = global_position
+				
+			Bus.on_game_over.emit(health, get_current_texture(4))
 			queue_free()
 	

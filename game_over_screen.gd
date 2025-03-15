@@ -18,14 +18,12 @@ func _ready() -> void:
 	tween.tween_property(self, "offset:y", 0, 0.4)
 	
 func _on_replay_button_button_up() -> void:
-	var tree := get_tree()
-	var scene_path := tree.current_scene.scene_file_path
-	await get_tree().create_timer(0.1).timeout
-	tree.call_deferred("unload_current_scene")
-	tree.call_deferred("change_scene_to_file", scene_path)
+	Bus.play_same_level()
+	queue_free()
 
 func _on_next_level_button_button_up() -> void:
-	pass # Replace with function body.
+	Bus.play_next_level()
+	queue_free()
 
 func set_time(time):
 	_time = time
@@ -46,7 +44,9 @@ func set_stars_count(num_stars):
 		add_star(empty_star)
 	
 func set_stars():
-	if _health == 5:
+	if _health == 0:
+		set_stars_count(0)
+	elif _health == 5:
 		set_stars_count(3)
 	else:
 		set_stars_count(1)

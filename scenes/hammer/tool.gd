@@ -22,10 +22,12 @@ func _process(delta):
 	queue_redraw()
 
 func _draw() -> void:
-	draw_set_transform_matrix(global_transform.affine_inverse())
-
-	for point in circle_points:
-		draw_circle(point, 2, Color(1, 0, 0), true)
+	pass
+	
+	#draw_set_transform_matrix(global_transform.affine_inverse())
+#
+	#for point in circle_points:
+		#draw_circle(point, 2, Color(1, 0, 0), true)
 		
 func _physics_process(delta: float) -> void:
 	detect_rocks()
