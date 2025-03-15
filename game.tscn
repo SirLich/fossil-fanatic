@@ -1,24 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=5 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="PackedScene" uid="uid://d0et4vc24oa8h" path="res://scenes/hammer/hammer.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://cwa0napga1sso" path="res://scenes/rock/rock.tscn" id="2_e2o6t"]
+[ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="2_fc0e3"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_feb5d")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
-visible = false
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.458128, 0.332041, 0.244983, 1)
-metadata/_edit_lock_ = true
+texture = ExtResource("2_fc0e3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 6
@@ -52,7 +51,6 @@ position = Vector2(387, 149)
 rotation = 2.95304
 
 [node name="Layer_2" type="Node2D" parent="."]
-z_index = 1
 
 [node name="Rock" parent="Layer_2" instance=ExtResource("2_e2o6t")]
 position = Vector2(168, 207)
