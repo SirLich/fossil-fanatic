@@ -7,20 +7,22 @@ class_name Rock
 @export_group("Nodes")
 @export var spite : Sprite2D
 
-#func _ready():
-	#area_entered.connect(on_area_entered)
-	#area_exited.connect(on_area_exited)
+var hovered = false
 
 func set_hovered():
 	spite.material.set_shader_parameter("enabled", true)
+	hovered = true
 	
 func set_unhovered():
 	spite.material.set_shader_parameter("enabled", false)
+	hovered = false
+
 	
 func take_damage():
-	modulate = lerp(Color.BLACK, Color.WHITE, health / max_health)
-	health -= 1
-	
-	if health == 0:
-		queue_free()
+	if hovered:
+		modulate = lerp(Color.BLACK, Color.WHITE, health / max_health)
+		health -= 1
+		
+		if health == 0:
+			queue_free()
 	

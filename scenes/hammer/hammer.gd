@@ -3,13 +3,24 @@ class_name Hammer
 
 @export var size = 20
 
+var circle_points = []
+var old_colliders = []
+var colliders = []
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	scale = Vector2(size, size)
 	
 func _process(delta):
 	global_position = get_global_mouse_position()
-	
+	queue_redraw()
+
+func _draw() -> void:
+	draw_set_transform_matrix(global_transform.affine_inverse())
+
+	for point in circle_points:
+		draw_circle(point, 2, Color(1, 0, 0), true)
+		
 func _physics_process(delta: float) -> void:
 	detect_rocks()
 	
@@ -42,22 +53,42 @@ func gather_colliders(pos):
 		
 		colliders.append(intersections[0].collider)
 
-	
-var old_colliders = []
-var colliders = []
+func get_chunks(c, h, k, r, step):
+	var center = c - Vector2(h, k)
+	var chunks = []
 
+	var min_x = h - r
+	var max_x = h + r
+	var min_y = k - r
+	var max_y = k + r
+	
+	for x in range(min_x, max_x + 1, step):
+		for y in range(min_y, max_y + 1, step):
+			if (x - h) * (x - h) + (y - k) * (y - k) <= r * r:
+				chunks.append(center + Vector2(x, y))
+	
+	return chunks
+
+	
 func detect_rocks():
 	
-	gather_colliders(get_viewport().get_mouse_position())
-	#gather_colliders(get_viewport().get_mouse_position() - Vector2(100, 0))
+	var center = get_viewport().get_mouse_position()
+
+	var scaled_size = size * 5
+	circle_points = get_chunks(get_viewport().get_mouse_position(), scaled_size, scaled_size, scaled_size, 20)
+	
+	for point in circle_points:
+		gather_colliders(point)
 
 	for collider in old_colliders:
 		if collider not in colliders:
-			collider.set_unhovered()
+			if collider:
+				collider.set_unhovered()
 			
 	for collider in colliders:
 		if collider not in old_colliders:
-			collider.set_hovered()
+			if collider:
+				collider.set_hovered()
 	
 	old_colliders.clear()
 	for collider in colliders:
