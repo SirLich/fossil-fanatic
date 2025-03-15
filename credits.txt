@@ -1,6 +1,6 @@
 General:
 	PULSE Game Jam
-	Liam, Tanja, Philip, Flo, ?
+	Liam, Tanja, Philip, Flo, Markus
 
 Tools:
 	Godot
@@ -8,3 +8,4 @@ Tools:
 Assets:
 	https://godotshaders.com/shader/dotted-circle/
 	https://godotshaders.com/shader/2d-outline-inline/
+	Barlow (font)

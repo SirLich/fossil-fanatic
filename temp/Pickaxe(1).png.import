@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6fd6w3uhblwf"
-path="res://.godot/imported/Hammer.png-a8caee3419a73516b4273df4c6c47c36.ctex"
+uid="uid://dlaa3qd5eitse"
+path="res://.godot/imported/Pickaxe(1).png-dcfa84f608d4b4271b31f0d4e5083b47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temp/Hammer.png"
-dest_files=["res://.godot/imported/Hammer.png-a8caee3419a73516b4273df4c6c47c36.ctex"]
+source_file="res://temp/Pickaxe(1).png"
+dest_files=["res://.godot/imported/Pickaxe(1).png-dcfa84f608d4b4271b31f0d4e5083b47.ctex"]
 
 [params]
 

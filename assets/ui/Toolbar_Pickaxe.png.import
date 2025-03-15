@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6fd6w3uhblwf"
-path="res://.godot/imported/Hammer.png-a8caee3419a73516b4273df4c6c47c36.ctex"
+uid="uid://1j0dnkd0801w"
+path="res://.godot/imported/Toolbar_Pickaxe.png-4f716f258a1f3234c32f08417fb49bab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temp/Hammer.png"
-dest_files=["res://.godot/imported/Hammer.png-a8caee3419a73516b4273df4c6c47c36.ctex"]
+source_file="res://assets/ui/Toolbar_Pickaxe.png"
+dest_files=["res://.godot/imported/Toolbar_Pickaxe.png-4f716f258a1f3234c32f08417fb49bab.ctex"]
 
 [params]
 

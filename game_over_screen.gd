@@ -27,7 +27,12 @@ func _on_next_level_button_button_up() -> void:
 
 func set_time(time):
 	_time = time
-	time_label.text = str(time)
+		
+	var total_seconds = int(time / 1000)
+	var minutes = total_seconds / 60
+	var seconds = total_seconds % 60
+	
+	time_label.text = str(minutes, " Minutes ", seconds, " Seconds")
 	
 func set_health(health):
 	_health = health

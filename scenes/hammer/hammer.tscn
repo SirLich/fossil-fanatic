@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/tool.gd" id="1_qnip4"]
 [ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_obftq"]
-[ext_resource type="Texture2D" uid="uid://dgvkcdq2ep601" path="res://temp/hammer.png" id="3_g080m"]
+[ext_resource type="Texture2D" uid="uid://b6fd6w3uhblwf" path="res://temp/Hammer.png" id="3_rxfdk"]
 [ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="4_rxfdk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ei3sq"]
@@ -132,7 +132,7 @@ mouse_filter = 2
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(20, 11)
 scale = Vector2(0.0507717, 0.0507717)
-texture = ExtResource("3_g080m")
+texture = ExtResource("3_rxfdk")
 offset = Vector2(14.9, -136.6)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

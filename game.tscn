@@ -1,12 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=8 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://game.gd" id="1_feb5d"]
-[ext_resource type="Texture2D" uid="uid://bbeqv6xttila6" path="res://temp/button.png" id="2_fc0e3"]
-[ext_resource type="Texture2D" uid="uid://bmbj2p4larq43" path="res://temp/pick.png" id="3_7jktm"]
 [ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://tool_button.gd" id="3_ryrav"]
 [ext_resource type="PackedScene" uid="uid://crbe0agxb2nli" path="res://scenes/hammer/pick.tscn" id="4_7jktm"]
 [ext_resource type="PackedScene" uid="uid://d0et4vc24oa8h" path="res://scenes/hammer/hammer.tscn" id="4_eow3j"]
-[ext_resource type="Texture2D" uid="uid://dgvkcdq2ep601" path="res://temp/hammer.png" id="7_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://1j0dnkd0801w" path="res://assets/ui/Toolbar_Pickaxe.png" id="4_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://dxh4sr01tyhlw" path="res://assets/ui/Toolbar_Hammer.png" id="4_vef74"]
 [ext_resource type="PackedScene" uid="uid://bu1ci1jhpw4u5" path="res://game_over_screen.tscn" id="11_mfdv2"]
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("hud")]
@@ -37,34 +36,14 @@ layout_mode = 2
 
 [node name="HammerButton" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
 layout_mode = 2
-texture_normal = ExtResource("2_fc0e3")
+texture_normal = ExtResource("4_j5wjh")
 script = ExtResource("3_ryrav")
 game = NodePath("../../../..")
 tool_scene = ExtResource("4_7jktm")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer/HammerButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_7jktm")
-expand_mode = 1
-
 [node name="PickButton" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
 layout_mode = 2
-texture_normal = ExtResource("2_fc0e3")
+texture_normal = ExtResource("4_vef74")
 script = ExtResource("3_ryrav")
 game = NodePath("../../../..")
 tool_scene = ExtResource("4_eow3j")
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer/PickButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("7_j5wjh")
-expand_mode = 1

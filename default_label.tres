@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bf23cgxfjefwf"]
+
+[ext_resource type="FontFile" uid="uid://coexytxldfvlm" path="res://assets/fonts/barlow/Barlow-Bold.ttf" id="1_462qx"]
+
+[resource]
+font = ExtResource("1_462qx")
+font_size = 60
+font_color = Color(0.559053, 0.411395, 0.301581, 1)

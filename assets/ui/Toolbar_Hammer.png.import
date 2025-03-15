@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmbj2p4larq43"
-path="res://.godot/imported/pick.png-4c6cb929ba3a6888733659e800edf119.ctex"
+uid="uid://dxh4sr01tyhlw"
+path="res://.godot/imported/Toolbar_Hammer.png-74f43c66ee33feca806a411251436d2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temp/pick.png"
-dest_files=["res://.godot/imported/pick.png-4c6cb929ba3a6888733659e800edf119.ctex"]
+source_file="res://assets/ui/Toolbar_Hammer.png"
+dest_files=["res://.godot/imported/Toolbar_Hammer.png-74f43c66ee33feca806a411251436d2a.ctex"]
 
 [params]
 
