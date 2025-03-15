@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0et4vc24oa8h"]
+[gd_scene load_steps=10 format=3 uid="uid://d0et4vc24oa8h"]
 
 [ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/hammer.gd" id="1_qnip4"]
 [ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_obftq"]
 [ext_resource type="Texture2D" uid="uid://dgvkcdq2ep601" path="res://temp/hammer.png" id="3_g080m"]
+[ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="4_rxfdk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ei3sq"]
 radius = 5.0
@@ -14,6 +15,33 @@ shader_parameter/diameter = 1.0
 shader_parameter/thickness = 0.03
 shader_parameter/frequency = 17.36
 shader_parameter/phase = 3.711
+
+[sub_resource type="Animation" id="Animation_rxfdk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, 11)]
+}
 
 [sub_resource type="Animation" id="Animation_g080m"]
 resource_name = "hit"
@@ -56,33 +84,21 @@ tracks/2/keys = {
 "method": &"apply_damage"
 }]
 }
-
-[sub_resource type="Animation" id="Animation_rxfdk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_rxfdk")
+}],
+"times": PackedFloat32Array(0)
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(20, 11)]
-}
+tracks/3/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nqvee"]
 _data = {
@@ -122,3 +138,5 @@ offset = Vector2(14.9, -136.6)
 libraries = {
 &"": SubResource("AnimationLibrary_nqvee")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

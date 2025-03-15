@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://b43mar84ae45h"]
+
+[ext_resource type="Texture2D" uid="uid://wy7f73ajuw7l" path="res://assets/textures/stones/stone_1-1.png" id="1_gsrsk"]
+[ext_resource type="Script" uid="uid://bxspk8m500bf3" path="res://assets/shaders/rock_particles.gd" id="1_rb83r"]
+
+[sub_resource type="Curve" id="Curve_gsrsk"]
+bake_resolution = 16
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_rb83r"]
+curve = SubResource("Curve_gsrsk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gsrsk"]
+particle_flag_disable_z = true
+angle_min = -360.7
+angle_max = -33.1
+direction = Vector3(0, 1, 0)
+spread = 180.0
+initial_velocity_min = 166.36
+initial_velocity_max = 388.15
+angular_velocity_min = -203.75
+angular_velocity_max = 156.94
+gravity = Vector3(0, 392, 0)
+scale_min = 0.2
+scale_curve = SubResource("CurveTexture_rb83r")
+hue_variation_min = -2.23517e-08
+hue_variation_max = -2.23517e-08
+
+[node name="RockParticles" type="Node2D" node_paths=PackedStringArray("particles")]
+script = ExtResource("1_rb83r")
+particles = NodePath("GPUParticles2D")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 16
+texture = ExtResource("1_gsrsk")
+lifetime = 1.6
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_gsrsk")

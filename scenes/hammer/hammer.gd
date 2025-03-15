@@ -2,7 +2,6 @@ extends Area2D
 class_name Hammer
 
 @export var size = 20
-
 @export_group("Nodes")
 @export var anim_player : AnimationPlayer
 
@@ -33,11 +32,11 @@ func _input(event: InputEvent) -> void:
 	if can_hit:
 		if event.is_action_released("use_tool"):
 			can_hit = false
-			anim_player.play("hit")
-			await anim_player.animation_finished
+			anim_player.stop()
+			anim_player.play("hit", 0.0)
 			can_hit = true
 
-func apply_damage():
+func apply_damage():	
 	for object_area in get_overlapping_areas():
 		object_area.take_damage()
 			

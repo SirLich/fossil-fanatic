@@ -3,6 +3,7 @@ class_name Rock
 
 
 @export var color = 0
+@export var rock_particle_scene : PackedScene
 
 @export_group("Nodes")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -31,5 +32,9 @@ func take_damage():
 		set_color()
 
 		if health == 0:
+			if rock_particle_scene:
+				var new_scene = rock_particle_scene.instantiate()
+				new_scene.global_position = global_position
+				add_sibling(new_scene)
 			queue_free()
 	
