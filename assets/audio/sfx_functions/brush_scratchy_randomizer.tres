@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://d1jjv0wvinqoc"]
+
+[ext_resource type="AudioStream" uid="uid://dkbgxu1x05233" path="res://assets/audio/sound_effects/brush/sfx_brush_stroke_scratchy-001.wav" id="1_hmx83"]
+[ext_resource type="AudioStream" uid="uid://cv6qnj50n7fhx" path="res://assets/audio/sound_effects/brush/sfx_brush_stroke_scratchy-002.wav" id="2_llwnv"]
+[ext_resource type="AudioStream" uid="uid://ju2eaaym00tq" path="res://assets/audio/sound_effects/brush/sfx_brush_stroke_scratchy-003.wav" id="3_uk5dm"]
+
+[resource]
+random_pitch = 1.1
+random_volume_offset_db = 0.35
+streams_count = 3
+stream_0/stream = ExtResource("1_hmx83")
+stream_1/stream = ExtResource("2_llwnv")
+stream_2/stream = ExtResource("3_uk5dm")
