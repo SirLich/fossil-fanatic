@@ -15,9 +15,9 @@ func _ready() -> void:
 	Bus.on_level_selected.connect(play_level)
 	Bus.play_same_level()
 	
-func play_level(level):
+func play_level(level : LevelDescription):
 	hud.visible = true
-	var new_level = level.instantiate()
+	var new_level = level.level_scene.instantiate()
 	add_child(new_level)
 	start_time = Time.get_ticks_msec()
 	change_tool(starting_tool)

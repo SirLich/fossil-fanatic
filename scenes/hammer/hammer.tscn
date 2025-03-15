@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://d0et4vc24oa8h"]
+[gd_scene load_steps=9 format=3 uid="uid://d0et4vc24oa8h"]
 
 [ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/tool.gd" id="1_qnip4"]
 [ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_obftq"]
 [ext_resource type="Texture2D" uid="uid://b6fd6w3uhblwf" path="res://temp/Hammer.png" id="3_rxfdk"]
-[ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="4_rxfdk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ei3sq"]
 radius = 5.0
@@ -84,21 +83,6 @@ tracks/2/keys = {
 "method": &"apply_damage"
 }]
 }
-tracks/3/type = "audio"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AudioStreamPlayer2D")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("4_rxfdk")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/3/use_blend = false
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nqvee"]
 _data = {

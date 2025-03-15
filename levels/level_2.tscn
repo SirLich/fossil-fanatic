@@ -1,20 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://dimxo0ae7osx2"]
+[gd_scene load_steps=4 format=3 uid="uid://fkotx5jd8c5s"]
 
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="1_0srwa"]
 [ext_resource type="PackedScene" uid="uid://wow2jnvojp3h" path="res://scenes/fossils/fossil_1.tscn" id="2_v5uil"]
-[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/rock/rock_4.tscn" id="3_0srwa"]
+[ext_resource type="PackedScene" uid="uid://wtf2w4bu57wi" path="res://levels/layers/layer_1.tscn" id="3_0srwa"]
 
-[node name="Level2" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 
 [node name="Ground" type="Sprite2D" parent="."]
 texture = ExtResource("1_0srwa")
 centered = false
 
-[node name="Fossil" parent="." instance=ExtResource("2_v5uil")]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Fossil" parent="Node2D" instance=ExtResource("2_v5uil")]
 position = Vector2(365, 305)
 
-[node name="Rock" parent="." instance=ExtResource("3_0srwa")]
-position = Vector2(243, 493)
+[node name="Level3" parent="." instance=ExtResource("3_0srwa")]
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
+position = Vector2(-233, 1453)
+rotation = -1.5353
+color = 1
+use_color = true
 
-[node name="Rock2" parent="." instance=ExtResource("3_0srwa")]
-position = Vector2(594, 290)
+[node name="Level4" parent="." instance=ExtResource("3_0srwa")]
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
+position = Vector2(2065, -395)
+rotation = 1.61513
+color = 1
+use_color = true
+
+[node name="Level2" parent="." instance=ExtResource("3_0srwa")]
+position = Vector2(1910, 1056)
+rotation = 3.13364
+color = 1
+use_color = true
+
+[node name="Level1" parent="." instance=ExtResource("3_0srwa")]

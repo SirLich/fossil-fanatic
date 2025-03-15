@@ -43,7 +43,8 @@ func take_damage():
 	if hovered:
 		health -= 1
 		set_color()
-
+		
+		Bus.fossil_damage.play()
 		if health == 0:
 			if rock_particle_scene:
 				var new_scene = rock_particle_scene.instantiate()
