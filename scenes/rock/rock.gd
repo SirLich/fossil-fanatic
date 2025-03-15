@@ -2,6 +2,8 @@ extends Area2D
 class_name Rock
 
 
+@export var destroy_audio : AudioStream
+
 @export var color = 0
 @export var rock_particle_scene : PackedScene
 
@@ -35,9 +37,11 @@ func take_damage():
 		set_color()
 
 		if health == 0:
+			Bus.destroy_effect.play()
 			if rock_particle_scene:
 				var new_scene = rock_particle_scene.instantiate()
 				get_parent().add_child(new_scene)
 				new_scene.global_position = global_position
 			queue_free()
-	
+		else:
+			Bus.damage_effect.play()

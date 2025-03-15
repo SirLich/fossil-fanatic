@@ -17,6 +17,8 @@ func _ready() -> void:
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "offset:y", 0, 0.4)
 	
+	
+	
 func _on_replay_button_button_up() -> void:
 	Bus.play_same_level()
 	queue_free()
@@ -36,8 +38,19 @@ func set_time(time):
 	
 func set_health(health):
 	_health = health
-	damage_label.text = str(health)
-
+	
+	var health_words = [
+		" completely destroyed ",
+		" very damaged ",
+		" damaged ",
+		" slightly damaged ",
+		"nearly perfect",
+		" mint "
+	]
+	
+	var level = Bus.get_current_level()
+	damage_label.text = "You discovered a " + level.name + " in " + health_words[_health] + " condition."
+	
 func add_star(scene_type):
 	var new_scene = scene_type.instantiate()
 	star_container.add_child(new_scene)
