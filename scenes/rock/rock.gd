@@ -7,14 +7,14 @@ class_name Rock
 @export_group("Nodes")
 @export var spite : Sprite2D
 
-func _ready():
-	area_entered.connect(on_area_entered)
-	area_exited.connect(on_area_exited)
+#func _ready():
+	#area_entered.connect(on_area_entered)
+	#area_exited.connect(on_area_exited)
 
-func on_area_entered(area : Area2D):
+func set_hovered():
 	spite.material.set_shader_parameter("enabled", true)
 	
-func on_area_exited(area : Area2D):
+func set_unhovered():
 	spite.material.set_shader_parameter("enabled", false)
 	
 func take_damage():
