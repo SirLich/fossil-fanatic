@@ -18,23 +18,39 @@ func _input(event: InputEvent) -> void:
 		for object_area in get_overlapping_areas():
 			object_area.take_damage()
 
-var old_colliders = []
-func detect_rocks():
+func gather_colliders(pos):
 	var world_2d = get_viewport().find_world_2d()
 	var direct_space = world_2d.direct_space_state
-
+	
 	var query = PhysicsPointQueryParameters2D.new()
-	query.position = get_viewport().get_mouse_position()
+	query.position = pos
 	query.collide_with_areas = true
 	query.collision_mask = pow(2, 1-1)
-
-	var colliders = []
+	
 	var intersections = direct_space.intersect_point(query)
 	if intersections:
-		for intersection in intersections:
-			var collider = intersection.collider
-			colliders.append(collider)
+		intersections.sort_custom(func(a, b):
+			var obj_a = a.collider
+			var obj_b = b.collider
+			
+			var obj_a_order = obj_a.get_parent().get_index() * 1000 + obj_a.get_index()
+			var obj_b_order = obj_b.get_parent().get_index() * 1000 + obj_b.get_index()
+
+			return obj_a_order > obj_b_order
+			#return obj_a.get_parent().get_z_index() > obj_b.get_parent().get_z_index()
+		)
+		
+		colliders.append(intersections[0].collider)
+
 	
+var old_colliders = []
+var colliders = []
+
+func detect_rocks():
+	
+	gather_colliders(get_viewport().get_mouse_position())
+	#gather_colliders(get_viewport().get_mouse_position() - Vector2(100, 0))
+
 	for collider in old_colliders:
 		if collider not in colliders:
 			collider.set_unhovered()
@@ -46,14 +62,4 @@ func detect_rocks():
 	old_colliders.clear()
 	for collider in colliders:
 		old_colliders.append(collider)
-
-		
-	
-	
-	
-	
-		#intersections.sort_custom(func(a, b):
-			#var obj_a = a.collider
-			#var obj_b = b.collider
-			#return obj_a.global_position.y > obj_b.global_position.y
-		#)
+	colliders.clear()
