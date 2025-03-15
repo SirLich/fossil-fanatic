@@ -2,6 +2,8 @@ extends Node2D
 class_name Game
 
 @export var starting_tool : PackedScene
+@export var game_over_scene : PackedScene
+
 var old_tool
 
 func _ready() -> void:
@@ -13,3 +15,5 @@ func change_tool(scene : PackedScene):
 	old_tool = scene.instantiate()
 	add_child(old_tool)
 	
+func trigger_game_over():
+	var game_over = game_over_scene.instantiate()

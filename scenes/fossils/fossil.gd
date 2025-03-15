@@ -10,6 +10,10 @@ var max_health := 5
 var health := max_health
 var hovered = false
 
+func _process(delta: float) -> void:
+	if get_overlapping_areas().size() == 0:
+		queue_free()
+	
 func _ready() -> void:
 	await get_tree().process_frame
 	set_color()

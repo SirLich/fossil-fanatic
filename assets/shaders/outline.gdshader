@@ -7,6 +7,9 @@ uniform bool inside = false;
 uniform bool add_margins = true; // only useful when inside is false
 uniform bool enabled = false;
 
+uniform vec4 modulate : source_color = vec4(1.0);
+
+
 void vertex() {
 	if (add_margins) {
 		VERTEX += (UV * 2.0 - 1.0) * width;
@@ -56,6 +59,8 @@ void fragment() {
 		} else {
 			COLOR = texture(TEXTURE, uv);
 		}
+		
+		COLOR = COLOR * modulate;
 		
 		if ((COLOR.a > 0.0) == inside && hasContraryNeighbour(uv, TEXTURE_PIXEL_SIZE, TEXTURE)) {
 			COLOR.rgb = inside ? mix(COLOR.rgb, color.rgb, color.a) : color.rgb;

@@ -15,6 +15,8 @@ var hovered = false
 func _ready() -> void:
 	await get_tree().process_frame
 	set_color()
+	animated_sprite_2d.material.set_shader_parameter("modulate", get_parent().modulate)
+
 	
 func set_hovered():
 	animated_sprite_2d.material.set_shader_parameter("enabled", true)
