@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://ten5sj53vblp"]
+
+[ext_resource type="AudioStream" uid="uid://dcpdmi0jkoby4" path="res://assets/audio/sound_effects/stone_destr/sfx_stone_destr-001.wav" id="1_hpej5"]
+[ext_resource type="AudioStream" uid="uid://cvs17s7s5e0lt" path="res://assets/audio/sound_effects/stone_destr/sfx_stone_destr-002.wav" id="2_b63l0"]
+
+[resource]
+random_pitch = 1.25
+random_volume_offset_db = 0.1
+streams_count = 2
+stream_0/stream = ExtResource("1_hpej5")
+stream_1/stream = ExtResource("2_b63l0")
