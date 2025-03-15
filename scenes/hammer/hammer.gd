@@ -3,6 +3,11 @@ class_name Hammer
 
 @export var size = 20
 
+@export_group("Nodes")
+@export var anim_player : AnimationPlayer
+
+var can_hit = true
+
 var circle_points = []
 var old_colliders = []
 var colliders = []
@@ -25,9 +30,17 @@ func _physics_process(delta: float) -> void:
 	detect_rocks()
 	
 func _input(event: InputEvent) -> void:
-	if event.is_action_released("use_tool"):
-		for object_area in get_overlapping_areas():
-			object_area.take_damage()
+	if can_hit:
+		if event.is_action_released("use_tool"):
+			can_hit = false
+			anim_player.play("hit")
+			await anim_player.animation_finished
+			can_hit = true
+
+func apply_damage():
+	for object_area in get_overlapping_areas():
+		object_area.take_damage()
+			
 
 func gather_colliders(pos):
 	var world_2d = get_viewport().find_world_2d()
@@ -48,7 +61,6 @@ func gather_colliders(pos):
 			var obj_b_order = obj_b.get_parent().get_index() * 1000 + obj_b.get_index()
 
 			return obj_a_order > obj_b_order
-			#return obj_a.get_parent().get_z_index() > obj_b.get_parent().get_z_index()
 		)
 		
 		colliders.append(intersections[0].collider)

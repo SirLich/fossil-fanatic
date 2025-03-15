@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://c3fgpx6xsl0ee"]
+
+[ext_resource type="AudioStream" uid="uid://537m8jv4klg3" path="res://assets/audio/sound_effects/pickaxe/sfx_pickaxe_hit-001.wav" id="1_sw0xg"]
+[ext_resource type="AudioStream" uid="uid://by1sv3a56csxn" path="res://assets/audio/sound_effects/pickaxe/sfx_pickaxe_hit-002.wav" id="2_6wymp"]
+[ext_resource type="AudioStream" uid="uid://b64hwlnd1rwkd" path="res://assets/audio/sound_effects/pickaxe/sfx_pickaxe_hit-003.wav" id="3_rkmei"]
+
+[resource]
+random_pitch = 1.1
+random_volume_offset_db = 0.3
+streams_count = 3
+stream_0/stream = ExtResource("1_sw0xg")
+stream_1/stream = ExtResource("2_6wymp")
+stream_2/stream = ExtResource("3_rkmei")

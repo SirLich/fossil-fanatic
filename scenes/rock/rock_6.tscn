@@ -1,0 +1,70 @@
+[gd_scene load_steps=15 format=3 uid="uid://2jh4u5s34gvq"]
+
+[ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_kd1xw"]
+[ext_resource type="Script" uid="uid://dggc4gw7y48nb" path="res://scenes/rock/rock.gd" id="2_fknbg"]
+[ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_187pf"]
+[ext_resource type="Texture2D" uid="uid://bvxupfadc6ndv" path="res://assets/textures/stones/stone_6-1.png" id="3_ydwsv"]
+[ext_resource type="Texture2D" uid="uid://dtsx4ju8fl855" path="res://assets/textures/stones/stone_6-2.png" id="4_oikff"]
+[ext_resource type="Texture2D" uid="uid://dxnsaxyxrafir" path="res://assets/textures/stones/stone_6-3.png" id="5_kd1xw"]
+[ext_resource type="Texture2D" uid="uid://d0heos265fx32" path="res://assets/textures/stones/stone_6-4.png" id="6_fknbg"]
+[ext_resource type="Texture2D" uid="uid://5rsdr8ag1g75" path="res://assets/textures/stones/stone_6-5.png" id="7_187pf"]
+[ext_resource type="Texture2D" uid="uid://cc4r37ujlbyav" path="res://assets/textures/stones/stone_6-6.png" id="8_yrsmi"]
+[ext_resource type="Texture2D" uid="uid://vn7sfa856v0f" path="res://assets/textures/stones/stone_6-7.png" id="9_tefh4"]
+[ext_resource type="Texture2D" uid="uid://uk63a2y4l6ns" path="res://assets/textures/stones/stone_6-8.png" id="10_uomng"]
+[ext_resource type="Texture2D" uid="uid://bepqrd0twrdmi" path="res://assets/textures/stones/stone_6-9.png" id="11_np756"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
+shader = ExtResource("1_kd1xw")
+shader_parameter/color = Color(0.512934, 0.362883, 0.187769, 0.654902)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/enabled = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k6ovs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ydwsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oikff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kd1xw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fknbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_187pf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yrsmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tefh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_uomng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_np756")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Rock" type="Area2D"]
+material = SubResource("ShaderMaterial_dkytv")
+collision_mask = 2
+script = ExtResource("2_fknbg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(94.5, -88.9, 77.8, -94.5, 75.5, -94.5, 75.5, -93.3, 18.2, -84.5, 13.2, -84.5, -21.6, -75.5, -26.9, -75.5, -47.8, -66.5, -50.5, -66.5, -64.5, -48.5, -65.6, -48.5, -92.6, -4.5, -93.8, -4.5, -104.8, 18.5, -106, 18.5, -111, 37.5, -112.5, 37.5, -112.5, 39.8, -111.5, 45.8, -111.5, 52.9, -104.5, 71.9, -104.5, 75.1, -91.6, 94.5, -81.1, 94.5, -27.1, 73.5, -24, 73.5, 79, 18.5, 81.4, 18.5, 88.4, 10.5, 89.9, 10.5, 93.9, 0.5, 94.9, 0.5, 112.5, -46.1, 112.5, -48.8, 107.5, -64.8, 107.5, -68.1, 94.5, -86.2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = ExtResource("3_187pf")
+sprite_frames = SubResource("SpriteFrames_k6ovs")
