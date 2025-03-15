@@ -44,27 +44,25 @@ text = "Brush"
 layout_mode = 2
 text = "Hammer"
 
-[node name="Layer_1" type="Node2D" parent="."]
-position = Vector2(-180, -16)
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(9, -9)
 
-[node name="Rock3" parent="Layer_1" instance=ExtResource("2_e2o6t")]
+[node name="Rock3" parent="Node2D2" instance=ExtResource("2_e2o6t")]
 position = Vector2(387, 149)
 rotation = 2.95304
 
-[node name="Layer_2" type="Node2D" parent="."]
-z_index = 1
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="Rock" parent="Layer_2" instance=ExtResource("2_e2o6t")]
+[node name="Rock" parent="Node2D" instance=ExtResource("2_e2o6t")]
 position = Vector2(168, 207)
 
-[node name="Rock2" parent="Layer_2" instance=ExtResource("2_e2o6t")]
+[node name="Rock2" parent="Node2D" instance=ExtResource("2_e2o6t")]
 position = Vector2(269, 247)
 rotation = 3.13936
 
-[node name="Rock3" parent="Layer_2" instance=ExtResource("2_e2o6t")]
+[node name="Rock3" parent="Node2D" instance=ExtResource("2_e2o6t")]
 position = Vector2(296, 120)
 rotation = 1.47652
 
 [node name="Hammer" parent="." instance=ExtResource("1_80nbo")]
-z_index = 100
 position = Vector2(0, 27)
