@@ -1,13 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://bu1ci1jhpw4u5"]
+[gd_scene load_steps=8 format=3 uid="uid://bu1ci1jhpw4u5"]
 
+[ext_resource type="Script" uid="uid://esvgo8trh17h" path="res://game_over_screen.gd" id="1_fdghx"]
 [ext_resource type="Texture2D" uid="uid://0rq0fdywd233" path="res://temp/large_panel.png" id="1_gt22q"]
 [ext_resource type="Texture2D" uid="uid://cbvn1d1mxmm08" path="res://assets/fossils/fossil_footprint_avaceratops-1.png" id="2_w3hxg"]
-[ext_resource type="Texture2D" uid="uid://cnd63ikvfohxa" path="res://assets/ui/Star.png" id="3_l4tlu"]
+[ext_resource type="PackedScene" uid="uid://b817wce4nifhn" path="res://levels/star.tscn" id="4_lqr8p"]
+[ext_resource type="Texture2D" uid="uid://bbeqv6xttila6" path="res://temp/button.png" id="5_2yv1s"]
+[ext_resource type="PackedScene" uid="uid://bhrgkkh3oe3px" path="res://levels/empty_star.tscn" id="5_r1tj2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w3hxg"]
 texture = ExtResource("1_gt22q")
 
-[node name="GameOverScreen" type="CanvasLayer"]
+[node name="GameOverScreen" type="CanvasLayer" node_paths=PackedStringArray("time_label", "damage_label", "star_container", "fossil")]
+script = ExtResource("1_fdghx")
+time_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/Time")
+damage_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/HBoxContainer3/Damage")
+star_container = NodePath("MarginContainer/PanelContainer/VBoxContainer/StarContainer")
+star_scene = ExtResource("4_lqr8p")
+empty_star = ExtResource("5_r1tj2")
+fossil = NodePath("MarginContainer/PanelContainer/VBoxContainer/Fossil")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -27,32 +37,81 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_w3hxg")
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/VBoxContainer"]
+[node name="Fossil" type="TextureRect" parent="MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("2_w3hxg")
 stretch_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
+[node name="StarContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(100, 100)
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_l4tlu")
-expand_mode = 1
+alignment = 1
 
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(100, 100)
+[node name="Time" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-texture = ExtResource("3_l4tlu")
-expand_mode = 1
+text = "Example Time"
 
-[node name="TextureRect3" type="TextureRect" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(100, 100)
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("3_l4tlu")
-expand_mode = 1
+alignment = 1
+
+[node name="Damage" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Example Damage
+"
+
+[node name="Control" type="Control" parent="MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 100
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ReplayButton" type="TextureButton" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("5_2yv1s")
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/ReplayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -11.5
+offset_right = 41.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Replay"
+
+[node name="NextLevelButton" type="TextureButton" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("5_2yv1s")
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/NextLevelButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -11.5
+offset_right = 41.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Next"
+
+[connection signal="button_up" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/ReplayButton" to="." method="_on_replay_button_button_up"]
+[connection signal="button_up" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/NextLevelButton" to="." method="_on_next_level_button_button_up"]

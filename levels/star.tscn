@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b817wce4nifhn"]
+
+[ext_resource type="Texture2D" uid="uid://cnd63ikvfohxa" path="res://assets/ui/Star.png" id="1_khnhu"]
+
+[node name="TextureRect" type="TextureRect"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+texture = ExtResource("1_khnhu")
+expand_mode = 1

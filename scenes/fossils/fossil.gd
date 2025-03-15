@@ -10,13 +10,22 @@ var max_health := 5
 var health := max_health
 var hovered = false
 
-func _process(delta: float) -> void:
-	if get_overlapping_areas().size() == 0:
-		queue_free()
+var is_ready = false
+
+func get_current_texture():
+	var spriteFrames: SpriteFrames = animated_sprite_2d.get_sprite_frames()
+	return spriteFrames.get_frame_texture("default", max_health - health)
 	
+func _process(delta: float) -> void:
+	if is_ready:
+		if get_overlapping_areas().size() == 0:
+			Bus.on_game_over.emit(health, get_current_texture())
+			self.queue_free()
+		
 func _ready() -> void:
 	await get_tree().process_frame
 	set_color()
+	is_ready = true
 	
 func set_hovered():
 	animated_sprite_2d.material.set_shader_parameter("enabled", true)
