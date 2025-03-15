@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4dh87ymrg6i3"]
 
-[ext_resource type="PackedScene" uid="uid://d0et4vc24oa8h" path="res://scenes/hammer/hammer.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="2_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://crbe0agxb2nli" path="res://scenes/hammer/pick.tscn" id="4_7jktm"]
 [ext_resource type="PackedScene" uid="uid://wtf2w4bu57wi" path="res://levels/level_1.tscn" id="4_fc0e3"]
 
 [node name="Game" type="Node2D"]
@@ -43,8 +43,7 @@ text = "Brush"
 layout_mode = 2
 text = "Hammer"
 
-[node name="Hammer" parent="." instance=ExtResource("1_80nbo")]
-z_index = 100
-position = Vector2(0, 27)
-
 [node name="Level1" parent="." instance=ExtResource("4_fc0e3")]
+
+[node name="Pick" parent="." instance=ExtResource("4_7jktm")]
+size = 3

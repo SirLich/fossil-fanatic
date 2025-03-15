@@ -1,23 +1,23 @@
-[gd_scene load_steps=10 format=3 uid="uid://d0et4vc24oa8h"]
+[gd_scene load_steps=10 format=3 uid="uid://crbe0agxb2nli"]
 
-[ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/tool.gd" id="1_qnip4"]
-[ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_obftq"]
-[ext_resource type="Texture2D" uid="uid://dgvkcdq2ep601" path="res://temp/hammer.png" id="3_g080m"]
-[ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="4_rxfdk"]
+[ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/tool.gd" id="1_acdsb"]
+[ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_f3efj"]
+[ext_resource type="Texture2D" uid="uid://dgvkcdq2ep601" path="res://temp/hammer.png" id="3_4hcue"]
+[ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="4_4c4nw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ei3sq"]
 radius = 5.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_g080m"]
-shader = ExtResource("2_obftq")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_acdsb"]
+shader = ExtResource("2_f3efj")
 shader_parameter/color = Color(1, 1, 1, 0.596078)
 shader_parameter/diameter = 1.0
-shader_parameter/thickness = 0.03
-shader_parameter/frequency = 17.36
-shader_parameter/phase = 3.711
+shader_parameter/thickness = 0.085
+shader_parameter/frequency = 5.19
+shader_parameter/phase = 5.401
 
 [sub_resource type="Animation" id="Animation_rxfdk"]
-length = 0.001
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -94,7 +94,7 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_rxfdk")
+"stream": ExtResource("4_4c4nw")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -106,16 +106,18 @@ _data = {
 &"hit": SubResource("Animation_g080m")
 }
 
-[node name="Hammer" type="Area2D" node_paths=PackedStringArray("anim_player") groups=["tool"]]
+[node name="Pick" type="Area2D" node_paths=PackedStringArray("anim_player") groups=["tool"]]
 collision_layer = 2
-script = ExtResource("1_qnip4")
+script = ExtResource("1_acdsb")
+size = 5
+hit_delay = 0.2
 anim_player = NodePath("AnimationPlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ei3sq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_g080m")
+material = SubResource("ShaderMaterial_acdsb")
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -131,7 +133,7 @@ grow_vertical = 2
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(20, 11)
 scale = Vector2(0.0507717, 0.0507717)
-texture = ExtResource("3_g080m")
+texture = ExtResource("3_4hcue")
 offset = Vector2(14.9, -136.6)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
