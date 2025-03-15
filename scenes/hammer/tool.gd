@@ -30,7 +30,7 @@ func _draw() -> void:
 func _physics_process(delta: float) -> void:
 	detect_rocks()
 	
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if can_hit:
 		if event.is_action_released("use_tool"):
 			can_hit = false

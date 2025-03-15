@@ -1,14 +1,12 @@
 extends Area2D
-class_name Rock
+class_name Fossil
 
-
-@export var color = 0
 @export var rock_particle_scene : PackedScene
 
 @export_group("Nodes")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-var max_health := 3
+var max_health := 5
 var health := max_health
 var hovered = false
 
@@ -25,7 +23,7 @@ func set_unhovered():
 	hovered = false
 
 func set_color():
-	animated_sprite_2d.frame = max_health - health + (3 * color)
+	animated_sprite_2d.frame = max_health - health
 
 func take_damage():
 	if hovered:

@@ -1,49 +1,102 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=11 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://game.gd" id="1_feb5d"]
-[ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="2_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://bbeqv6xttila6" path="res://temp/button.png" id="2_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://bmbj2p4larq43" path="res://temp/pick.png" id="3_7jktm"]
+[ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://tool_button.gd" id="3_ryrav"]
 [ext_resource type="PackedScene" uid="uid://crbe0agxb2nli" path="res://scenes/hammer/pick.tscn" id="4_7jktm"]
+[ext_resource type="PackedScene" uid="uid://d0et4vc24oa8h" path="res://scenes/hammer/hammer.tscn" id="4_eow3j"]
 [ext_resource type="PackedScene" uid="uid://wtf2w4bu57wi" path="res://levels/level_1.tscn" id="4_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://dgvkcdq2ep601" path="res://temp/hammer.png" id="7_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="10_hve3p"]
+[ext_resource type="PackedScene" uid="uid://wow2jnvojp3h" path="res://scenes/fossils/fossil_1.tscn" id="10_mfdv2"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_feb5d")
+starting_tool = ExtResource("4_eow3j")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
+layer = 100
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -40.0
+offset_right = 108.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="HammerButton" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
+layout_mode = 2
+texture_normal = ExtResource("2_fc0e3")
+script = ExtResource("3_ryrav")
+game = NodePath("../../../..")
+tool_scene = ExtResource("4_7jktm")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer/HammerButton"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_fc0e3")
+texture = ExtResource("3_7jktm")
+expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
+[node name="PickButton" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
+layout_mode = 2
+texture_normal = ExtResource("2_fc0e3")
+script = ExtResource("3_ryrav")
+game = NodePath("../../../..")
+tool_scene = ExtResource("4_eow3j")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer/PickButton"]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -40.0
-offset_top = -20.0
-offset_bottom = 20.0
-grow_horizontal = 0
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("7_j5wjh")
+expand_mode = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-text = "Hammer"
+[node name="Ground" type="Sprite2D" parent="."]
+texture = ExtResource("10_hve3p")
+centered = false
 
-[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-text = "Brush"
+[node name="Fossil" parent="." instance=ExtResource("10_mfdv2")]
+position = Vector2(365, 305)
 
-[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-text = "Hammer"
+[node name="Node2D" type="Node2D" parent="."]
+modulate = Color(0.597176, 0.597176, 0.597176, 1)
+
+[node name="Level3" parent="Node2D" instance=ExtResource("4_fc0e3")]
+position = Vector2(-233, 1453)
+rotation = -1.5353
+scale = Vector2(1, 1)
+color = 1
+use_color = true
+
+[node name="Level4" parent="Node2D" instance=ExtResource("4_fc0e3")]
+position = Vector2(2065, -395)
+rotation = 1.61513
+scale = Vector2(1, 1)
+color = 1
+use_color = true
+
+[node name="Level2" parent="." instance=ExtResource("4_fc0e3")]
+position = Vector2(1910, 1056)
+rotation = 3.13364
+color = 1
+use_color = true
 
 [node name="Level1" parent="." instance=ExtResource("4_fc0e3")]
-
-[node name="Pick" parent="." instance=ExtResource("4_7jktm")]
-size = 3

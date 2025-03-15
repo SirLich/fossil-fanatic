@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://wtf2w4bu57wi"]
+[gd_scene load_steps=23 format=3 uid="uid://wtf2w4bu57wi"]
 
 [ext_resource type="PackedScene" uid="uid://krhbdx33i2g3" path="res://scenes/rock/rock_8.tscn" id="1_jkxa6"]
+[ext_resource type="Script" uid="uid://dcec4tbqoio3t" path="res://levels/level.gd" id="1_udfhf"]
 [ext_resource type="PackedScene" uid="uid://b43mar84ae45h" path="res://assets/shaders/rock_particles.tscn" id="2_udfhf"]
 [ext_resource type="PackedScene" uid="uid://cwa0napga1sso" path="res://scenes/rock/rock_1.tscn" id="2_w75he"]
 [ext_resource type="PackedScene" uid="uid://sm48vjbd723f" path="res://scenes/rock/rock_2.tscn" id="3_udfhf"]
@@ -23,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://ywv2h6vt71if" path="res://scenes/rock/rock_21.tscn" id="20_gtrna"]
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_udfhf")
 
 [node name="Rock28" parent="." instance=ExtResource("8_4knja")]
 position = Vector2(866, 16)

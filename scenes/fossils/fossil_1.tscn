@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://wow2jnvojp3h"]
+
+[ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_gckda"]
+[ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_heuy3"]
+[ext_resource type="Texture2D" uid="uid://cbvn1d1mxmm08" path="res://assets/fossils/fossil_footprint_avaceratops-1.png" id="3_fm6ue"]
+[ext_resource type="Texture2D" uid="uid://ctweey478bm2k" path="res://assets/fossils/fossil_footprint_avaceratops-2.png" id="4_6j0mq"]
+[ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="4_ujvo6"]
+[ext_resource type="Texture2D" uid="uid://cihthqq0yfhqe" path="res://assets/fossils/fossil_footprint_avaceratops-3.png" id="5_a1k6n"]
+[ext_resource type="Texture2D" uid="uid://bxqd8788ul5fg" path="res://assets/fossils/fossil_footprint_avaceratops-4.png" id="6_gvrr2"]
+[ext_resource type="Texture2D" uid="uid://b5yy25618jtd8" path="res://assets/fossils/fossil_footprint_avaceratops-5.png" id="7_oe8si"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
+shader = ExtResource("1_gckda")
+shader_parameter/color = Color(0.512934, 0.362883, 0.187769, 0.654902)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/enabled = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xb8gw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fm6ue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6j0mq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a1k6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gvrr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oe8si")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fossil" type="Area2D"]
+material = SubResource("ShaderMaterial_dkytv")
+collision_mask = 2
+script = ExtResource("2_heuy3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-49.9, -226, -63, -219, -65.1, -219, -93.1, -199, -95.2, -199, -187.2, -131, -189.3, -131, -207.4, -114, -208.9, -114, -212.9, -104, -214.3, -104, -217.3, -78, -218.7, -78, -214.5, -26.8, -214.5, -11.7, -242.5, 25.6, -242.5, 50.2, -200.5, 174.3, -200.5, 177.5, -193.5, 191.5, -193.5, 193.8, -187.5, 199.8, -187.5, 201.5, -167.5, 207.4, -167.5, 208.7, -125.5, 214.7, -125.5, 215.8, -39.5, 224.8, -39.5, 226, 118.3, 226, 189.3, 155, 190.9, 155, 212.5, 91.3, 212.5, 88.4, 242.5, 12, 242.5, -17.7, 204.5, -62.8, 204.5, -64.8, 52.5, -214.9, 52.5, -216.1, 39, -224, 29, -224, -6.10001, -205, -6.7, -205, -27.5, -225.8)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = ExtResource("4_ujvo6")
+sprite_frames = SubResource("SpriteFrames_xb8gw")
