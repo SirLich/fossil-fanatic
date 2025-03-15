@@ -1,9 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://jw2jfhmwcx"]
+[gd_scene load_steps=5 format=3 uid="uid://jw2jfhmwcx"]
 
 [ext_resource type="Script" uid="uid://emtgsupplk38" path="res://src/bus.gd" id="1_jel5a"]
 [ext_resource type="PackedScene" uid="uid://dimxo0ae7osx2" path="res://levels/level_2.tscn" id="2_j6yom"]
 [ext_resource type="PackedScene" uid="uid://fkotx5jd8c5s" path="res://levels/level_1.tscn" id="3_4qkln"]
+[ext_resource type="AudioStream" uid="uid://dt4djx6077q0i" path="res://assets/audio/music/Kaput_IngameMusic_v_1.0.wav" id="4_4qkln"]
 
 [node name="Bus" type="Node2D"]
 script = ExtResource("1_jel5a")
 levels_in_order = Array[PackedScene]([ExtResource("2_j6yom"), ExtResource("3_4qkln")])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4qkln")
+autoplay = true
