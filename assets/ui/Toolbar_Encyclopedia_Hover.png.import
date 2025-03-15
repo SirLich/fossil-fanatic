@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6fd6w3uhblwf"
-path="res://.godot/imported/hammer.png-bbd7e573854806f593eabb7749c9946a.ctex"
+uid="uid://bd8o4v1ppumim"
+path="res://.godot/imported/Toolbar_Encyclopedia_Hover.png-962afec88412f158e1a9257ae58a6bc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temp/hammer.png"
-dest_files=["res://.godot/imported/hammer.png-bbd7e573854806f593eabb7749c9946a.ctex"]
+source_file="res://assets/ui/Toolbar_Encyclopedia_Hover.png"
+dest_files=["res://.godot/imported/Toolbar_Encyclopedia_Hover.png-962afec88412f158e1a9257ae58a6bc6.ctex"]
 
 [params]
 
