@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/tool.gd" id="1_acdsb"]
 [ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_f3efj"]
-[ext_resource type="Texture2D" uid="uid://dgvkcdq2ep601" path="res://temp/hammer.png" id="3_4hcue"]
+[ext_resource type="Texture2D" uid="uid://bmbj2p4larq43" path="res://temp/pick.png" id="3_acdsb"]
 [ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="4_4c4nw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ei3sq"]
@@ -53,10 +53,10 @@ tracks/0/path = NodePath("Sprite2D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0666667, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.0661127, 0.0666667, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, -0.892378, 0.0]
+"values": [0.0, -0.884962, -0.892378, 0.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -65,10 +65,10 @@ tracks/1/path = NodePath("Sprite2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.0639357, 0.6),
+"times": PackedFloat32Array(0, 0.0661127, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(15, 7), Vector2(11, 7), Vector2(15, 7)]
+"values": [Vector2(46, 26), Vector2(49, 16), Vector2(46, 26)]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -132,8 +132,8 @@ grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(20, 11)
-scale = Vector2(0.0507717, 0.0507717)
-texture = ExtResource("3_4hcue")
+scale = Vector2(0.255048, 0.255048)
+texture = ExtResource("3_acdsb")
 offset = Vector2(14.9, -136.6)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
