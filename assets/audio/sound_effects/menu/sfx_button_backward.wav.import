@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dax4jqqk4m8dr"
-path="res://.godot/imported/sfx_button_backward.wav-f22e3d92e6821d1e2548c10bae974741.sample"
+path="res://.godot/imported/sfx_button_backward.wav-c2f4526c51fe2b02e250a97c2616e3d7.sample"
 
 [deps]
 
-source_file="res://assets/audio/sound_effects/sfx_button_backward.wav"
-dest_files=["res://.godot/imported/sfx_button_backward.wav-f22e3d92e6821d1e2548c10bae974741.sample"]
+source_file="res://assets/audio/sound_effects/menu/sfx_button_backward.wav"
+dest_files=["res://.godot/imported/sfx_button_backward.wav-c2f4526c51fe2b02e250a97c2616e3d7.sample"]
 
 [params]
 
