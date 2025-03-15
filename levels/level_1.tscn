@@ -10,7 +10,9 @@
 texture = ExtResource("1_bt44k")
 centered = false
 
-[node name="Fossil" parent="." instance=ExtResource("2_kx6l7")]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Fossil" parent="Node2D" instance=ExtResource("2_kx6l7")]
 position = Vector2(365, 305)
 
 [node name="Level3" parent="." instance=ExtResource("3_n46q3")]

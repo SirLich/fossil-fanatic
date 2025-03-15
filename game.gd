@@ -16,6 +16,7 @@ func _ready() -> void:
 	Bus.play_same_level()
 	
 func play_level(level):
+	hud.visible = true
 	var new_level = level.instantiate()
 	add_child(new_level)
 	start_time = Time.get_ticks_msec()
