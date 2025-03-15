@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4dh87ymrg6i3"]
+
+[ext_resource type="PackedScene" uid="uid://d0et4vc24oa8h" path="res://scenes/hammer/hammer.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://cwa0napga1sso" path="res://scenes/rock/rock.tscn" id="2_e2o6t"]
+
+[node name="Game" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.458128, 0.332041, 0.244983, 1)
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Hammer"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Brush"
+
+[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Hammer"
+
+[node name="Rock" parent="." instance=ExtResource("2_e2o6t")]
+position = Vector2(168, 207)
+
+[node name="Rock2" parent="." instance=ExtResource("2_e2o6t")]
+position = Vector2(283, 257)
+rotation = 3.13936
+
+[node name="Rock3" parent="." instance=ExtResource("2_e2o6t")]
+position = Vector2(309, 100)
+rotation = 1.47652
+
+[node name="Hammer" parent="." instance=ExtResource("1_80nbo")]
