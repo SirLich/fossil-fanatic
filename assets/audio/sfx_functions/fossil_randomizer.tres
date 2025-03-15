@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=3 format=3 uid="uid://cpc0mjyvacwy5"]
+
+[ext_resource type="AudioStream" uid="uid://mvnoqdxlprql" path="res://assets/audio/sound_effects/fossil/sfx_fossil_damaged-001.wav" id="1_7arxl"]
+[ext_resource type="AudioStream" uid="uid://baxlt2pg3t4jx" path="res://assets/audio/sound_effects/fossil/sfx_fossil_damaged-002.wav" id="2_8eyc3"]
+
+[resource]
+random_pitch = 1.2
+random_volume_offset_db = 0.2
+streams_count = 2
+stream_0/stream = ExtResource("1_7arxl")
+stream_1/stream = ExtResource("2_8eyc3")
