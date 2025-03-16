@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://c8l8bl3dignc2"]
+
+[ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_fywgo"]
+[ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_4savw"]
+[ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_2vcm1"]
+[ext_resource type="Texture2D" uid="uid://wfbe4n5uomh0" path="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-1.png" id="4_fywgo"]
+[ext_resource type="Texture2D" uid="uid://cbgf6i4svwpp8" path="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-2.png" id="5_4savw"]
+[ext_resource type="Texture2D" uid="uid://c6x21qs3h8pcp" path="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-3.png" id="6_2vcm1"]
+[ext_resource type="Texture2D" uid="uid://dtu5rjuko4upb" path="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-4.png" id="7_7ryoy"]
+[ext_resource type="Texture2D" uid="uid://cm15qxcf10hi8" path="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-5.png" id="8_nq85y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
+shader = ExtResource("1_fywgo")
+shader_parameter/color = Color(0.512934, 0.362883, 0.187769, 0.654902)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/enabled = true
+shader_parameter/modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sylig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_fywgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4savw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2vcm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7ryoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nq85y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fossil_avaceratops" type="Area2D"]
+material = SubResource("ShaderMaterial_dkytv")
+script = ExtResource("2_4savw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-149.5, -273, -162.1, -264, -163.5, -264, -199.5, -213, -200.7, -213, -252.5, -108.5, -252.5, -106.6, -288.6, -48, -289.7, -48, -305.5, -16.4, -305.5, 20, -304.5, 22.3, -304.5, 26.4, -255.5, 153.4, -255.5, 156.5, -228.5, 211.4, -228.5, 214.7, -214.5, 233.6, -214.5, 235.9, -203.5, 244.9, -203.5, 246.4, -180.8, 254, -162.4, 254, -133.2, 250, -127.3, 250, -99.4, 243, -93.9, 243, -55.5, 251.6, -55.5, 252.7, 67.2, 273, 115.5, 273, 139.2, 252, 140.4, 252, 201.4, 180, 202.6, 180, 241.6, 123, 242.6, 123, 305.5, 21.1, 305.5, -25.2, 298.5, -45.5, 298.5, -48.5, 287.5, -71.5, 287.5, -74.5, 240.5, -160.7, 240.5, -162.6, 209.5, -210.7, 209.5, -212.8, 196.5, -225.8, 196.5, -227.4, 184.5, -231.5, 184.5, -232.8, 156.6, -236, 86, -236, 45.5, -256.3, 45.5, -257.7, 20.5, -261.8, 20.5, -262.8, -80.5, -272.9)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = ExtResource("3_2vcm1")
+sprite_frames = SubResource("SpriteFrames_sylig")

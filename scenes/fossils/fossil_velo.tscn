@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://dc07jkw852rhw"]
+
+[ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_max5l"]
+[ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_p3368"]
+[ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_khqak"]
+[ext_resource type="Texture2D" uid="uid://j3avivwma5jm" path="res://assets/fossils/Footprints/fossil_footprint_velociraptor-1.png" id="3_q5pip"]
+[ext_resource type="Texture2D" uid="uid://lp1dkeg5igdi" path="res://assets/fossils/Footprints/fossil_footprint_velociraptor-2.png" id="5_max5l"]
+[ext_resource type="Texture2D" uid="uid://dl8pdb6dw26fp" path="res://assets/fossils/Footprints/fossil_footprint_velociraptor-3.png" id="6_p3368"]
+[ext_resource type="Texture2D" uid="uid://chmbbhb6sxv0y" path="res://assets/fossils/Footprints/fossil_footprint_velociraptor-4.png" id="7_khqak"]
+[ext_resource type="Texture2D" uid="uid://cjyfpoas1mjhc" path="res://assets/fossils/Footprints/fossil_footprint_velociraptor-5.png" id="8_xgctn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
+shader = ExtResource("1_max5l")
+shader_parameter/color = Color(0.512934, 0.362883, 0.187769, 0.654902)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/enabled = true
+shader_parameter/modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eguum"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_q5pip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_max5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p3368")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_khqak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xgctn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fossil_avaceratops" type="Area2D"]
+material = SubResource("ShaderMaterial_dkytv")
+script = ExtResource("2_p3368")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-15.6, -346, -33, -346, -67.5, -311.4, -76.8, -313, -79.4, -313, -118, -337.2, -118, -339.6, -128.1, -337, -130.9, -337, -148.9, -315, -150.1, -315, -228.1, -188, -230, -188, -230, -164.8, -222, -127.6, -222, -122.7, -193, -31.8, -193, -18.5, -212, 14.5, -212, 16.3, -238, 47.8, -238, 83.6, -184, 225.4, -184, 228.4, -159, 286.3, -159, 288.8, -149, 298.8, -149, 300.3, -142, 303.2, -142, 304.6, -81.2, 318, -78.5, 318, -41, 340.1, -41, 341.4, -28.8, 346, 23.8, 346, 50.4, 334, 52.7, 334, 104.7, 295, 106.7, 295, 220.7, 199, 222.9, 199, 232.9, 187, 234.4, 187, 238, 178, 238, 122, 221, 60, 221, 55.7, 167, -100.5, 167, -103.4, 122, -215.5, 122, -218.6, 98, -257.6, 98, -259.8, 83, -275.9, 83, -277, 0, -337.1, 0, -338.2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = ExtResource("3_khqak")
+sprite_frames = SubResource("SpriteFrames_eguum")
