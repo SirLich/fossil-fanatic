@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0et4vc24oa8h"]
+[gd_scene load_steps=10 format=3 uid="uid://d0et4vc24oa8h"]
 
 [ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/tool.gd" id="1_qnip4"]
 [ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_obftq"]
 [ext_resource type="Texture2D" uid="uid://b6fd6w3uhblwf" path="res://temp/Hammer.png" id="3_rxfdk"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx_functions/hammer_randomizer.tres" id="4_rxfdk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ei3sq"]
 radius = 5.0
@@ -41,6 +42,17 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(20, 11)]
 }
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/2/use_blend = true
 
 [sub_resource type="Animation" id="Animation_g080m"]
 resource_name = "hit"
@@ -83,6 +95,21 @@ tracks/2/keys = {
 "method": &"apply_damage"
 }]
 }
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_rxfdk")
+}],
+"times": PackedFloat32Array(0.0333333)
+}
+tracks/3/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nqvee"]
 _data = {
