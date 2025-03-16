@@ -18,10 +18,19 @@ func get_current_texture(frame):
 	
 func _process(delta: float) -> void:
 	if is_ready:
-		if get_overlapping_areas().size() == 0:
-			Bus.on_game_over.emit(health, get_current_texture( max_health - health))
-			self.queue_free()
+		var bodies = get_overlapping_areas()
 		
+		for area in bodies:
+			if area.is_inside_tree():
+				return
+				
+		Bus.on_game_over.emit(health, get_current_texture( max_health - health))
+		
+
+func _enter_tree() -> void:
+	await get_tree().create_timer(0.1).timeout
+	is_ready = true
+	
 func _ready() -> void:
 	set_color()
 	
@@ -50,7 +59,6 @@ func take_damage():
 				var new_scene = rock_particle_scene.instantiate()
 				get_parent().add_child(new_scene)
 				new_scene.global_position = global_position
-				
+			
 			Bus.on_game_over.emit(health, get_current_texture(4))
-			queue_free()
 	

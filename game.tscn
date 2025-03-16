@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=19 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://tool_button.gd" id="3_ryrav"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bu1ci1jhpw4u5" path="res://game_over_screen.tscn" id="11_mfdv2"]
 [ext_resource type="Texture2D" uid="uid://cawvm38ag5r7a" path="res://assets/textures/stones/stone_4-4.png" id="12_7sc4i"]
 [ext_resource type="Texture2D" uid="uid://3d8noeo3ath" path="res://assets/textures/stones/stone_4-6.png" id="13_80cx4"]
+[ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="14_215e1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8heu"]
 texture = ExtResource("10_lc2xo")
@@ -150,5 +151,9 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Play"
 label_settings = SubResource("LabelSettings_e36ub")
+
+[node name="Ground" type="Sprite2D" parent="."]
+texture = ExtResource("14_215e1")
+centered = false
 
 [connection signal="pressed" from="StartGame/MarginContainer/Panel/HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

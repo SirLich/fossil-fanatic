@@ -11,6 +11,7 @@ var game_over_ui
 var old_tool
 var start_time
 
+var my_level
 func _ready() -> void:
 	hud.visible = false
 	Bus.on_game_over.connect(trigger_game_over)
@@ -18,8 +19,8 @@ func _ready() -> void:
 		
 func play_level(level : LevelDescription):
 	hud.visible = true
-	var new_level = level.level_scene.instantiate()
-	add_child(new_level)
+	my_level = level.level_scene.instantiate()
+	add_child(my_level)
 	start_time = Time.get_ticks_msec()
 	change_tool(starting_tool)
 	
@@ -32,6 +33,7 @@ func change_tool(scene : PackedScene):
 func trigger_game_over(health, texture):
 	var game_time = Time.get_ticks_msec() - start_time
 	
+	my_level.queue_free()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	old_tool.queue_free()
 	hud.visible = false
