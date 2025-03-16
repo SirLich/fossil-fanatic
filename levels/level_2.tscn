@@ -12,27 +12,14 @@ centered = false
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="Fossil" parent="Node2D" instance=ExtResource("2_v5uil")]
+[node name="Fossil_Avaceratops" parent="Node2D" instance=ExtResource("2_v5uil")]
 position = Vector2(365, 305)
 
-[node name="Level3" parent="." instance=ExtResource("3_0srwa")]
-modulate = Color(0.625597, 0.625597, 0.625597, 1)
-position = Vector2(-233, 1453)
-rotation = -1.5353
-color = 1
-use_color = true
-
-[node name="Level4" parent="." instance=ExtResource("3_0srwa")]
-modulate = Color(0.625597, 0.625597, 0.625597, 1)
-position = Vector2(2065, -395)
-rotation = 1.61513
-color = 1
-use_color = true
-
 [node name="Level2" parent="." instance=ExtResource("3_0srwa")]
-position = Vector2(1910, 1056)
+position = Vector2(2370, 1736)
 rotation = 3.13364
 color = 1
 use_color = true
 
 [node name="Level1" parent="." instance=ExtResource("3_0srwa")]
+position = Vector2(1156, -92)

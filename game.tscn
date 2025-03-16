@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=19 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://tool_button.gd" id="3_ryrav"]
@@ -8,12 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dxh4sr01tyhlw" path="res://assets/ui/Toolbar_Hammer.png" id="4_vef74"]
 [ext_resource type="Texture2D" uid="uid://dgt0vpytp3jke" path="res://assets/ui/Toolbar_Pickaxe_Hover.png" id="5_j5wjh"]
 [ext_resource type="Texture2D" uid="uid://bjhywp2ay0v5s" path="res://assets/ui/Toolbar_Hammer_Hover.png" id="9_vef74"]
-[ext_resource type="PackedScene" uid="uid://c38en28qudhof" path="res://scenes/hammer/brush.tscn" id="10_7sc4i"]
-[ext_resource type="Texture2D" uid="uid://c7doo2r6uo5y8" path="res://assets/ui/Toolbar_Brush.png" id="10_e8heu"]
 [ext_resource type="Texture2D" uid="uid://b2lnhfmjx3bhk" path="res://assets/ui/Fin_Background.png" id="10_lc2xo"]
 [ext_resource type="FontFile" uid="uid://coexytxldfvlm" path="res://assets/fonts/barlow/Barlow-Bold.ttf" id="11_215e1"]
 [ext_resource type="PackedScene" uid="uid://bu1ci1jhpw4u5" path="res://game_over_screen.tscn" id="11_mfdv2"]
-[ext_resource type="Texture2D" uid="uid://ckkecaqhh0y2o" path="res://assets/ui/Toolbar_Brush_Hover.png" id="11_rvswv"]
 [ext_resource type="Texture2D" uid="uid://cawvm38ag5r7a" path="res://assets/textures/stones/stone_4-4.png" id="12_7sc4i"]
 [ext_resource type="Texture2D" uid="uid://3d8noeo3ath" path="res://assets/textures/stones/stone_4-6.png" id="13_80cx4"]
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="14_215e1"]
@@ -78,14 +75,6 @@ texture_hover = ExtResource("9_vef74")
 script = ExtResource("3_ryrav")
 game = NodePath("../../../..")
 tool_scene = ExtResource("4_eow3j")
-
-[node name="BrushButton" type="TextureButton" parent="UI/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
-layout_mode = 2
-texture_normal = ExtResource("10_e8heu")
-texture_hover = ExtResource("11_rvswv")
-script = ExtResource("3_ryrav")
-game = NodePath("../../../..")
-tool_scene = ExtResource("10_7sc4i")
 
 [node name="StartGame" type="CanvasLayer" parent="."]
 
