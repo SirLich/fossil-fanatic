@@ -1,0 +1,127 @@
+[gd_scene load_steps=9 format=3 uid="uid://c38en28qudhof"]
+
+[ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/tool.gd" id="1_gt162"]
+[ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_i5pv2"]
+[ext_resource type="Texture2D" uid="uid://cmuh4c0viae1d" path="res://temp/Brush.png" id="3_gt162"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ei3sq"]
+radius = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g080m"]
+shader = ExtResource("2_i5pv2")
+shader_parameter/color = Color(1, 1, 1, 0.596078)
+shader_parameter/diameter = 1.0
+shader_parameter/thickness = 0.03
+shader_parameter/frequency = 17.36
+shader_parameter/phase = 3.711
+
+[sub_resource type="Animation" id="Animation_rxfdk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, 11)]
+}
+
+[sub_resource type="Animation" id="Animation_g080m"]
+resource_name = "hit"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.892378, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0306023, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(15, 7), Vector2(11, 7), Vector2(15, 7)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"apply_damage"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nqvee"]
+_data = {
+&"RESET": SubResource("Animation_rxfdk"),
+&"hit": SubResource("Animation_g080m")
+}
+
+[node name="Hammer" type="Area2D" node_paths=PackedStringArray("anim_player") groups=["tool"]]
+collision_layer = 2
+script = ExtResource("1_gt162")
+anim_player = NodePath("AnimationPlayer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ei3sq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_g080m")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20, 11)
+scale = Vector2(0.0507717, 0.0507717)
+texture = ExtResource("3_gt162")
+offset = Vector2(14.9, -136.6)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nqvee")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
