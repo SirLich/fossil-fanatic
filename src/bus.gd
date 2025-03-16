@@ -13,12 +13,17 @@ func get_current_level():
 func play_next_level():
 	if current_level > levels_in_order.size():
 		pass
-			
+	
+	
 	current_level += 1
-	on_level_selected.emit(levels_in_order[current_level])
+	if levels_in_order.size() > current_level:
+		on_level_selected.emit(levels_in_order[current_level])
+	else:
+		go_main_menu.emit()
 	
 func play_same_level():
 	on_level_selected.emit(levels_in_order[current_level])
-	
+
+signal go_main_menu
 signal on_level_selected(level)
 signal on_game_over(health, texture)

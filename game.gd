@@ -16,7 +16,12 @@ func _ready() -> void:
 	hud.visible = false
 	Bus.on_game_over.connect(trigger_game_over)
 	Bus.on_level_selected.connect(play_level)
-		
+	Bus.go_main_menu.connect(restart)
+
+func restart():
+	start_screen.visible = true
+	hud.visible = false
+	
 func play_level(level : LevelDescription):
 	hud.visible = true
 	my_level = level.level_scene.instantiate()
