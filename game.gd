@@ -38,10 +38,12 @@ func trigger_game_over(health, texture):
 	old_tool.queue_free()
 	hud.visible = false
 	game_over_ui = game_over_scene.instantiate()
-	game_over_ui.set_time(game_time)
-	game_over_ui.set_health(health)
-	game_over_ui.set_stars()
-	game_over_ui.set_texture(texture)
+	
+	game_over_ui.set_end_game_data(game_time, health, texture)
+	#game_over_ui.set_time(game_time)
+	#game_over_ui.set_health(health)
+	#game_over_ui.set_stars()
+	#game_over_ui.set_texture(texture)
 	add_child(game_over_ui)
 
 
