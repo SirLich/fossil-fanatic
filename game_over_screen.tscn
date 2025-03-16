@@ -21,7 +21,7 @@ font = ExtResource("7_0ccdq")
 font_size = 50
 font_color = Color(0.559053, 0.411395, 0.301581, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_3dait"]
+[sub_resource type="LabelSettings" id="LabelSettings_c5lb4"]
 font = ExtResource("7_0ccdq")
 font_size = 40
 font_color = Color(0.414042, 0.297175, 0.209878, 1)
@@ -30,7 +30,7 @@ font_color = Color(0.414042, 0.297175, 0.209878, 1)
 script = ExtResource("1_fdghx")
 time_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/MarginContainer/Time")
 damage_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/VBOx/MarginContainer2/DamageInfo")
-time_need_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/PanelContainer/Info")
+time_need_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/VBOx/Info")
 star_container = NodePath("MarginContainer/PanelContainer/VBoxContainer/MarginContainer2/StarContainer")
 star_scene = ExtResource("4_lqr8p")
 empty_star = ExtResource("5_r1tj2")
@@ -101,6 +101,15 @@ label_settings = SubResource("LabelSettings_akil3")
 horizontal_alignment = 1
 autowrap_mode = 2
 
+[node name="Info" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/VBOx"]
+custom_minimum_size = Vector2(1000, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Testsdfds"
+label_settings = SubResource("LabelSettings_c5lb4")
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer/VBOx"]
 layout_mode = 2
 theme_override_constants/margin_top = 80
@@ -128,14 +137,6 @@ script = ExtResource("10_c5lb4")
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(1110, 0)
 layout_mode = 2
-
-[node name="Info" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/PanelContainer"]
-custom_minimum_size = Vector2(1000, 0)
-layout_mode = 2
-size_flags_horizontal = 4
-label_settings = SubResource("LabelSettings_3dait")
-horizontal_alignment = 1
-autowrap_mode = 2
 
 [node name="NextLevelButton" type="TextureButton" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2"]
 layout_mode = 2

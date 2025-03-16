@@ -36,7 +36,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 script = ExtResource("2_7q2qf")
 name = "Dilophosaurus"
 description = ""
-best_time_seconds = 20
+best_time_seconds = 35
 level_scene = ExtResource("5_fwtcj")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
@@ -52,7 +52,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 script = ExtResource("2_7q2qf")
 name = "Tyrannosaurus"
 description = ""
-best_time_seconds = 20
+best_time_seconds = 30
 level_scene = ExtResource("3_hu2lu")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
@@ -68,7 +68,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 script = ExtResource("2_7q2qf")
 name = "Tyrannosaurus"
 description = ""
-best_time_seconds = 20
+best_time_seconds = 60
 level_scene = ExtResource("8_ja42h")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
@@ -84,22 +84,28 @@ levels_in_order = Array[ExtResource("2_7q2qf")]([SubResource("Resource_kyr87"), 
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_erqox")
+volume_db = 10.0
 autoplay = true
 
 [node name="GameMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4qkln")
+volume_db = 10.0
 
 [node name="DamagePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ofiws")
+volume_db = 2.0
 max_polyphony = 2
 
 [node name="DestroyPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_7o3tk")
+volume_db = 1.0
 max_polyphony = 2
 
 [node name="DamageFossil" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_kyr87")
+volume_db = -2.0
 max_polyphony = 2
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_6th81")
+volume_db = -2.0
