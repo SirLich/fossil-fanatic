@@ -28,7 +28,30 @@ metadata/_edit_lock_ = true
 
 [node name="Fossil_Brontosaurus" parent="." instance=ExtResource("2_btoec")]
 position = Vector2(1231, 378)
-scale = Vector2(0.724585, 0.724585)
+
+[node name="Sand2" parent="." instance=ExtResource("18_oqlok")]
+position = Vector2(1238, 266)
+
+[node name="Sand8" parent="." instance=ExtResource("18_oqlok")]
+position = Vector2(1297, 358)
+
+[node name="Sand3" parent="." instance=ExtResource("18_oqlok")]
+position = Vector2(1301, 480)
+
+[node name="Sand6" parent="." instance=ExtResource("18_oqlok")]
+position = Vector2(1176, 339)
+
+[node name="Sand7" parent="." instance=ExtResource("18_oqlok")]
+position = Vector2(1144, 452)
+
+[node name="Sand5" parent="." instance=ExtResource("18_oqlok")]
+position = Vector2(1079, 314)
+
+[node name="Sand4" parent="." instance=ExtResource("18_oqlok")]
+position = Vector2(1412, 312)
+
+[node name="Sand" parent="." instance=ExtResource("18_oqlok")]
+position = Vector2(1035, 458)
 
 [node name="Rock3" parent="." instance=ExtResource("3_bt44k")]
 position = Vector2(1450, 314)
@@ -182,6 +205,3 @@ rotation = 3.89817
 
 [node name="Rock40" parent="." instance=ExtResource("17_lrvbd")]
 position = Vector2(583, 1194)
-
-[node name="Sand" parent="." instance=ExtResource("18_oqlok")]
-position = Vector2(1037, 781)
