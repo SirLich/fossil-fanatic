@@ -84,28 +84,27 @@ levels_in_order = Array[ExtResource("2_7q2qf")]([SubResource("Resource_kyr87"), 
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_erqox")
-volume_db = 10.0
+volume_db = 7.5
 autoplay = true
 
 [node name="GameMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4qkln")
-volume_db = 10.0
+volume_db = 6.0
 
 [node name="DamagePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ofiws")
-volume_db = 2.0
+volume_db = -1.5
 max_polyphony = 2
 
 [node name="DestroyPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_7o3tk")
-volume_db = 1.0
 max_polyphony = 2
 
 [node name="DamageFossil" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_kyr87")
-volume_db = -2.0
+volume_db = -1.0
 max_polyphony = 2
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_6th81")
-volume_db = -2.0
+volume_db = 1.5
