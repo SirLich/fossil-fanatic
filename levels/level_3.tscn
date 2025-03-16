@@ -128,7 +128,6 @@ rock_particle_scene = ExtResource("6_46211")
 [node name="Rock16" parent="Level3" instance=ExtResource("12_lva13")]
 position = Vector2(-45.2133, 1428.62)
 rotation = 0.951528
-scale = Vector2(1, 1)
 rock_particle_scene = ExtResource("6_46211")
 
 [node name="Rock17" parent="Level3" instance=ExtResource("13_110es")]
@@ -163,7 +162,6 @@ rock_particle_scene = ExtResource("6_46211")
 [node name="Rock23" parent="Level3" instance=ExtResource("8_x1e8k")]
 position = Vector2(588.129, 782.018)
 rotation = 0.853368
-scale = Vector2(1, 1)
 rock_particle_scene = ExtResource("6_46211")
 
 [node name="Rock24" parent="Level3" instance=ExtResource("17_bw4gc")]

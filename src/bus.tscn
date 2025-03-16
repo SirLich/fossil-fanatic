@@ -17,7 +17,7 @@
 
 [sub_resource type="Resource" id="Resource_kyr87"]
 script = ExtResource("2_7q2qf")
-name = "Avaceratops Footprint"
+name = "Velociraptor"
 description = ""
 best_time_seconds = 20
 level_scene = ExtResource("3_nqcwp")
@@ -25,7 +25,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
 [sub_resource type="Resource" id="Resource_fwtcj"]
 script = ExtResource("2_7q2qf")
-name = "MISSING"
+name = "Parasaurolophus"
 description = ""
 best_time_seconds = 20
 level_scene = ExtResource("4_7q2qf")
@@ -33,7 +33,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
 [sub_resource type="Resource" id="Resource_hu2lu"]
 script = ExtResource("2_7q2qf")
-name = "MISSING"
+name = "Dilophosaurus"
 description = ""
 best_time_seconds = 20
 level_scene = ExtResource("5_fwtcj")
@@ -41,7 +41,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
 [sub_resource type="Resource" id="Resource_nqcwp"]
 script = ExtResource("2_7q2qf")
-name = "MISSING"
+name = "Brontosaurus"
 description = ""
 best_time_seconds = 20
 level_scene = ExtResource("6_hu2lu")
@@ -49,7 +49,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
 [sub_resource type="Resource" id="Resource_ja42h"]
 script = ExtResource("2_7q2qf")
-name = "MISSING"
+name = "Tyrannosaurus"
 description = ""
 best_time_seconds = 20
 level_scene = ExtResource("3_hu2lu")
@@ -57,7 +57,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
 [sub_resource type="Resource" id="Resource_n0b7l"]
 script = ExtResource("2_7q2qf")
-name = "MISSING"
+name = "Avaceratops"
 description = ""
 best_time_seconds = 20
 level_scene = ExtResource("8_n0b7l")
@@ -65,7 +65,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
 [sub_resource type="Resource" id="Resource_6th81"]
 script = ExtResource("2_7q2qf")
-name = "MISSING"
+name = "Tyrannosaurus"
 description = ""
 best_time_seconds = 20
 level_scene = ExtResource("8_ja42h")
