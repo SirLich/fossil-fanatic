@@ -21,6 +21,7 @@ func play_next_level():
 	if levels_in_order.size() > current_level:
 		on_level_selected.emit(levels_in_order[current_level])
 	else:
+		current_level = 0
 		go_main_menu.emit()
 	
 func play_same_level():
