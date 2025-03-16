@@ -16,10 +16,20 @@ centered = false
 position = Vector2(365, 305)
 
 [node name="Level2" parent="." instance=ExtResource("3_0srwa")]
+<<<<<<< Updated upstream
 position = Vector2(2370, 1736)
 rotation = 3.13364
+=======
+position = Vector2(1901, 950)
+rotation = 3.00925
+>>>>>>> Stashed changes
 color = 1
 use_color = true
 
 [node name="Level1" parent="." instance=ExtResource("3_0srwa")]
+<<<<<<< Updated upstream
 position = Vector2(1156, -92)
+=======
+position = Vector2(891, -834)
+rotation = 0.714112
+>>>>>>> Stashed changes
