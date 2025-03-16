@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cos6bp05etwh0"]
+[gd_scene load_steps=7 format=3 uid="uid://cos6bp05etwh0"]
 
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="1_t0qhu"]
 [ext_resource type="PackedScene" uid="uid://dc07jkw852rhw" path="res://scenes/fossils/fossil_velo.tscn" id="2_t6q73"]
 [ext_resource type="PackedScene" uid="uid://cjud87bnt1wt8" path="res://scenes/rock/rock_15.tscn" id="3_0fd8o"]
 [ext_resource type="PackedScene" uid="uid://galc4u7g16as" path="res://levels/layers/layer_2.tscn" id="3_hokjj"]
 [ext_resource type="PackedScene" uid="uid://dpy38kmegkb45" path="res://scenes/rock/rock_12.tscn" id="4_dmnu2"]
+[ext_resource type="PackedScene" uid="uid://b43mar84ae45h" path="res://assets/shaders/rock_particles.tscn" id="4_hokjj"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,9 +21,11 @@ scale = Vector2(0.516774, 0.516774)
 
 [node name="Rock" parent="Node2D" instance=ExtResource("3_0fd8o")]
 position = Vector2(520, 685)
+rock_particle_scene = ExtResource("4_hokjj")
 
 [node name="Rock2" parent="Node2D" instance=ExtResource("4_dmnu2")]
 position = Vector2(922, 591)
+rock_particle_scene = ExtResource("4_hokjj")
 
 [node name="Level1" parent="." instance=ExtResource("3_hokjj")]
 position = Vector2(157, -291)
