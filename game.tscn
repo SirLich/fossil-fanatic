@@ -125,7 +125,7 @@ horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="StartGame/MarginContainer/Panel/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Created by Liam, Flores, Philipp, Tanja, and Marcus for Puls Game Jam 2025"
+text = "Created by Liam, Flores, Philip, Tanja, and Markus for Global Game Jam 2024"
 label_settings = SubResource("LabelSettings_boyg6")
 horizontal_alignment = 1
 
