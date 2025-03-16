@@ -1,5 +1,7 @@
 extends Node
 
+@export var button_sound : AudioStreamPlayer
+
 @export var destroy_effect : AudioStreamPlayer
 @export var damage_effect : AudioStreamPlayer
 @export var fossil_damage : AudioStreamPlayer

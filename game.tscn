@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=23 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://tool_button.gd" id="3_ryrav"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cawvm38ag5r7a" path="res://assets/textures/stones/stone_4-4.png" id="12_7sc4i"]
 [ext_resource type="Texture2D" uid="uid://3d8noeo3ath" path="res://assets/textures/stones/stone_4-6.png" id="13_80cx4"]
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="14_215e1"]
+[ext_resource type="Script" uid="uid://dh0fh6o726g1h" path="res://button_shim.gd" id="17_rvswv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8heu"]
 texture = ExtResource("10_lc2xo")
@@ -146,6 +147,7 @@ texture_normal = ExtResource("12_7sc4i")
 texture_hover = ExtResource("13_80cx4")
 ignore_texture_size = true
 stretch_mode = 4
+script = ExtResource("17_rvswv")
 
 [node name="Label" type="Label" parent="StartGame/MarginContainer/Panel/HBoxContainer/TextureButton"]
 layout_mode = 1

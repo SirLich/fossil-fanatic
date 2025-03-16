@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://jw2jfhmwcx"]
+[gd_scene load_steps=22 format=3 uid="uid://jw2jfhmwcx"]
 
 [ext_resource type="Script" uid="uid://emtgsupplk38" path="res://src/bus.gd" id="1_jel5a"]
 [ext_resource type="Script" uid="uid://gbjidnc5cov7" path="res://level_descriptions/level_description.gd" id="2_7q2qf"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://cpc0mjyvacwy5" path="res://assets/audio/sfx_functions/fossil_randomizer.tres" id="7_kyr87"]
 [ext_resource type="PackedScene" uid="uid://bdxj0emtbxm4u" path="res://levels/level_3.tscn" id="8_ja42h"]
 [ext_resource type="PackedScene" uid="uid://fkotx5jd8c5s" path="res://levels/level_2.tscn" id="8_n0b7l"]
+[ext_resource type="AudioStream" uid="uid://cgj187eg48vp6" path="res://assets/audio/sound_effects/menu/sfx_button_forward.wav" id="14_6th81"]
 
 [sub_resource type="Resource" id="Resource_kyr87"]
 script = ExtResource("2_7q2qf")
@@ -70,8 +71,9 @@ best_time_seconds = 20
 level_scene = ExtResource("8_ja42h")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
-[node name="Bus" type="Node2D" node_paths=PackedStringArray("destroy_effect", "damage_effect", "fossil_damage")]
+[node name="Bus" type="Node2D" node_paths=PackedStringArray("button_sound", "destroy_effect", "damage_effect", "fossil_damage")]
 script = ExtResource("1_jel5a")
+button_sound = NodePath("AudioStreamPlayer2")
 destroy_effect = NodePath("DestroyPlayer")
 damage_effect = NodePath("DamagePlayer")
 fossil_damage = NodePath("DamageFossil")
@@ -92,3 +94,6 @@ max_polyphony = 2
 [node name="DamageFossil" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_kyr87")
 max_polyphony = 2
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_6th81")
