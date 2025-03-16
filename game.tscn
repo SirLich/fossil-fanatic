@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=20 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://tool_button.gd" id="3_ryrav"]
@@ -10,31 +10,21 @@
 [ext_resource type="Texture2D" uid="uid://bjhywp2ay0v5s" path="res://assets/ui/Toolbar_Hammer_Hover.png" id="9_vef74"]
 [ext_resource type="PackedScene" uid="uid://c38en28qudhof" path="res://scenes/hammer/brush.tscn" id="10_7sc4i"]
 [ext_resource type="Texture2D" uid="uid://c7doo2r6uo5y8" path="res://assets/ui/Toolbar_Brush.png" id="10_e8heu"]
-[ext_resource type="Texture2D" uid="uid://b2lnhfmjx3bhk" path="res://assets/ui/Fin_Background.png" id="10_lc2xo"]
 [ext_resource type="FontFile" uid="uid://coexytxldfvlm" path="res://assets/fonts/barlow/Barlow-Bold.ttf" id="11_215e1"]
 [ext_resource type="PackedScene" uid="uid://bu1ci1jhpw4u5" path="res://game_over_screen.tscn" id="11_mfdv2"]
 [ext_resource type="Texture2D" uid="uid://ckkecaqhh0y2o" path="res://assets/ui/Toolbar_Brush_Hover.png" id="11_rvswv"]
-[ext_resource type="Texture2D" uid="uid://cawvm38ag5r7a" path="res://assets/textures/stones/stone_4-4.png" id="12_7sc4i"]
-[ext_resource type="Texture2D" uid="uid://3d8noeo3ath" path="res://assets/textures/stones/stone_4-6.png" id="13_80cx4"]
+[ext_resource type="Texture2D" uid="uid://di6vgrqm8x7xl" path="res://assets/textures/Start_with_Title.png" id="13_e8heu"]
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="14_215e1"]
+[ext_resource type="Texture2D" uid="uid://4on25pim7olc" path="res://assets/ui/Startbutton.png" id="15_e8heu"]
+[ext_resource type="Texture2D" uid="uid://beahtvmc0jjqx" path="res://assets/ui/Startbutton_Hover.png" id="16_rvswv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8heu"]
-texture = ExtResource("10_lc2xo")
-
-[sub_resource type="LabelSettings" id="LabelSettings_rvswv"]
-font = ExtResource("11_215e1")
-font_size = 90
-font_color = Color(0.378068, 0.269593, 0.188509, 1)
+texture = ExtResource("13_e8heu")
 
 [sub_resource type="LabelSettings" id="LabelSettings_boyg6"]
 font = ExtResource("11_215e1")
-font_size = 30
-font_color = Color(0.182598, 0.12211, 0.0767958, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_e36ub"]
-font = ExtResource("11_215e1")
-font_size = 40
-font_color = Color(0.182598, 0.12211, 0.0767958, 1)
+font_size = 25
+font_color = Color(0.282353, 0.203922, 0.184314, 1)
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("start_screen", "hud")]
 script = ExtResource("1_feb5d")
@@ -95,76 +85,39 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 200
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 200
-theme_override_constants/margin_bottom = 50
 
 [node name="Panel" type="Panel" parent="StartGame/MarginContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_e8heu")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="StartGame/MarginContainer/Panel"]
+[node name="Label" type="Label" parent="StartGame/MarginContainer/Panel"]
 layout_mode = 2
-offset_right = 1520.0
-offset_bottom = 980.0
+offset_left = 740.0
+offset_top = 815.0
+offset_right = 1188.0
+offset_bottom = 1009.0
+text = "Created by
+Liam, Flores, Philipp, Tanja, and Marcus
 
-[node name="MarginContainer" type="MarginContainer" parent="StartGame/MarginContainer/Panel/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 50
-
-[node name="VBoxContainer" type="VBoxContainer" parent="StartGame/MarginContainer/Panel/VBoxContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="StartGame/MarginContainer/Panel/VBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "FOSSIL FANATIC"
-label_settings = SubResource("LabelSettings_rvswv")
-horizontal_alignment = 1
-
-[node name="Label2" type="Label" parent="StartGame/MarginContainer/Panel/VBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Created by Liam, Flores, Philip, Tanja, and Markus for Global Game Jam 2024"
+for PULS Game Jam 2025"
 label_settings = SubResource("LabelSettings_boyg6")
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="StartGame/MarginContainer/Panel"]
-layout_mode = 2
-offset_left = 1261.0
-offset_top = 749.0
-offset_right = 1461.0
-offset_bottom = 949.0
-size_flags_horizontal = 8
-size_flags_vertical = 8
-alignment = 2
-
-[node name="TextureButton" type="TextureButton" parent="StartGame/MarginContainer/Panel/HBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="StartGame/MarginContainer/Panel"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-texture_normal = ExtResource("12_7sc4i")
-texture_hover = ExtResource("13_80cx4")
+offset_left = 643.0
+offset_top = 460.0
+offset_right = 1271.0
+offset_bottom = 791.0
+texture_normal = ExtResource("15_e8heu")
+texture_hover = ExtResource("16_rvswv")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="StartGame/MarginContainer/Panel/HBoxContainer/TextureButton"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -44.0
-offset_top = -40.0
-offset_right = 31.0
-offset_bottom = 8.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Play"
-label_settings = SubResource("LabelSettings_e36ub")
-
 [node name="Ground" type="Sprite2D" parent="."]
+position = Vector2(3, 0)
 texture = ExtResource("14_215e1")
 centered = false
 
-[connection signal="pressed" from="StartGame/MarginContainer/Panel/HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="StartGame/MarginContainer/Panel/TextureButton" to="." method="_on_texture_button_pressed"]
