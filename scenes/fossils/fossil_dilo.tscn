@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=3 uid="uid://da2p1h1y6h3bd"]
+
+[ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_5omry"]
+[ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_xe7sm"]
+[ext_resource type="Texture2D" uid="uid://drsujjccdesbm" path="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-1.png" id="3_ebrna"]
+[ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_nuymd"]
+[ext_resource type="Texture2D" uid="uid://bbdhtand16js8" path="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-2.png" id="5_15rkc"]
+[ext_resource type="Texture2D" uid="uid://c4yk2ckeq0wnr" path="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-3.png" id="6_y7wg2"]
+[ext_resource type="Texture2D" uid="uid://cn4tcwccpyyr1" path="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-4.png" id="7_hpayk"]
+[ext_resource type="Texture2D" uid="uid://w72rpiyubdi8" path="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-5.png" id="8_h3epq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
+shader = ExtResource("1_5omry")
+shader_parameter/color = Color(0.512934, 0.362883, 0.187769, 0.654902)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/enabled = true
+shader_parameter/modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y2xqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ebrna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_15rkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y7wg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hpayk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h3epq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fossil_avaceratops" type="Area2D"]
+material = SubResource("ShaderMaterial_dkytv")
+collision_mask = 5
+script = ExtResource("2_xe7sm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(10.5, -393, -17.9, -393, -38.8, -387, -42.8, -387, -264.8, -312, -267.3, -312, -357.3, -220, -358.4, -220, -434.4, -129, -436.3, -129, -442.5, -59.1, -442.5, -57.9, -499.5, -8.70001, -499.5, 43.1, -490.5, 92.4, -490.5, 98.2, -478.5, 147, -478.5, 151.3, -451.5, 240.2, -451.5, 244.3, -428.5, 310.4, -428.5, 312.6, -361.5, 325.6, -361.5, 326.8, -287.5, 334.8, -287.5, 335.8, -142.5, 348.8, -142.5, 349.9, -55.5, 354, -48.2, 354, -9.5, 387.8, -9.5, 389.2, -1.89999, 393, 77.1, 393, 144.8, 384, 153.7, 384, 318.9, 352, 323.7, 352, 364.6, 342, 370.8, 342, 408.8, 330, 412.5, 330, 416.5, 325, 418, 325, 422, 312, 423, 312, 444, 237, 445.1, 237, 499.5, 6.10001, 499.5, -16.8, 432.4, -78.9, 430.5, -124.1, 430.5, -164.2, 428.5, -173.4, 428.5, -177, 423.5, -181, 423.5, -182.1, 351, -225, 349.1, -225, 180.5, -331.2, 180.5, -332.2, 98.5, -379.2, 98.5, -380.3, 82.9, -387, 76, -387, 40, -368, 39.2, -368, 10.5, -392)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = ExtResource("3_nuymd")
+sprite_frames = SubResource("SpriteFrames_y2xqc")

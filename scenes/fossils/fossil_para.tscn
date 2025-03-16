@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=3 uid="uid://w6myf5m3w8ks"]
+
+[ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_ee4l2"]
+[ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_nyye6"]
+[ext_resource type="Texture2D" uid="uid://br1r2d1g5ce7m" path="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-1.png" id="3_c7u54"]
+[ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_tcvqj"]
+[ext_resource type="Texture2D" uid="uid://d1fxm7i0wj4hy" path="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-2.png" id="5_ee4l2"]
+[ext_resource type="Texture2D" uid="uid://dqshx74kicynb" path="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-3.png" id="6_nyye6"]
+[ext_resource type="Texture2D" uid="uid://c2y71hdtpxqbe" path="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-4.png" id="7_tcvqj"]
+[ext_resource type="Texture2D" uid="uid://dlg6vwx76j6li" path="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-5.png" id="8_dmuth"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
+shader = ExtResource("1_ee4l2")
+shader_parameter/color = Color(0.512934, 0.362883, 0.187769, 0.654902)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/enabled = true
+shader_parameter/modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ha54v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_c7u54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ee4l2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nyye6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tcvqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dmuth")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fossil_avaceratops" type="Area2D"]
+material = SubResource("ShaderMaterial_dkytv")
+collision_mask = 5
+script = ExtResource("2_nyye6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(365.1, -463, 311.9, -463, 270.6, -455, 265.8, -455, 121.9, -420, 116.7, -420, -23.2, -380, -27.3, -380, -112.4, -350, -115.4, -350, -182.5, -323, -185.5, -323, -256.5, -289, -258.6, -289, -297.5, -265, -300, -265, -371, -169.7, -461.4, -136, -464.5, -136, -489.5, -122, -491.9, -122, -498.9, -114, -500.5, -114, -534, 11.7, -534, 15.7, -576, 142.7, -576, 173.5, -571, 183.5, -571, 186.5, -515, 302.4, -515, 304.6, -490, 345.5, -490, 347.6, -471, 374.6, -471, 376.7, -433, 423.8, -433, 425.9, -406, 450.9, -406, 452.2, -387.2, 463, -329, 463, -192, 441.7, -192, 440.8, 64.2, 413, 72.2, 413, 156.4, 397, 160.5, 397, 179.5, 387, 181.9, 387, 200.9, 365, 202.2, 365, 274, 228.5, 274, 227.6, 347, 212.6, 347, 211.8, 404.2, 206, 412.2, 206, 475.4, 192, 477.9, 192, 482.9, 186, 484.6, 186, 486.5, 178, 487.6, 178, 511.5, 74, 512.7, 74, 547.7, -117, 548.7, -117, 563, -214.9, 563, -221.6, 576, -292.9, 576, -344, 564, -356.9, 564, -358.1, 537, -375.2, 537, -376.2, 402, -449.3, 402, -450.4)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = ExtResource("3_tcvqj")
+sprite_frames = SubResource("SpriteFrames_ha54v")

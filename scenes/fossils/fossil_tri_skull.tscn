@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=3 uid="uid://cq4iq41s46kwt"]
+
+[ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_2w0xv"]
+[ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_5mttb"]
+[ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_a3p2g"]
+[ext_resource type="Texture2D" uid="uid://bif1ewckh2amb" path="res://assets/fossils/Skulls/fossil_skull_pteranodon-1.png" id="4_v8a7j"]
+[ext_resource type="Texture2D" uid="uid://bcfhiylirrnyo" path="res://assets/fossils/Skulls/fossil_skull_pteranodon-2.png" id="5_48cf0"]
+[ext_resource type="Texture2D" uid="uid://bxvcl2mna5066" path="res://assets/fossils/Skulls/fossil_skull_pteranodon-3.png" id="6_eiqkh"]
+[ext_resource type="Texture2D" uid="uid://b7d68tu2cwp03" path="res://assets/fossils/Skulls/fossil_skull_pteranodon-4.png" id="7_pifxi"]
+[ext_resource type="Texture2D" uid="uid://jejyfq38ntbk" path="res://assets/fossils/Skulls/fossil_skull_pteranodon-5.png" id="8_iptgp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
+shader = ExtResource("1_2w0xv")
+shader_parameter/color = Color(0.512934, 0.362883, 0.187769, 0.654902)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/enabled = true
+shader_parameter/modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jf1uv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_v8a7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_48cf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_eiqkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pifxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_iptgp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fossil_avaceratops" type="Area2D"]
+material = SubResource("ShaderMaterial_dkytv")
+collision_mask = 5
+script = ExtResource("2_5mttb")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(339.2, -302, 289.5, -302, 242.7, -296, 234.8, -296, 60.7, -267, 53.8, -267, -55.8, -244.7, -146.7, -273, -151.3, -273, -292.4, -223, -295.4, -223, -410.3, -174, -413.5, -174, -464.5, -147, -466.8, -147, -484.7, -131, -486.8, -131, -510, 46.8, -510, 71.2, -489, 110.5, -489, 112.6, -447, 180.6, -447, 182.8, -428, 201.8, -428, 203.7, -340.2, 219, -335.1, 219, -205, 251.5, -205, 252.7, -139, 264.7, -139, 265.7, -3, 290.7, -3, 291.8, 74.6, 302, 133.3, 302, 168, 277, 168, 276.1, 256, 219.1, 256, 218.2, 280.9, 205.2, 320, 209.7, 320, 211.3, 329.3, 210, 334.8, 210, 337.8, 207, 340, 207, 425, 99.7, 425, 97.7, 489.9, 25, 491.1, 25, 510, -2.89999, 510, -20, 496.6, -43.3, 510, -80.9, 510, -90.7, 481, -220.4, 481, -223.1, 415, -263.1, 415, -264.2, 359, -294.3, 359, -295.4)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = ExtResource("3_a3p2g")
+sprite_frames = SubResource("SpriteFrames_jf1uv")
