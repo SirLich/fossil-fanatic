@@ -19,7 +19,7 @@
 script = ExtResource("2_7q2qf")
 name = "Velociraptor"
 description = ""
-best_time_seconds = 20
+best_time_seconds = 10
 level_scene = ExtResource("3_nqcwp")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
@@ -27,7 +27,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 script = ExtResource("2_7q2qf")
 name = "Parasaurolophus"
 description = ""
-best_time_seconds = 20
+best_time_seconds = 30
 level_scene = ExtResource("4_7q2qf")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
