@@ -5,8 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://dbikr3gejwkoq" path="res://assets/audio/sound_effects/brush/sfx_brush_stroke_normal-003.wav" id="3_uw18m"]
 
 [resource]
-random_pitch = 1.19
-random_volume_offset_db = 0.3
+random_pitch = 1.05
+random_volume_offset_db = 0.2
 streams_count = 3
 stream_0/stream = ExtResource("1_evgue")
 stream_1/stream = ExtResource("2_mefx0")

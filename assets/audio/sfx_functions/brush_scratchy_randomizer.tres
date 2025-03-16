@@ -5,8 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://ju2eaaym00tq" path="res://assets/audio/sound_effects/brush/sfx_brush_stroke_scratchy-003.wav" id="3_uk5dm"]
 
 [resource]
-random_pitch = 1.1
-random_volume_offset_db = 0.35
+random_pitch = 1.05
+random_volume_offset_db = 0.2
 streams_count = 3
 stream_0/stream = ExtResource("1_hmx83")
 stream_1/stream = ExtResource("2_llwnv")
