@@ -1,13 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bdxj0emtbxm4u"]
+[gd_scene load_steps=5 format=3 uid="uid://bdxj0emtbxm4u"]
 
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="1_gew73"]
 [ext_resource type="PackedScene" uid="uid://cepskpeqtffmp" path="res://scenes/fossils/fossil_tri.tscn" id="2_hldmh"]
-[ext_resource type="PackedScene" uid="uid://ywv2h6vt71if" path="res://scenes/rock/rock_21.tscn" id="3_ofchu"]
-[ext_resource type="PackedScene" uid="uid://dd0xxc3qf8g0s" path="res://scenes/rock/rock_16.tscn" id="4_jq78i"]
-[ext_resource type="PackedScene" uid="uid://dd3q00355i23t" path="res://scenes/rock/rock_10.tscn" id="5_lsnkt"]
-[ext_resource type="PackedScene" uid="uid://fc47bpu8outc" path="res://scenes/rock/rock_3.tscn" id="6_wj73x"]
-[ext_resource type="PackedScene" uid="uid://sm48vjbd723f" path="res://scenes/rock/rock_2.tscn" id="7_0unm6"]
-[ext_resource type="PackedScene" uid="uid://cwa0napga1sso" path="res://scenes/rock/rock_1.tscn" id="8_q42ux"]
+[ext_resource type="PackedScene" uid="uid://wtf2w4bu57wi" path="res://levels/layers/layer_1.tscn" id="3_20opy"]
+[ext_resource type="PackedScene" uid="uid://galc4u7g16as" path="res://levels/layers/layer_2.tscn" id="3_bmgug"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,27 +11,29 @@
 texture = ExtResource("1_gew73")
 centered = false
 
-[node name="Fossil_avaceratops" parent="." instance=ExtResource("2_hldmh")]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Fossil_avaceratops" parent="Node2D" instance=ExtResource("2_hldmh")]
 position = Vector2(1562, 723)
 scale = Vector2(0.350165, 0.350165)
 
-[node name="Rock" parent="." instance=ExtResource("3_ofchu")]
-position = Vector2(407, 905)
+[node name="Level2" parent="." instance=ExtResource("3_bmgug")]
+position = Vector2(-839, -1324)
 
-[node name="Rock2" parent="." instance=ExtResource("4_jq78i")]
-position = Vector2(482, 498)
+[node name="Level3" parent="." instance=ExtResource("3_bmgug")]
+position = Vector2(-839, -1324)
 
-[node name="Rock3" parent="." instance=ExtResource("5_lsnkt")]
-position = Vector2(596, 224)
+[node name="Level4" parent="." instance=ExtResource("3_bmgug")]
+position = Vector2(-839, -1324)
 
-[node name="Rock4" parent="." instance=ExtResource("6_wj73x")]
-position = Vector2(1566, 738)
+[node name="Level5" parent="." instance=ExtResource("3_bmgug")]
+position = Vector2(602, -950)
 
-[node name="Rock5" parent="." instance=ExtResource("7_0unm6")]
-position = Vector2(1481, 530)
+[node name="Level6" parent="." instance=ExtResource("3_bmgug")]
+position = Vector2(-829, -500)
 
-[node name="Rock6" parent="." instance=ExtResource("8_q42ux")]
-position = Vector2(985, 438)
+[node name="Level7" parent="." instance=ExtResource("3_bmgug")]
+position = Vector2(186, -192)
 
-[node name="Rock7" parent="." instance=ExtResource("7_0unm6")]
-position = Vector2(1031, 316)
+[node name="Level1" parent="." instance=ExtResource("3_20opy")]
+position = Vector2(-1223, 930)

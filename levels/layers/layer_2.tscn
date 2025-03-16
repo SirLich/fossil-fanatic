@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://galc4u7g16as"]
+
+[ext_resource type="Script" uid="uid://dcec4tbqoio3t" path="res://levels/layers/layer.gd" id="1_85ktw"]
+[ext_resource type="PackedScene" uid="uid://bf3e5r1dkyedg" path="res://scenes/rock/rock_7.tscn" id="2_d2r8u"]
+[ext_resource type="PackedScene" uid="uid://krhbdx33i2g3" path="res://scenes/rock/rock_8.tscn" id="4_4kbmb"]
+[ext_resource type="PackedScene" uid="uid://sm48vjbd723f" path="res://scenes/rock/rock_2.tscn" id="7_q7tmj"]
+[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/rock/rock_4.tscn" id="8_hs6jw"]
+[ext_resource type="PackedScene" uid="uid://2jh4u5s34gvq" path="res://scenes/rock/rock_6.tscn" id="10_nudl3"]
+[ext_resource type="PackedScene" uid="uid://dd3q00355i23t" path="res://scenes/rock/rock_10.tscn" id="11_3u24f"]
+[ext_resource type="PackedScene" uid="uid://fc47bpu8outc" path="res://scenes/rock/rock_3.tscn" id="20_nds56"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_85ktw")
+
+[node name="Rock" parent="." instance=ExtResource("7_q7tmj")]
+position = Vector2(744, 588)
+
+[node name="Rock2" parent="." instance=ExtResource("20_nds56")]
+position = Vector2(1143, 750)
+
+[node name="Rock3" parent="." instance=ExtResource("10_nudl3")]
+position = Vector2(829, 662)
+
+[node name="Rock4" parent="." instance=ExtResource("8_hs6jw")]
+position = Vector2(902, 518)
+
+[node name="Rock5" parent="." instance=ExtResource("2_d2r8u")]
+position = Vector2(1012, 772)
+
+[node name="Rock6" parent="." instance=ExtResource("20_nds56")]
+position = Vector2(1078, 512)
+
+[node name="Rock7" parent="." instance=ExtResource("4_4kbmb")]
+position = Vector2(1157, 684)
+
+[node name="Rock8" parent="." instance=ExtResource("11_3u24f")]
+position = Vector2(1179, 548)
