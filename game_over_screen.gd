@@ -51,8 +51,8 @@ func set_health():
 		" very damaged ",
 		" damaged ",
 		" slightly damaged ",
-		"nearly perfect",
-		" mint "
+		" nearly perfect",
+		" perfect "
 	]
 	
 	var level = Bus.get_current_level()
