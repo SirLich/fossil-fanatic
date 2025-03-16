@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bu1ci1jhpw4u5"]
+[gd_scene load_steps=16 format=3 uid="uid://bu1ci1jhpw4u5"]
 
 [ext_resource type="Script" uid="uid://esvgo8trh17h" path="res://game_over_screen.gd" id="1_fdghx"]
 [ext_resource type="PackedScene" uid="uid://b817wce4nifhn" path="res://levels/star.tscn" id="4_lqr8p"]
@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://coexytxldfvlm" path="res://assets/fonts/barlow/Barlow-Bold.ttf" id="7_0ccdq"]
 [ext_resource type="Texture2D" uid="uid://dcmhtd7rnubom" path="res://assets/ui/Arrow_Next.png" id="7_r1tj2"]
 [ext_resource type="Texture2D" uid="uid://psjgplfl1pda" path="res://assets/ui/Arrow_Repeat_Hover.png" id="9_akil3"]
+[ext_resource type="Script" uid="uid://dh0fh6o726g1h" path="res://button_shim.gd" id="10_c5lb4"]
 [ext_resource type="Texture2D" uid="uid://cnqaqndbhr3yu" path="res://assets/ui/Arrow_Next_Hover.png" id="11_3dait"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w3hxg"]
@@ -121,6 +122,7 @@ alignment = 2
 layout_mode = 2
 texture_normal = ExtResource("6_lqr8p")
 texture_hover = ExtResource("9_akil3")
+script = ExtResource("10_c5lb4")
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2"]
 modulate = Color(1, 1, 1, 0)
@@ -139,6 +141,7 @@ autowrap_mode = 2
 layout_mode = 2
 texture_normal = ExtResource("7_r1tj2")
 texture_hover = ExtResource("11_3dait")
+script = ExtResource("10_c5lb4")
 
 [connection signal="button_up" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/ReplayButton" to="." method="_on_replay_button_button_up"]
 [connection signal="button_up" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/NextLevelButton" to="." method="_on_next_level_button_button_up"]
