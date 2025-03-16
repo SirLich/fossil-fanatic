@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelDescription" load_steps=3 format=3 uid="uid://ckgydywc82n41"]
+
+[ext_resource type="PackedScene" uid="uid://bdxj0emtbxm4u" path="res://levels/level_3.tscn" id="1_c4s3n"]
+[ext_resource type="Script" uid="uid://gbjidnc5cov7" path="res://level_descriptions/level_description.gd" id="2_yu5wf"]
+
+[resource]
+script = ExtResource("2_yu5wf")
+name = "sefds"
+description = "d|sfsdfsdfdssdfsdf"
+best_time_seconds = 20
+level_scene = ExtResource("1_c4s3n")
+metadata/_custom_type_script = "uid://gbjidnc5cov7"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://jw2jfhmwcx"]
+[gd_scene load_steps=10 format=3 uid="uid://jw2jfhmwcx"]
 
 [ext_resource type="Script" uid="uid://emtgsupplk38" path="res://src/bus.gd" id="1_jel5a"]
 [ext_resource type="Script" uid="uid://gbjidnc5cov7" path="res://level_descriptions/level_description.gd" id="2_7q2qf"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dt4djx6077q0i" path="res://assets/audio/music/Kaput_IngameMusic_v_1.0.wav" id="4_4qkln"]
 [ext_resource type="Resource" uid="uid://b3aeahclyejh8" path="res://level_descriptions/level_2.tres" id="4_hu2lu"]
 [ext_resource type="AudioStream" uid="uid://ten5sj53vblp" path="res://assets/audio/sfx_functions/stone_destr_randomizer.tres" id="5_7o3tk"]
+[ext_resource type="Resource" uid="uid://ckgydywc82n41" path="res://level_descriptions/level_3.tres" id="5_fwtcj"]
 [ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="5_ofiws"]
 [ext_resource type="AudioStream" uid="uid://cpc0mjyvacwy5" path="res://assets/audio/sfx_functions/fossil_randomizer.tres" id="7_kyr87"]
 
@@ -14,7 +15,7 @@ script = ExtResource("1_jel5a")
 destroy_effect = NodePath("DestroyPlayer")
 damage_effect = NodePath("DamagePlayer")
 fossil_damage = NodePath("DamageFossil")
-levels_in_order = Array[ExtResource("2_7q2qf")]([ExtResource("3_fwtcj"), ExtResource("4_hu2lu")])
+levels_in_order = Array[ExtResource("2_7q2qf")]([ExtResource("3_fwtcj"), ExtResource("4_hu2lu"), ExtResource("5_fwtcj")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4qkln")

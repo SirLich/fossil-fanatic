@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdxj0emtbxm4u"]
+
+[ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="1_gew73"]
+[ext_resource type="PackedScene" uid="uid://cepskpeqtffmp" path="res://scenes/fossils/fossil_tri.tscn" id="2_hldmh"]
+[ext_resource type="PackedScene" uid="uid://ywv2h6vt71if" path="res://scenes/rock/rock_21.tscn" id="3_ofchu"]
+[ext_resource type="PackedScene" uid="uid://dd0xxc3qf8g0s" path="res://scenes/rock/rock_16.tscn" id="4_jq78i"]
+[ext_resource type="PackedScene" uid="uid://dd3q00355i23t" path="res://scenes/rock/rock_10.tscn" id="5_lsnkt"]
+[ext_resource type="PackedScene" uid="uid://fc47bpu8outc" path="res://scenes/rock/rock_3.tscn" id="6_wj73x"]
+[ext_resource type="PackedScene" uid="uid://sm48vjbd723f" path="res://scenes/rock/rock_2.tscn" id="7_0unm6"]
+[ext_resource type="PackedScene" uid="uid://cwa0napga1sso" path="res://scenes/rock/rock_1.tscn" id="8_q42ux"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Ground" type="Sprite2D" parent="."]
+texture = ExtResource("1_gew73")
+centered = false
+
+[node name="Fossil_avaceratops" parent="." instance=ExtResource("2_hldmh")]
+position = Vector2(1562, 723)
+scale = Vector2(0.350165, 0.350165)
+
+[node name="Rock" parent="." instance=ExtResource("3_ofchu")]
+position = Vector2(407, 905)
+
+[node name="Rock2" parent="." instance=ExtResource("4_jq78i")]
+position = Vector2(482, 498)
+
+[node name="Rock3" parent="." instance=ExtResource("5_lsnkt")]
+position = Vector2(975, 637)
+
+[node name="Rock4" parent="." instance=ExtResource("6_wj73x")]
+position = Vector2(1624, 736)
+
+[node name="Rock5" parent="." instance=ExtResource("7_0unm6")]
+position = Vector2(1481, 530)
+
+[node name="Rock6" parent="." instance=ExtResource("8_q42ux")]
+position = Vector2(985, 438)
+
+[node name="Rock7" parent="." instance=ExtResource("7_0unm6")]
+position = Vector2(1031, 316)
