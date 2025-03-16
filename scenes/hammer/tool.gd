@@ -9,6 +9,8 @@ class_name Tool
 
 var can_hit = true
 
+@export var is_brush = false
+
 var circle_points = []
 var old_colliders = []
 var colliders = []
@@ -36,6 +38,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if can_hit:
 		if event.is_action_released("use_tool"):
 			can_hit = false
+			$AudioStreamPlayer2D.play()
 			await get_tree().create_timer(hit_delay).timeout
 			anim_player.stop()
 			anim_player.play("hit", 0.0)
@@ -53,7 +56,11 @@ func gather_colliders(pos):
 	var query = PhysicsPointQueryParameters2D.new()
 	query.position = pos
 	query.collide_with_areas = true
-	query.collision_mask = pow(2, 1-1)
+	if is_brush:
+		query.collision_mask = pow(2, 3-1)
+	else:
+		query.collision_mask = pow(2, 1-1)
+
 	
 	var intersections = direct_space.intersect_point(query)
 	if intersections:

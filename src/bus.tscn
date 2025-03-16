@@ -16,7 +16,7 @@ script = ExtResource("1_jel5a")
 destroy_effect = NodePath("DestroyPlayer")
 damage_effect = NodePath("DamagePlayer")
 fossil_damage = NodePath("DamageFossil")
-levels_in_order = Array[ExtResource("2_7q2qf")]([ExtResource("3_fwtcj"), ExtResource("4_hu2lu"), ExtResource("5_fwtcj"), ExtResource("6_hu2lu")])
+levels_in_order = Array[ExtResource("2_7q2qf")]([ExtResource("5_fwtcj"), ExtResource("3_fwtcj"), ExtResource("4_hu2lu"), ExtResource("6_hu2lu")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4qkln")

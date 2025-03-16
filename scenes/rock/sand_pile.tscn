@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://cs0i12ani7rxf"]
+
+[ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_5x2wy"]
+[ext_resource type="Script" uid="uid://cwbpe3pxo1t27" path="res://scenes/rock/sand_pile.gd" id="2_nm5ha"]
+[ext_resource type="Shader" uid="uid://7cqcmhwpbqk3" path="res://assets/shaders/highlight.gdshader" id="3_0jsf7"]
+[ext_resource type="Texture2D" uid="uid://crgv87txlixbg" path="res://temp/sand.png" id="3_hyrip"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
+shader = ExtResource("1_5x2wy")
+shader_parameter/color = Color(0.512934, 0.362883, 0.187769, 0.654902)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/enabled = true
+shader_parameter/modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cpmkv"]
+shader = ExtResource("3_0jsf7")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/enabled = false
+shader_parameter/modulate = Color(1, 1, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0jsf7"]
+radius = 52.0384
+
+[node name="Sand" type="Area2D"]
+modulate = Color(0.486907, 0.41944, 0.337824, 1)
+material = SubResource("ShaderMaterial_dkytv")
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("2_nm5ha")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_cpmkv")
+position = Vector2(0.999998, 6)
+scale = Vector2(0.695, 0.695)
+texture = ExtResource("3_hyrip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0jsf7")

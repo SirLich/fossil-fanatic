@@ -44,6 +44,7 @@ animations = [{
 
 [node name="Fossil_avaceratops" type="Area2D"]
 material = SubResource("ShaderMaterial_dkytv")
+collision_mask = 5
 script = ExtResource("2_p3368")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
