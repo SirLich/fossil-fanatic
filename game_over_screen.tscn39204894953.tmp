@@ -25,11 +25,10 @@ font = ExtResource("7_0ccdq")
 font_size = 40
 font_color = Color(0.414042, 0.297175, 0.209878, 1)
 
-[node name="GameOverScreen" type="CanvasLayer" node_paths=PackedStringArray("time_label", "damage_label", "time_need_label", "star_container", "fossil")]
+[node name="GameOverScreen" type="CanvasLayer" node_paths=PackedStringArray("time_label", "damage_label", "star_container", "fossil")]
 script = ExtResource("1_fdghx")
 time_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/Time")
 damage_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/VBOx/Damage")
-time_need_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/VBOx/MarginContainer/Info")
 star_container = NodePath("MarginContainer/PanelContainer/VBoxContainer/MarginContainer2/StarContainer")
 star_scene = ExtResource("4_lqr8p")
 empty_star = ExtResource("5_r1tj2")
@@ -91,14 +90,11 @@ text = "You discovered a Plateron, in mind condition.sdfsdfsfsdffsdfs"
 label_settings = SubResource("LabelSettings_akil3")
 autowrap_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer/VBOx"]
-layout_mode = 2
-theme_override_constants/margin_top = 50
-
-[node name="Info" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/VBOx/MarginContainer"]
+[node name="Info" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/VBOx"]
 custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+text = "Score in :20 seconds or less for three stars!"
 label_settings = SubResource("LabelSettings_3dait")
 horizontal_alignment = 1
 autowrap_mode = 2

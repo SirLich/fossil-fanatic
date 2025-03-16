@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("1_jp86j")
-name = "Boogie Woogie"
-description = ""
-best_time_seconds = 20
+name = "Fantastic Fossil"
+description = "Lord knows"
+best_time_seconds = 5
 level_scene = ExtResource("1_1w0v8")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"

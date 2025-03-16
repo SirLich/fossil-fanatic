@@ -3,6 +3,7 @@ class_name GameOverScreen
 
 @export var time_label : Label
 @export var damage_label : Label
+@export var time_need_label : Label
 @export var star_container : Container
 @export var star_scene : PackedScene
 @export var empty_star : PackedScene
@@ -18,7 +19,6 @@ func _ready() -> void:
 	tween.tween_property(self, "offset:y", 0, 0.4)
 	
 	
-	
 func _on_replay_button_button_up() -> void:
 	Bus.play_same_level()
 	queue_free()
@@ -29,12 +29,13 @@ func _on_next_level_button_button_up() -> void:
 
 func set_time(time):
 	_time = time
-		
-	var total_seconds = int(time / 1000)
+	time_label.text = get_time_as_string(time)
+
+func get_time_as_string(in_time):
+	var total_seconds = int(in_time / 1000)
 	var minutes = total_seconds / 60
 	var seconds = total_seconds % 60
-	
-	time_label.text = str(minutes, " Minutes ", seconds, " Seconds")
+	return str(minutes, " Minutes ", seconds, " Seconds")
 	
 func set_health(health):
 	_health = health
@@ -51,11 +52,19 @@ func set_health(health):
 	var level = Bus.get_current_level()
 	damage_label.text = "You discovered a " + level.name + " in " + health_words[_health] + " condition."
 	
+	var required_time_msecs = level.best_time_seconds * 1000
+	if _time > required_time_msecs:
+		time_need_label.text = "Time to beat: " + get_time_as_string(required_time_msecs)
+	
+	
 func add_star(scene_type):
 	var new_scene = scene_type.instantiate()
 	star_container.add_child(new_scene)
 
 func set_stars_count(num_stars):
+	for child in star_container.get_children():
+		star_container.remove_child(child)
+	
 	for i in range(num_stars):
 		add_star(star_scene)
 	for i in range(3-num_stars):
