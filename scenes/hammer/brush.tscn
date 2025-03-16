@@ -96,7 +96,7 @@ collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_gt162")
 size = 15
-hit_delay = 0.3
+hit_delay = 0.2
 anim_player = NodePath("AnimationPlayer")
 is_brush = true
 
