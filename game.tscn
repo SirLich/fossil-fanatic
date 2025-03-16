@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=10 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://tool_button.gd" id="3_ryrav"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d0et4vc24oa8h" path="res://scenes/hammer/hammer.tscn" id="4_eow3j"]
 [ext_resource type="Texture2D" uid="uid://1j0dnkd0801w" path="res://assets/ui/Toolbar_Pickaxe.png" id="4_j5wjh"]
 [ext_resource type="Texture2D" uid="uid://dxh4sr01tyhlw" path="res://assets/ui/Toolbar_Hammer.png" id="4_vef74"]
+[ext_resource type="Texture2D" uid="uid://dgt0vpytp3jke" path="res://assets/ui/Toolbar_Pickaxe_Hover.png" id="5_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://bjhywp2ay0v5s" path="res://assets/ui/Toolbar_Hammer_Hover.png" id="9_vef74"]
 [ext_resource type="PackedScene" uid="uid://bu1ci1jhpw4u5" path="res://game_over_screen.tscn" id="11_mfdv2"]
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("hud")]
@@ -37,6 +39,7 @@ layout_mode = 2
 [node name="HammerButton" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
 layout_mode = 2
 texture_normal = ExtResource("4_j5wjh")
+texture_hover = ExtResource("5_j5wjh")
 script = ExtResource("3_ryrav")
 game = NodePath("../../../..")
 tool_scene = ExtResource("4_7jktm")
@@ -44,6 +47,7 @@ tool_scene = ExtResource("4_7jktm")
 [node name="PickButton" type="TextureButton" parent="CanvasLayer/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
 layout_mode = 2
 texture_normal = ExtResource("4_vef74")
+texture_hover = ExtResource("9_vef74")
 script = ExtResource("3_ryrav")
 game = NodePath("../../../..")
 tool_scene = ExtResource("4_eow3j")
