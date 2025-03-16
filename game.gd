@@ -1,6 +1,7 @@
 extends Node2D
 class_name Game
 
+@export var start_screen : CanvasLayer
 @export var starting_tool : PackedScene
 @export var game_over_scene : PackedScene
 @export var hud : CanvasLayer
@@ -11,10 +12,10 @@ var old_tool
 var start_time
 
 func _ready() -> void:
+	hud.visible = false
 	Bus.on_game_over.connect(trigger_game_over)
 	Bus.on_level_selected.connect(play_level)
-	Bus.play_same_level()
-	
+		
 func play_level(level : LevelDescription):
 	hud.visible = true
 	var new_level = level.level_scene.instantiate()
@@ -40,3 +41,8 @@ func trigger_game_over(health, texture):
 	game_over_ui.set_stars()
 	game_over_ui.set_texture(texture)
 	add_child(game_over_ui)
+
+
+func _on_texture_button_pressed() -> void:
+	start_screen.visible = false
+	Bus.play_same_level()

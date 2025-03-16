@@ -11,6 +11,9 @@ func get_current_level():
 	return levels_in_order[current_level]
 	
 func play_next_level():
+	if current_level > levels_in_order.size():
+		pass
+			
 	current_level += 1
 	on_level_selected.emit(levels_in_order[current_level])
 	
