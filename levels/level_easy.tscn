@@ -24,23 +24,28 @@ centered = false
 position = Vector2(997, 570)
 
 [node name="Rock" parent="." instance=ExtResource("3_8itow")]
+visible = false
 position = Vector2(1238, 352)
 rock_particle_scene = ExtResource("4_tmxu3")
 
 [node name="Rock2" parent="." instance=ExtResource("4_btl7j")]
+visible = false
 position = Vector2(1525, 944)
 rock_particle_scene = ExtResource("4_tmxu3")
 
 [node name="Rock3" parent="." instance=ExtResource("5_tmxu3")]
+visible = false
 position = Vector2(882, 288)
 color = 2
 rock_particle_scene = ExtResource("4_tmxu3")
 
 [node name="Rock4" parent="." instance=ExtResource("6_qpe02")]
+visible = false
 position = Vector2(732, 536)
 rock_particle_scene = ExtResource("4_tmxu3")
 
 [node name="Rock5" parent="." instance=ExtResource("7_g75uv")]
+visible = false
 position = Vector2(834, 804)
 rock_particle_scene = ExtResource("4_tmxu3")
 
