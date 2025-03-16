@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbvn1d1mxmm08"
-path="res://.godot/imported/fossil_footprint_avaceratops-1.png-2ac2d0883dc609cf84b8bcb7229d4344.ctex"
+uid="uid://daex6ie352dk3"
+path="res://.godot/imported/fossil_footprint_triceratops-4.png-ad32704f1b99d39cef6e15d322befef3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/fossil_footprint_avaceratops-1.png"
-dest_files=["res://.godot/imported/fossil_footprint_avaceratops-1.png-2ac2d0883dc609cf84b8bcb7229d4344.ctex"]
+source_file="res://assets/fossils/Footprints/fossil_footprint_triceratops-4.png"
+dest_files=["res://.godot/imported/fossil_footprint_triceratops-4.png-ad32704f1b99d39cef6e15d322befef3.ctex"]
 
 [params]
 

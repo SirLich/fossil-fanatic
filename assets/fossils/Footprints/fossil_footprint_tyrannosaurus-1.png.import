@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cihthqq0yfhqe"
-path="res://.godot/imported/fossil_footprint_avaceratops-3.png-86c18156ee7b0fa5f1a6df1dfe982741.ctex"
+uid="uid://bpmcggx30q2m4"
+path="res://.godot/imported/fossil_footprint_tyrannosaurus-1.png-5946e8f6f0a4f606b126746b664ad05a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/fossil_footprint_avaceratops-3.png"
-dest_files=["res://.godot/imported/fossil_footprint_avaceratops-3.png-86c18156ee7b0fa5f1a6df1dfe982741.ctex"]
+source_file="res://assets/fossils/Footprints/fossil_footprint_tyrannosaurus-1.png"
+dest_files=["res://.godot/imported/fossil_footprint_tyrannosaurus-1.png-5946e8f6f0a4f606b126746b664ad05a.ctex"]
 
 [params]
 

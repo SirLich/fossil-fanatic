@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://fkotx5jd8c5s"]
 
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="1_0srwa"]
-[ext_resource type="PackedScene" uid="uid://wow2jnvojp3h" path="res://scenes/fossils/fossil_1.tscn" id="2_v5uil"]
+[ext_resource type="PackedScene" uid="uid://wow2jnvojp3h" path="res://scenes/fossils/fossil_avaceratops.tscn" id="2_v5uil"]
 [ext_resource type="PackedScene" uid="uid://wtf2w4bu57wi" path="res://levels/layers/layer_1.tscn" id="3_0srwa"]
 
 [node name="Node2D" type="Node2D"]

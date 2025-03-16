@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://bu1ci1jhpw4u5"]
 
 [ext_resource type="Script" uid="uid://esvgo8trh17h" path="res://game_over_screen.gd" id="1_fdghx"]
-[ext_resource type="Texture2D" uid="uid://cbvn1d1mxmm08" path="res://assets/fossils/fossil_footprint_avaceratops-1.png" id="2_w3hxg"]
 [ext_resource type="PackedScene" uid="uid://b817wce4nifhn" path="res://levels/star.tscn" id="4_lqr8p"]
 [ext_resource type="Texture2D" uid="uid://b2lnhfmjx3bhk" path="res://assets/ui/Fin_Background.png" id="4_tmhko"]
+[ext_resource type="Texture2D" uid="uid://tgbax53obl3i" path="res://assets/fossils/Footprints/fossil_footprint_avaceratops-1.png" id="5_3dait"]
 [ext_resource type="PackedScene" uid="uid://bhrgkkh3oe3px" path="res://levels/empty_star.tscn" id="5_r1tj2"]
 [ext_resource type="Texture2D" uid="uid://qfnx17i4xto0" path="res://assets/ui/Arrow_Repeat.png" id="6_lqr8p"]
 [ext_resource type="LabelSettings" uid="uid://bf23cgxfjefwf" path="res://default_label.tres" id="6_r1tj2"]
@@ -56,7 +56,7 @@ layout_mode = 2
 [node name="Fossil" type="TextureRect" parent="MarginContainer/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(312, 312)
 layout_mode = 2
-texture = ExtResource("2_w3hxg")
+texture = ExtResource("5_3dait")
 expand_mode = 1
 stretch_mode = 5
 

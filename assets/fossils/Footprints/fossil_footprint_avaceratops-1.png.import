@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dghdy5r4mwhrb"
-path="res://.godot/imported/fossil_footprint_brontosaurus-1.png-735c6863ae9325eddec839856303d954.ctex"
+uid="uid://tgbax53obl3i"
+path="res://.godot/imported/fossil_footprint_avaceratops-1.png-cbda2ef8050566c8e7adcf778954ca8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/fossil_footprint_brontosaurus-1.png"
-dest_files=["res://.godot/imported/fossil_footprint_brontosaurus-1.png-735c6863ae9325eddec839856303d954.ctex"]
+source_file="res://assets/fossils/Footprints/fossil_footprint_avaceratops-1.png"
+dest_files=["res://.godot/imported/fossil_footprint_avaceratops-1.png-cbda2ef8050566c8e7adcf778954ca8c.ctex"]
 
 [params]
 
