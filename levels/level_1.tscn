@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bcxshrlu7a4rp" path="res://scenes/rock/rock_17.tscn" id="5_gwceb"]
 [ext_resource type="PackedScene" uid="uid://c5om4h6stmig5" path="res://scenes/rock/rock_11.tscn" id="6_l53as"]
 
-[node name="Level2" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
 [node name="Ground" type="Sprite2D" parent="."]
 texture = ExtResource("1_bt44k")
@@ -15,29 +15,33 @@ centered = false
 metadata/_edit_lock_ = true
 
 [node name="Fossil_avaceratops" parent="." instance=ExtResource("2_btoec")]
-position = Vector2(1540, 838)
+position = Vector2(1231, 378)
+scale = Vector2(0.724585, 0.724585)
 
 [node name="Rock2" parent="." instance=ExtResource("3_bt44k")]
-position = Vector2(594, 290)
+position = Vector2(445, 1073)
 
 [node name="Rock3" parent="." instance=ExtResource("3_bt44k")]
-position = Vector2(1582, 335)
+position = Vector2(1450, 314)
 rotation = 0.315571
 
 [node name="Rock" parent="." instance=ExtResource("3_bt44k")]
-position = Vector2(299, 911)
+position = Vector2(761, 336)
+rotation = -2.00172
 
 [node name="Rock4" parent="." instance=ExtResource("3_bt44k")]
-position = Vector2(972, 1059)
+position = Vector2(741, 545)
 
 [node name="Rock5" parent="." instance=ExtResource("3_bt44k")]
-position = Vector2(1075, 723)
+position = Vector2(1016, 459)
 
 [node name="Rock6" parent="." instance=ExtResource("4_btoec")]
-position = Vector2(1053, 371)
+position = Vector2(1176, 246)
+rotation = -0.501972
 
 [node name="Rock7" parent="." instance=ExtResource("5_gwceb")]
-position = Vector2(1431, 744)
+position = Vector2(1672, 1022)
 
 [node name="Rock8" parent="." instance=ExtResource("6_l53as")]
-position = Vector2(597, 680)
+position = Vector2(1118, 650)
+rotation = 2.0643
