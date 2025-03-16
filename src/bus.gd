@@ -1,5 +1,8 @@
 extends Node
 
+@export var menu_music :AudioStreamPlayer
+@export var game_music :AudioStreamPlayer
+
 @export var button_sound : AudioStreamPlayer
 
 @export var destroy_effect : AudioStreamPlayer

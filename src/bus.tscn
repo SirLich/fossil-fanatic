@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://jw2jfhmwcx"]
+[gd_scene load_steps=23 format=3 uid="uid://jw2jfhmwcx"]
 
 [ext_resource type="Script" uid="uid://emtgsupplk38" path="res://src/bus.gd" id="1_jel5a"]
 [ext_resource type="Script" uid="uid://gbjidnc5cov7" path="res://level_descriptions/level_description.gd" id="2_7q2qf"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://cpc0mjyvacwy5" path="res://assets/audio/sfx_functions/fossil_randomizer.tres" id="7_kyr87"]
 [ext_resource type="PackedScene" uid="uid://bdxj0emtbxm4u" path="res://levels/level_3.tscn" id="8_ja42h"]
 [ext_resource type="PackedScene" uid="uid://fkotx5jd8c5s" path="res://levels/level_2.tscn" id="8_n0b7l"]
+[ext_resource type="AudioStream" uid="uid://bnyt5i4ilr0hd" path="res://assets/audio/music/Kaput_MenuMusic_loop.wav" id="10_erqox"]
 [ext_resource type="AudioStream" uid="uid://cgj187eg48vp6" path="res://assets/audio/sound_effects/menu/sfx_button_forward.wav" id="14_6th81"]
 
 [sub_resource type="Resource" id="Resource_kyr87"]
@@ -71,17 +72,22 @@ best_time_seconds = 20
 level_scene = ExtResource("8_ja42h")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
-[node name="Bus" type="Node2D" node_paths=PackedStringArray("button_sound", "destroy_effect", "damage_effect", "fossil_damage")]
+[node name="Bus" type="Node2D" node_paths=PackedStringArray("menu_music", "game_music", "button_sound", "destroy_effect", "damage_effect", "fossil_damage")]
 script = ExtResource("1_jel5a")
+menu_music = NodePath("MenuMusic")
+game_music = NodePath("GameMusic")
 button_sound = NodePath("AudioStreamPlayer2")
 destroy_effect = NodePath("DestroyPlayer")
 damage_effect = NodePath("DamagePlayer")
 fossil_damage = NodePath("DamageFossil")
 levels_in_order = Array[ExtResource("2_7q2qf")]([SubResource("Resource_kyr87"), SubResource("Resource_fwtcj"), SubResource("Resource_hu2lu"), SubResource("Resource_nqcwp"), SubResource("Resource_ja42h"), SubResource("Resource_n0b7l"), SubResource("Resource_6th81")])
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_4qkln")
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_erqox")
 autoplay = true
+
+[node name="GameMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4qkln")
 
 [node name="DamagePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ofiws")

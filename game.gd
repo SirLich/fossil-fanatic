@@ -19,6 +19,8 @@ func _ready() -> void:
 	Bus.go_main_menu.connect(restart)
 
 func restart():
+	Bus.game_music.stop()
+	Bus.menu_music.play()
 	start_screen.visible = true
 	hud.visible = false
 	
@@ -54,4 +56,6 @@ func trigger_game_over(health, texture):
 
 func _on_texture_button_pressed() -> void:
 	start_screen.visible = false
+	Bus.game_music.play()
+	Bus.menu_music.stop()
 	Bus.play_same_level()
