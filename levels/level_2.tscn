@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://fkotx5jd8c5s"]
+[gd_scene load_steps=5 format=3 uid="uid://fkotx5jd8c5s"]
 
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="1_0srwa"]
+[ext_resource type="PackedScene" uid="uid://cs0i12ani7rxf" path="res://scenes/rock/sand_pile.tscn" id="2_5722l"]
 [ext_resource type="PackedScene" uid="uid://wow2jnvojp3h" path="res://scenes/fossils/fossil_avaceratops.tscn" id="2_v5uil"]
 [ext_resource type="PackedScene" uid="uid://wtf2w4bu57wi" path="res://levels/layers/layer_1.tscn" id="3_0srwa"]
 
@@ -13,13 +14,82 @@ centered = false
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Fossil_Avaceratops" parent="Node2D" instance=ExtResource("2_v5uil")]
-position = Vector2(365, 305)
+position = Vector2(501, 313)
+
+[node name="SandPile" type="Node2D" parent="."]
+position = Vector2(1023, 502)
+
+[node name="Sand13" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-336, -211)
+
+[node name="Sand14" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(428, 23)
+
+[node name="Sand" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-727, -259)
+
+[node name="Sand2" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-486, -229)
+
+[node name="Sand3" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-560, -324)
+
+[node name="Sand4" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-571, -27)
+
+[node name="Sand5" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-664, -122)
+
+[node name="Sand6" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-612, -322)
+
+[node name="Sand7" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-472, 7)
+
+[node name="Sand8" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-385, -313)
+
+[node name="Sand9" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-745, -106)
+
+[node name="Sand21" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-406, -136)
+
+[node name="Sand22" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-467, -336)
+
+[node name="Sand33" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(-99, 345)
+
+[node name="Sand34" parent="SandPile" instance=ExtResource("2_5722l")]
+position = Vector2(703, -298)
+
+[node name="Sand2" parent="." instance=ExtResource("2_5722l")]
+position = Vector2(605, 334)
+
+[node name="Sand5" parent="." instance=ExtResource("2_5722l")]
+position = Vector2(1042, 457)
+
+[node name="Sand9" parent="." instance=ExtResource("2_5722l")]
+position = Vector2(1298, 238)
+
+[node name="Sand12" parent="." instance=ExtResource("2_5722l")]
+position = Vector2(433, 838)
+
+[node name="Sand13" parent="." instance=ExtResource("2_5722l")]
+position = Vector2(1737, 726)
+
+[node name="Sand14" parent="." instance=ExtResource("2_5722l")]
+position = Vector2(1384, 842)
 
 [node name="Level2" parent="." instance=ExtResource("3_0srwa")]
-position = Vector2(2370, 1736)
-rotation = 3.13364
+visible = false
+position = Vector2(1901, 950)
+rotation = 3.00925
 color = 1
 use_color = true
 
 [node name="Level1" parent="." instance=ExtResource("3_0srwa")]
-position = Vector2(1156, -92)
+visible = false
+position = Vector2(891, -834)
+rotation = 0.714112
