@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dgtiia3oh6q00"]
+[gd_scene load_steps=11 format=3 uid="uid://da2p1h1y6h3bd"]
 
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_5omry"]
 [ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_xe7sm"]

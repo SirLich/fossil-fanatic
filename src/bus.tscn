@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://jw2jfhmwcx"]
+[gd_scene load_steps=21 format=3 uid="uid://jw2jfhmwcx"]
 
 [ext_resource type="Script" uid="uid://emtgsupplk38" path="res://src/bus.gd" id="1_jel5a"]
 [ext_resource type="Script" uid="uid://gbjidnc5cov7" path="res://level_descriptions/level_description.gd" id="2_7q2qf"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dimxo0ae7osx2" path="res://levels/level_1.tscn" id="6_hu2lu"]
 [ext_resource type="AudioStream" uid="uid://cpc0mjyvacwy5" path="res://assets/audio/sfx_functions/fossil_randomizer.tres" id="7_kyr87"]
 [ext_resource type="PackedScene" uid="uid://bdxj0emtbxm4u" path="res://levels/level_3.tscn" id="8_ja42h"]
+[ext_resource type="PackedScene" uid="uid://fkotx5jd8c5s" path="res://levels/level_2.tscn" id="8_n0b7l"]
 
 [sub_resource type="Resource" id="Resource_kyr87"]
 script = ExtResource("2_7q2qf")
@@ -58,7 +59,7 @@ script = ExtResource("2_7q2qf")
 name = "MISSING"
 description = ""
 best_time_seconds = 20
-level_scene = ExtResource("8_ja42h")
+level_scene = ExtResource("8_n0b7l")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
 [sub_resource type="Resource" id="Resource_6th81"]
