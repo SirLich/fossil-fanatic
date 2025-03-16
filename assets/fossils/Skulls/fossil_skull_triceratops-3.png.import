@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6fd6w3uhblwf"
-path="res://.godot/imported/hammer.png-bbd7e573854806f593eabb7749c9946a.ctex"
+uid="uid://dc423udb87553"
+path="res://.godot/imported/fossil_skull_triceratops-3.png-a157734c0c659f1b1d724da702225eaa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temp/hammer.png"
-dest_files=["res://.godot/imported/hammer.png-bbd7e573854806f593eabb7749c9946a.ctex"]
+source_file="res://assets/fossils/Skulls/fossil_skull_triceratops-3.png"
+dest_files=["res://.godot/imported/fossil_skull_triceratops-3.png-a157734c0c659f1b1d724da702225eaa.ctex"]
 
 [params]
 

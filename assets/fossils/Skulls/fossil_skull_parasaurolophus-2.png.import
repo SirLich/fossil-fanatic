@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6fd6w3uhblwf"
-path="res://.godot/imported/hammer.png-bbd7e573854806f593eabb7749c9946a.ctex"
+uid="uid://d1fxm7i0wj4hy"
+path="res://.godot/imported/fossil_skull_parasaurolophus-2.png-a6a2cc2e5c9709c9ebf980af6282e21a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temp/hammer.png"
-dest_files=["res://.godot/imported/hammer.png-bbd7e573854806f593eabb7749c9946a.ctex"]
+source_file="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-2.png"
+dest_files=["res://.godot/imported/fossil_skull_parasaurolophus-2.png-a6a2cc2e5c9709c9ebf980af6282e21a.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dimxo0ae7osx2"]
+[gd_scene load_steps=19 format=3 uid="uid://dimxo0ae7osx2"]
 
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="1_bt44k"]
 [ext_resource type="PackedScene" uid="uid://c8l8bl3dignc2" path="res://scenes/fossils/fossil_bront.tscn" id="2_btoec"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dd0xxc3qf8g0s" path="res://scenes/rock/rock_16.tscn" id="15_jkxa6"]
 [ext_resource type="PackedScene" uid="uid://cjud87bnt1wt8" path="res://scenes/rock/rock_15.tscn" id="16_w75he"]
 [ext_resource type="PackedScene" uid="uid://sssj17i0kbj6" path="res://scenes/rock/rock_20.tscn" id="17_lrvbd"]
+[ext_resource type="PackedScene" uid="uid://cs0i12ani7rxf" path="res://scenes/rock/sand_pile.tscn" id="18_oqlok"]
 
 [node name="Level1" type="Node2D"]
 
@@ -181,3 +182,6 @@ rotation = 3.89817
 
 [node name="Rock40" parent="." instance=ExtResource("17_lrvbd")]
 position = Vector2(583, 1194)
+
+[node name="Sand" parent="." instance=ExtResource("18_oqlok")]
+position = Vector2(1037, 781)

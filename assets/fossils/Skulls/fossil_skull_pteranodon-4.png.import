@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6fd6w3uhblwf"
-path="res://.godot/imported/hammer.png-bbd7e573854806f593eabb7749c9946a.ctex"
+uid="uid://b7d68tu2cwp03"
+path="res://.godot/imported/fossil_skull_pteranodon-4.png-361ef91ef1f538419736e103b9b9aa32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temp/hammer.png"
-dest_files=["res://.godot/imported/hammer.png-bbd7e573854806f593eabb7749c9946a.ctex"]
+source_file="res://assets/fossils/Skulls/fossil_skull_pteranodon-4.png"
+dest_files=["res://.godot/imported/fossil_skull_pteranodon-4.png-361ef91ef1f538419736e103b9b9aa32.ctex"]
 
 [params]
 
