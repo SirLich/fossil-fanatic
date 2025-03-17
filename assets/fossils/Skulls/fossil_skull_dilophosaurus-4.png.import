@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cn4tcwccpyyr1"
-path="res://.godot/imported/fossil_skull_dilophosaurus-4.png-8337765afa9d82df9773adc7af5a258e.ctex"
+path="res://.godot/imported/fossil_skull_dilophosaurus-4.png-388b61b4da584bff338404b414d1af6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-4.png"
-dest_files=["res://.godot/imported/fossil_skull_dilophosaurus-4.png-8337765afa9d82df9773adc7af5a258e.ctex"]
+source_file="res://assets/fossils/skulls/fossil_skull_dilophosaurus-4.png"
+dest_files=["res://.godot/imported/fossil_skull_dilophosaurus-4.png-388b61b4da584bff338404b414d1af6d.ctex"]
 
 [params]
 

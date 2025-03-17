@@ -3,11 +3,11 @@
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_0memw"]
 [ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_taf5d"]
 [ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_iwr15"]
-[ext_resource type="Texture2D" uid="uid://tgbax53obl3i" path="res://assets/fossils/Footprints/fossil_footprint_avaceratops-1.png" id="4_0memw"]
-[ext_resource type="Texture2D" uid="uid://vwmbgd4watrn" path="res://assets/fossils/Footprints/fossil_footprint_avaceratops-2.png" id="5_taf5d"]
-[ext_resource type="Texture2D" uid="uid://deekamh5535gw" path="res://assets/fossils/Footprints/fossil_footprint_avaceratops-3.png" id="6_iwr15"]
-[ext_resource type="Texture2D" uid="uid://wyoip2c2ofgu" path="res://assets/fossils/Footprints/fossil_footprint_avaceratops-4.png" id="7_nqk1c"]
-[ext_resource type="Texture2D" uid="uid://bmcftynrcx4ge" path="res://assets/fossils/Footprints/fossil_footprint_avaceratops-5.png" id="8_daged"]
+[ext_resource type="Texture2D" uid="uid://tgbax53obl3i" path="res://assets/fossils/footprints/fossil_footprint_avaceratops-1.png" id="4_0memw"]
+[ext_resource type="Texture2D" uid="uid://vwmbgd4watrn" path="res://assets/fossils/footprints/fossil_footprint_avaceratops-2.png" id="5_taf5d"]
+[ext_resource type="Texture2D" uid="uid://deekamh5535gw" path="res://assets/fossils/footprints/fossil_footprint_avaceratops-3.png" id="6_iwr15"]
+[ext_resource type="Texture2D" uid="uid://wyoip2c2ofgu" path="res://assets/fossils/footprints/fossil_footprint_avaceratops-4.png" id="7_nqk1c"]
+[ext_resource type="Texture2D" uid="uid://bmcftynrcx4ge" path="res://assets/fossils/footprints/fossil_footprint_avaceratops-5.png" id="8_daged"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
 shader = ExtResource("1_0memw")

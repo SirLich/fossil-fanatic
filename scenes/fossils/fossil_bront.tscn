@@ -3,11 +3,11 @@
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_fywgo"]
 [ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_4savw"]
 [ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_2vcm1"]
-[ext_resource type="Texture2D" uid="uid://wfbe4n5uomh0" path="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-1.png" id="4_fywgo"]
-[ext_resource type="Texture2D" uid="uid://cbgf6i4svwpp8" path="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-2.png" id="5_4savw"]
-[ext_resource type="Texture2D" uid="uid://c6x21qs3h8pcp" path="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-3.png" id="6_2vcm1"]
-[ext_resource type="Texture2D" uid="uid://dtu5rjuko4upb" path="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-4.png" id="7_7ryoy"]
-[ext_resource type="Texture2D" uid="uid://cm15qxcf10hi8" path="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-5.png" id="8_nq85y"]
+[ext_resource type="Texture2D" uid="uid://wfbe4n5uomh0" path="res://assets/fossils/footprints/fossil_footprint_brontosaurus-1.png" id="4_fywgo"]
+[ext_resource type="Texture2D" uid="uid://cbgf6i4svwpp8" path="res://assets/fossils/footprints/fossil_footprint_brontosaurus-2.png" id="5_4savw"]
+[ext_resource type="Texture2D" uid="uid://c6x21qs3h8pcp" path="res://assets/fossils/footprints/fossil_footprint_brontosaurus-3.png" id="6_2vcm1"]
+[ext_resource type="Texture2D" uid="uid://dtu5rjuko4upb" path="res://assets/fossils/footprints/fossil_footprint_brontosaurus-4.png" id="7_7ryoy"]
+[ext_resource type="Texture2D" uid="uid://cm15qxcf10hi8" path="res://assets/fossils/footprints/fossil_footprint_brontosaurus-5.png" id="8_nq85y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
 shader = ExtResource("1_fywgo")

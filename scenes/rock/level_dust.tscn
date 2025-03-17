@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://dh3nr4ibfo5v6"]
 
-[ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="1_yso2b"]
+[ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/misc/Ground.png" id="1_yso2b"]
 [ext_resource type="PackedScene" uid="uid://da2p1h1y6h3bd" path="res://scenes/fossils/fossil_dilo.tscn" id="2_crnu2"]
 [ext_resource type="PackedScene" uid="uid://bf3e5r1dkyedg" path="res://scenes/rock/rock_7.tscn" id="3_iygsd"]
 [ext_resource type="PackedScene" uid="uid://krhbdx33i2g3" path="res://scenes/rock/rock_8.tscn" id="4_xd5je"]

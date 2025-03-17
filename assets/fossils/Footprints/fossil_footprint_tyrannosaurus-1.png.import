@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpmcggx30q2m4"
-path="res://.godot/imported/fossil_footprint_tyrannosaurus-1.png-5946e8f6f0a4f606b126746b664ad05a.ctex"
+path="res://.godot/imported/fossil_footprint_tyrannosaurus-1.png-0ec09b48eb07dfa1ff412d502077e7ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Footprints/fossil_footprint_tyrannosaurus-1.png"
-dest_files=["res://.godot/imported/fossil_footprint_tyrannosaurus-1.png-5946e8f6f0a4f606b126746b664ad05a.ctex"]
+source_file="res://assets/fossils/footprints/fossil_footprint_tyrannosaurus-1.png"
+dest_files=["res://.godot/imported/fossil_footprint_tyrannosaurus-1.png-0ec09b48eb07dfa1ff412d502077e7ab.ctex"]
 
 [params]
 

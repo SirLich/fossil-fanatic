@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bif1ewckh2amb"
-path="res://.godot/imported/fossil_skull_pteranodon-1.png-2c7568f28041170042eee0fca5d51ed5.ctex"
+path="res://.godot/imported/fossil_skull_pteranodon-1.png-1d88291e83da661709aca77f6f303901.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Skulls/fossil_skull_pteranodon-1.png"
-dest_files=["res://.godot/imported/fossil_skull_pteranodon-1.png-2c7568f28041170042eee0fca5d51ed5.ctex"]
+source_file="res://assets/fossils/skulls/fossil_skull_pteranodon-1.png"
+dest_files=["res://.godot/imported/fossil_skull_pteranodon-1.png-1d88291e83da661709aca77f6f303901.ctex"]
 
 [params]
 

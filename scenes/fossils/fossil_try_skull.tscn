@@ -3,11 +3,11 @@
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_qip4h"]
 [ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_rddd3"]
 [ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_h0vl3"]
-[ext_resource type="Texture2D" uid="uid://rv188jatt3t2" path="res://assets/fossils/Skulls/fossil_skull_tyrannosaurus-1.png" id="3_vh5qx"]
-[ext_resource type="Texture2D" uid="uid://dtnry3wap53ur" path="res://assets/fossils/Skulls/fossil_skull_tyrannosaurus-2.png" id="5_qip4h"]
-[ext_resource type="Texture2D" uid="uid://3675as80ggoq" path="res://assets/fossils/Skulls/fossil_skull_tyrannosaurus-3.png" id="6_rddd3"]
-[ext_resource type="Texture2D" uid="uid://2r16t8x3sh32" path="res://assets/fossils/Skulls/fossil_skull_tyrannosaurus-4.png" id="7_h0vl3"]
-[ext_resource type="Texture2D" uid="uid://d6clr63v76w" path="res://assets/fossils/Skulls/fossil_skull_tyrannosaurus-5.png" id="8_3y68j"]
+[ext_resource type="Texture2D" uid="uid://rv188jatt3t2" path="res://assets/fossils/skulls/fossil_skull_tyrannosaurus-1.png" id="3_vh5qx"]
+[ext_resource type="Texture2D" uid="uid://dtnry3wap53ur" path="res://assets/fossils/skulls/fossil_skull_tyrannosaurus-2.png" id="5_qip4h"]
+[ext_resource type="Texture2D" uid="uid://3675as80ggoq" path="res://assets/fossils/skulls/fossil_skull_tyrannosaurus-3.png" id="6_rddd3"]
+[ext_resource type="Texture2D" uid="uid://2r16t8x3sh32" path="res://assets/fossils/skulls/fossil_skull_tyrannosaurus-4.png" id="7_h0vl3"]
+[ext_resource type="Texture2D" uid="uid://d6clr63v76w" path="res://assets/fossils/skulls/fossil_skull_tyrannosaurus-5.png" id="8_3y68j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
 shader = ExtResource("1_qip4h")

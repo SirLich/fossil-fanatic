@@ -3,11 +3,11 @@
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_uj8cl"]
 [ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_pvc0f"]
 [ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_6a118"]
-[ext_resource type="Texture2D" uid="uid://6ni1spfmtosl" path="res://assets/fossils/Footprints/fossil_footprint_triceratops-1.png" id="3_dc5ql"]
-[ext_resource type="Texture2D" uid="uid://c1vr12ubc8d5c" path="res://assets/fossils/Footprints/fossil_footprint_triceratops-2.png" id="4_pwxgu"]
-[ext_resource type="Texture2D" uid="uid://ci41sj0xlnnb6" path="res://assets/fossils/Footprints/fossil_footprint_triceratops-3.png" id="5_uj8cl"]
-[ext_resource type="Texture2D" uid="uid://daex6ie352dk3" path="res://assets/fossils/Footprints/fossil_footprint_triceratops-4.png" id="6_pvc0f"]
-[ext_resource type="Texture2D" uid="uid://crxe5nbacxnw3" path="res://assets/fossils/Footprints/fossil_footprint_triceratops-5.png" id="7_6a118"]
+[ext_resource type="Texture2D" uid="uid://6ni1spfmtosl" path="res://assets/fossils/footprints/fossil_footprint_triceratops-1.png" id="3_dc5ql"]
+[ext_resource type="Texture2D" uid="uid://c1vr12ubc8d5c" path="res://assets/fossils/footprints/fossil_footprint_triceratops-2.png" id="4_pwxgu"]
+[ext_resource type="Texture2D" uid="uid://ci41sj0xlnnb6" path="res://assets/fossils/footprints/fossil_footprint_triceratops-3.png" id="5_uj8cl"]
+[ext_resource type="Texture2D" uid="uid://daex6ie352dk3" path="res://assets/fossils/footprints/fossil_footprint_triceratops-4.png" id="6_pvc0f"]
+[ext_resource type="Texture2D" uid="uid://crxe5nbacxnw3" path="res://assets/fossils/footprints/fossil_footprint_triceratops-5.png" id="7_6a118"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
 shader = ExtResource("1_uj8cl")

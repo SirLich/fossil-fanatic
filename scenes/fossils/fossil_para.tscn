@@ -2,12 +2,12 @@
 
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_ee4l2"]
 [ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_nyye6"]
-[ext_resource type="Texture2D" uid="uid://br1r2d1g5ce7m" path="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-1.png" id="3_c7u54"]
+[ext_resource type="Texture2D" uid="uid://br1r2d1g5ce7m" path="res://assets/fossils/skulls/fossil_skull_parasaurolophus-1.png" id="3_c7u54"]
 [ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_tcvqj"]
-[ext_resource type="Texture2D" uid="uid://d1fxm7i0wj4hy" path="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-2.png" id="5_ee4l2"]
-[ext_resource type="Texture2D" uid="uid://dqshx74kicynb" path="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-3.png" id="6_nyye6"]
-[ext_resource type="Texture2D" uid="uid://c2y71hdtpxqbe" path="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-4.png" id="7_tcvqj"]
-[ext_resource type="Texture2D" uid="uid://dlg6vwx76j6li" path="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-5.png" id="8_dmuth"]
+[ext_resource type="Texture2D" uid="uid://d1fxm7i0wj4hy" path="res://assets/fossils/skulls/fossil_skull_parasaurolophus-2.png" id="5_ee4l2"]
+[ext_resource type="Texture2D" uid="uid://dqshx74kicynb" path="res://assets/fossils/skulls/fossil_skull_parasaurolophus-3.png" id="6_nyye6"]
+[ext_resource type="Texture2D" uid="uid://c2y71hdtpxqbe" path="res://assets/fossils/skulls/fossil_skull_parasaurolophus-4.png" id="7_tcvqj"]
+[ext_resource type="Texture2D" uid="uid://dlg6vwx76j6li" path="res://assets/fossils/skulls/fossil_skull_parasaurolophus-5.png" id="8_dmuth"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
 shader = ExtResource("1_ee4l2")

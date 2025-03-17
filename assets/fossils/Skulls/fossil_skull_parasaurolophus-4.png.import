@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2y71hdtpxqbe"
-path="res://.godot/imported/fossil_skull_parasaurolophus-4.png-17b9e5a578a4181ce60f2a375c987340.ctex"
+path="res://.godot/imported/fossil_skull_parasaurolophus-4.png-16900c311227760d5f6cb0a1349827f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-4.png"
-dest_files=["res://.godot/imported/fossil_skull_parasaurolophus-4.png-17b9e5a578a4181ce60f2a375c987340.ctex"]
+source_file="res://assets/fossils/skulls/fossil_skull_parasaurolophus-4.png"
+dest_files=["res://.godot/imported/fossil_skull_parasaurolophus-4.png-16900c311227760d5f6cb0a1349827f0.ctex"]
 
 [params]
 

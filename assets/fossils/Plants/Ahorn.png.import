@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://doljiubu65i34"
-path="res://.godot/imported/Ahorn.png-19d41e27f0df3f67a97b0cae1e83b92c.ctex"
+path="res://.godot/imported/Ahorn.png-d3b8477dfe954ec5fb7b6c7010555305.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Plants/Ahorn.png"
-dest_files=["res://.godot/imported/Ahorn.png-19d41e27f0df3f67a97b0cae1e83b92c.ctex"]
+source_file="res://assets/fossils/plants/Ahorn.png"
+dest_files=["res://.godot/imported/Ahorn.png-d3b8477dfe954ec5fb7b6c7010555305.ctex"]
 
 [params]
 

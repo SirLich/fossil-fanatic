@@ -1,0 +1,128 @@
+[gd_scene load_steps=21 format=3 uid="uid://b4dh87ymrg6i3"]
+
+[ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://scenes/game/game.gd" id="1_feb5d"]
+[ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://src/tool_button.gd" id="3_ryrav"]
+[ext_resource type="PackedScene" uid="uid://crbe0agxb2nli" path="res://scenes/hammer/pick.tscn" id="4_7jktm"]
+[ext_resource type="PackedScene" uid="uid://d0et4vc24oa8h" path="res://scenes/hammer/hammer.tscn" id="4_eow3j"]
+[ext_resource type="Texture2D" uid="uid://1j0dnkd0801w" path="res://assets/textures/ui/Toolbar_Pickaxe.png" id="4_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://dxh4sr01tyhlw" path="res://assets/textures/ui/Toolbar_Hammer.png" id="4_vef74"]
+[ext_resource type="Texture2D" uid="uid://dgt0vpytp3jke" path="res://assets/textures/ui/Toolbar_Pickaxe_Hover.png" id="5_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://bjhywp2ay0v5s" path="res://assets/textures/ui/Toolbar_Hammer_Hover.png" id="9_vef74"]
+[ext_resource type="PackedScene" uid="uid://c38en28qudhof" path="res://scenes/hammer/brush.tscn" id="10_7sc4i"]
+[ext_resource type="Texture2D" uid="uid://c7doo2r6uo5y8" path="res://assets/textures/ui/Toolbar_Brush.png" id="10_e8heu"]
+[ext_resource type="FontFile" uid="uid://coexytxldfvlm" path="res://assets/fonts/barlow/Barlow-Bold.ttf" id="11_215e1"]
+[ext_resource type="PackedScene" uid="uid://bu1ci1jhpw4u5" path="res://scenes/ui/game_over/game_over_screen.tscn" id="11_mfdv2"]
+[ext_resource type="Texture2D" uid="uid://ckkecaqhh0y2o" path="res://assets/textures/ui/Toolbar_Brush_Hover.png" id="11_rvswv"]
+[ext_resource type="Texture2D" uid="uid://di6vgrqm8x7xl" path="res://assets/textures/ui/Start_with_Title.png" id="13_e8heu"]
+[ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/misc/Ground.png" id="14_215e1"]
+[ext_resource type="Texture2D" uid="uid://4on25pim7olc" path="res://assets/textures/ui/Startbutton.png" id="15_e8heu"]
+[ext_resource type="Texture2D" uid="uid://beahtvmc0jjqx" path="res://assets/textures/ui/Startbutton_Hover.png" id="16_rvswv"]
+[ext_resource type="Script" uid="uid://dh0fh6o726g1h" path="res://src/button_shim.gd" id="17_rvswv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8heu"]
+texture = ExtResource("13_e8heu")
+
+[sub_resource type="LabelSettings" id="LabelSettings_boyg6"]
+font = ExtResource("11_215e1")
+font_size = 40
+font_color = Color(0.282353, 0.203922, 0.184314, 1)
+
+[node name="Game" type="Node2D" node_paths=PackedStringArray("start_screen", "hud")]
+script = ExtResource("1_feb5d")
+start_screen = NodePath("StartGame")
+starting_tool = ExtResource("4_eow3j")
+game_over_scene = ExtResource("11_mfdv2")
+hud = NodePath("UI")
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -127.0
+offset_top = -128.0
+offset_right = 481.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.575, 0.575)
+size_flags_vertical = 4
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+
+[node name="HammerButton" type="TextureButton" parent="UI/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
+layout_mode = 2
+texture_normal = ExtResource("4_j5wjh")
+texture_hover = ExtResource("5_j5wjh")
+script = ExtResource("3_ryrav")
+game = NodePath("../../../..")
+tool_scene = ExtResource("4_7jktm")
+
+[node name="PickButton" type="TextureButton" parent="UI/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
+layout_mode = 2
+texture_normal = ExtResource("4_vef74")
+texture_hover = ExtResource("9_vef74")
+script = ExtResource("3_ryrav")
+game = NodePath("../../../..")
+tool_scene = ExtResource("4_eow3j")
+
+[node name="BrushButton" type="TextureButton" parent="UI/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
+layout_mode = 2
+texture_normal = ExtResource("10_e8heu")
+texture_hover = ExtResource("11_rvswv")
+script = ExtResource("3_ryrav")
+game = NodePath("../../../..")
+tool_scene = ExtResource("10_7sc4i")
+
+[node name="StartGame" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="StartGame"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="StartGame/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_e8heu")
+
+[node name="Label" type="Label" parent="StartGame/MarginContainer/Panel"]
+layout_mode = 2
+offset_left = 83.0
+offset_top = 708.0
+offset_right = 531.0
+offset_bottom = 1011.0
+text = "Created by
+Liam, Flores, Philipp,
+Tanja, and Marcus
+
+for PULS Game Jam 2025"
+label_settings = SubResource("LabelSettings_boyg6")
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="StartGame/MarginContainer/Panel"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+offset_left = 643.0
+offset_top = 460.0
+offset_right = 1271.0
+offset_bottom = 791.0
+texture_normal = ExtResource("15_e8heu")
+texture_hover = ExtResource("16_rvswv")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("17_rvswv")
+
+[node name="Ground" type="Sprite2D" parent="."]
+texture = ExtResource("14_215e1")
+centered = false
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="StartGame/MarginContainer/Panel/TextureButton" to="." method="_on_texture_button_pressed"]

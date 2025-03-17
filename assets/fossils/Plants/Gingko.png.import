@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dptnvqx74qom6"
-path="res://.godot/imported/Gingko.png-b3be5586e8d6d6d1a306047d37cab0d2.ctex"
+path="res://.godot/imported/Gingko.png-4e62603f399ff126624ee67a30a7bc6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Plants/Gingko.png"
-dest_files=["res://.godot/imported/Gingko.png-b3be5586e8d6d6d1a306047d37cab0d2.ctex"]
+source_file="res://assets/fossils/plants/Gingko.png"
+dest_files=["res://.godot/imported/Gingko.png-4e62603f399ff126624ee67a30a7bc6c.ctex"]
 
 [params]
 

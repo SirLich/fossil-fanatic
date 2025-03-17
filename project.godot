@@ -13,7 +13,6 @@ config_version=5
 config/name="fossil"
 run/main_scene="uid://b4dh87ymrg6i3"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
@@ -25,6 +24,14 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://assets/shaders/": "red",
+"res://resources/": "teal",
+"res://src/": "gray"
+}
 
 [global_group]
 

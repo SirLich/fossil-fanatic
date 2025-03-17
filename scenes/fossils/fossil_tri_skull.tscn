@@ -3,11 +3,11 @@
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_2w0xv"]
 [ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_5mttb"]
 [ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_a3p2g"]
-[ext_resource type="Texture2D" uid="uid://bif1ewckh2amb" path="res://assets/fossils/Skulls/fossil_skull_pteranodon-1.png" id="4_v8a7j"]
-[ext_resource type="Texture2D" uid="uid://bcfhiylirrnyo" path="res://assets/fossils/Skulls/fossil_skull_pteranodon-2.png" id="5_48cf0"]
-[ext_resource type="Texture2D" uid="uid://bxvcl2mna5066" path="res://assets/fossils/Skulls/fossil_skull_pteranodon-3.png" id="6_eiqkh"]
-[ext_resource type="Texture2D" uid="uid://b7d68tu2cwp03" path="res://assets/fossils/Skulls/fossil_skull_pteranodon-4.png" id="7_pifxi"]
-[ext_resource type="Texture2D" uid="uid://jejyfq38ntbk" path="res://assets/fossils/Skulls/fossil_skull_pteranodon-5.png" id="8_iptgp"]
+[ext_resource type="Texture2D" uid="uid://bif1ewckh2amb" path="res://assets/fossils/skulls/fossil_skull_pteranodon-1.png" id="4_v8a7j"]
+[ext_resource type="Texture2D" uid="uid://bcfhiylirrnyo" path="res://assets/fossils/skulls/fossil_skull_pteranodon-2.png" id="5_48cf0"]
+[ext_resource type="Texture2D" uid="uid://bxvcl2mna5066" path="res://assets/fossils/skulls/fossil_skull_pteranodon-3.png" id="6_eiqkh"]
+[ext_resource type="Texture2D" uid="uid://b7d68tu2cwp03" path="res://assets/fossils/skulls/fossil_skull_pteranodon-4.png" id="7_pifxi"]
+[ext_resource type="Texture2D" uid="uid://jejyfq38ntbk" path="res://assets/fossils/skulls/fossil_skull_pteranodon-5.png" id="8_iptgp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
 shader = ExtResource("1_2w0xv")

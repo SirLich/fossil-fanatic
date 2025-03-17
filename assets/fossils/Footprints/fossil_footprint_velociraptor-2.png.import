@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lp1dkeg5igdi"
-path="res://.godot/imported/fossil_footprint_velociraptor-2.png-f0db62729d91488e4c19d9e10ce040da.ctex"
+path="res://.godot/imported/fossil_footprint_velociraptor-2.png-52043fb895211551f1458d6f179ed165.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Footprints/fossil_footprint_velociraptor-2.png"
-dest_files=["res://.godot/imported/fossil_footprint_velociraptor-2.png-f0db62729d91488e4c19d9e10ce040da.ctex"]
+source_file="res://assets/fossils/footprints/fossil_footprint_velociraptor-2.png"
+dest_files=["res://.godot/imported/fossil_footprint_velociraptor-2.png-52043fb895211551f1458d6f179ed165.ctex"]
 
 [params]
 

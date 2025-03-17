@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dc423udb87553"
-path="res://.godot/imported/fossil_skull_triceratops-3.png-a157734c0c659f1b1d724da702225eaa.ctex"
+path="res://.godot/imported/fossil_skull_triceratops-3.png-7ea5e2d44c8036be626bb0278ae257b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Skulls/fossil_skull_triceratops-3.png"
-dest_files=["res://.godot/imported/fossil_skull_triceratops-3.png-a157734c0c659f1b1d724da702225eaa.ctex"]
+source_file="res://assets/fossils/skulls/fossil_skull_triceratops-3.png"
+dest_files=["res://.godot/imported/fossil_skull_triceratops-3.png-7ea5e2d44c8036be626bb0278ae257b8.ctex"]
 
 [params]
 

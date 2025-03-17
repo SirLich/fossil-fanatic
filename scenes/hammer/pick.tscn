@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/tool.gd" id="1_acdsb"]
 [ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_f3efj"]
-[ext_resource type="Texture2D" uid="uid://dlaa3qd5eitse" path="res://temp/Pickaxe(1).png" id="3_acdsb"]
+[ext_resource type="Texture2D" uid="uid://dlaa3qd5eitse" path="res://assets/textures/tools/pick.png" id="3_acdsb"]
 [ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="4_4c4nw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ei3sq"]

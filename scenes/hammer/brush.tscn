@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/tool.gd" id="1_gt162"]
 [ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_i5pv2"]
-[ext_resource type="Texture2D" uid="uid://cmuh4c0viae1d" path="res://temp/Brush.png" id="3_gt162"]
+[ext_resource type="Texture2D" uid="uid://cmuh4c0viae1d" path="res://assets/textures/tools/brush.png" id="3_gt162"]
 [ext_resource type="AudioStream" uid="uid://3kjdfta1f1mr" path="res://assets/audio/sfx_functions/brush_normal_randomizer.tres" id="4_i5pv2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ei3sq"]

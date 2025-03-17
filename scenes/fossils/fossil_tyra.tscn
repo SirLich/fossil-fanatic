@@ -3,11 +3,11 @@
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_bamuu"]
 [ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_fjklp"]
 [ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_obrlq"]
-[ext_resource type="Texture2D" uid="uid://bpmcggx30q2m4" path="res://assets/fossils/Footprints/fossil_footprint_tyrannosaurus-1.png" id="3_tbxmk"]
-[ext_resource type="Texture2D" uid="uid://bxsxdefkf3u0q" path="res://assets/fossils/Footprints/fossil_footprint_tyrannosaurus-2.png" id="5_bamuu"]
-[ext_resource type="Texture2D" uid="uid://cq2witw4xo7cw" path="res://assets/fossils/Footprints/fossil_footprint_tyrannosaurus-3.png" id="6_fjklp"]
-[ext_resource type="Texture2D" uid="uid://ca6qthvv0y5e4" path="res://assets/fossils/Footprints/fossil_footprint_tyrannosaurus-4.png" id="7_obrlq"]
-[ext_resource type="Texture2D" uid="uid://b0fbyjbq51nbk" path="res://assets/fossils/Footprints/fossil_footprint_tyrannosaurus-5.png" id="8_hck58"]
+[ext_resource type="Texture2D" uid="uid://bpmcggx30q2m4" path="res://assets/fossils/footprints/fossil_footprint_tyrannosaurus-1.png" id="3_tbxmk"]
+[ext_resource type="Texture2D" uid="uid://bxsxdefkf3u0q" path="res://assets/fossils/footprints/fossil_footprint_tyrannosaurus-2.png" id="5_bamuu"]
+[ext_resource type="Texture2D" uid="uid://cq2witw4xo7cw" path="res://assets/fossils/footprints/fossil_footprint_tyrannosaurus-3.png" id="6_fjklp"]
+[ext_resource type="Texture2D" uid="uid://ca6qthvv0y5e4" path="res://assets/fossils/footprints/fossil_footprint_tyrannosaurus-4.png" id="7_obrlq"]
+[ext_resource type="Texture2D" uid="uid://b0fbyjbq51nbk" path="res://assets/fossils/footprints/fossil_footprint_tyrannosaurus-5.png" id="8_hck58"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
 shader = ExtResource("1_bamuu")

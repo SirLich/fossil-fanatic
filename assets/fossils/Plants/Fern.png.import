@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2fcevvbyrj1x"
-path="res://.godot/imported/Fern.png-e3d0e169c036ee20d81e8248fabee3bb.ctex"
+path="res://.godot/imported/Fern.png-fe69a443d33ad8c18fadc975823e7049.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Plants/Fern.png"
-dest_files=["res://.godot/imported/Fern.png-e3d0e169c036ee20d81e8248fabee3bb.ctex"]
+source_file="res://assets/fossils/plants/Fern.png"
+dest_files=["res://.godot/imported/Fern.png-fe69a443d33ad8c18fadc975823e7049.ctex"]
 
 [params]
 

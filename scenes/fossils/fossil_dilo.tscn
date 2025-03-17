@@ -2,12 +2,12 @@
 
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_5omry"]
 [ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_xe7sm"]
-[ext_resource type="Texture2D" uid="uid://drsujjccdesbm" path="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-1.png" id="3_ebrna"]
+[ext_resource type="Texture2D" uid="uid://drsujjccdesbm" path="res://assets/fossils/skulls/fossil_skull_dilophosaurus-1.png" id="3_ebrna"]
 [ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_nuymd"]
-[ext_resource type="Texture2D" uid="uid://bbdhtand16js8" path="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-2.png" id="5_15rkc"]
-[ext_resource type="Texture2D" uid="uid://c4yk2ckeq0wnr" path="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-3.png" id="6_y7wg2"]
-[ext_resource type="Texture2D" uid="uid://cn4tcwccpyyr1" path="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-4.png" id="7_hpayk"]
-[ext_resource type="Texture2D" uid="uid://w72rpiyubdi8" path="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-5.png" id="8_h3epq"]
+[ext_resource type="Texture2D" uid="uid://bbdhtand16js8" path="res://assets/fossils/skulls/fossil_skull_dilophosaurus-2.png" id="5_15rkc"]
+[ext_resource type="Texture2D" uid="uid://c4yk2ckeq0wnr" path="res://assets/fossils/skulls/fossil_skull_dilophosaurus-3.png" id="6_y7wg2"]
+[ext_resource type="Texture2D" uid="uid://cn4tcwccpyyr1" path="res://assets/fossils/skulls/fossil_skull_dilophosaurus-4.png" id="7_hpayk"]
+[ext_resource type="Texture2D" uid="uid://w72rpiyubdi8" path="res://assets/fossils/skulls/fossil_skull_dilophosaurus-5.png" id="8_h3epq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
 shader = ExtResource("1_5omry")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm15qxcf10hi8"
-path="res://.godot/imported/fossil_footprint_brontosaurus-5.png-c0f5591dd8388836069eb3c71376c516.ctex"
+path="res://.godot/imported/fossil_footprint_brontosaurus-5.png-575d16b32800949a9335e52911cacbca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-5.png"
-dest_files=["res://.godot/imported/fossil_footprint_brontosaurus-5.png-c0f5591dd8388836069eb3c71376c516.ctex"]
+source_file="res://assets/fossils/footprints/fossil_footprint_brontosaurus-5.png"
+dest_files=["res://.godot/imported/fossil_footprint_brontosaurus-5.png-575d16b32800949a9335e52911cacbca.ctex"]
 
 [params]
 

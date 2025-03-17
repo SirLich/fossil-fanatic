@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://c6oky8i2hsxh2"]
 
-[ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/Ground.png" id="1_fxiqf"]
+[ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/misc/Ground.png" id="1_fxiqf"]
 [ext_resource type="PackedScene" uid="uid://w6myf5m3w8ks" path="res://scenes/fossils/fossil_para.tscn" id="2_lyefx"]
 [ext_resource type="PackedScene" uid="uid://sm48vjbd723f" path="res://scenes/rock/rock_2.tscn" id="3_fy1pb"]
 [ext_resource type="PackedScene" uid="uid://fc47bpu8outc" path="res://scenes/rock/rock_3.tscn" id="3_s21mw"]

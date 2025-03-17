@@ -3,7 +3,7 @@
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_5x2wy"]
 [ext_resource type="Script" uid="uid://cwbpe3pxo1t27" path="res://scenes/rock/sand_pile.gd" id="2_nm5ha"]
 [ext_resource type="Shader" uid="uid://7cqcmhwpbqk3" path="res://assets/shaders/highlight.gdshader" id="3_0jsf7"]
-[ext_resource type="Texture2D" uid="uid://crgv87txlixbg" path="res://temp/sand.png" id="3_hyrip"]
+[ext_resource type="Texture2D" uid="uid://crgv87txlixbg" path="res://assets/textures/misc/sand.png" id="3_hyrip"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
 shader = ExtResource("1_5x2wy")

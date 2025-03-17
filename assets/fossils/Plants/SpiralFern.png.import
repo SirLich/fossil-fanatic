@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0ufq4ymchcgs"
-path="res://.godot/imported/SpiralFern.png-beb04764e812f96f3724bc7f2079daa3.ctex"
+path="res://.godot/imported/SpiralFern.png-242cda0a33e33e2b6457f39598d0bd9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Plants/SpiralFern.png"
-dest_files=["res://.godot/imported/SpiralFern.png-beb04764e812f96f3724bc7f2079daa3.ctex"]
+source_file="res://assets/fossils/plants/SpiralFern.png"
+dest_files=["res://.godot/imported/SpiralFern.png-242cda0a33e33e2b6457f39598d0bd9b.ctex"]
 
 [params]
 

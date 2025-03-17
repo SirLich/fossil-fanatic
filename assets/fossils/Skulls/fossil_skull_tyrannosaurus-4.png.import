@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2r16t8x3sh32"
-path="res://.godot/imported/fossil_skull_tyrannosaurus-4.png-cf876a9353161e13528f622f1ee6634c.ctex"
+path="res://.godot/imported/fossil_skull_tyrannosaurus-4.png-2eb0a2117b0812e2cad26224b9781d25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/Skulls/fossil_skull_tyrannosaurus-4.png"
-dest_files=["res://.godot/imported/fossil_skull_tyrannosaurus-4.png-cf876a9353161e13528f622f1ee6634c.ctex"]
+source_file="res://assets/fossils/skulls/fossil_skull_tyrannosaurus-4.png"
+dest_files=["res://.godot/imported/fossil_skull_tyrannosaurus-4.png-2eb0a2117b0812e2cad26224b9781d25.ctex"]
 
 [params]
 
