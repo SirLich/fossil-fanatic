@@ -1,19 +1,24 @@
 extends CanvasLayer
 class_name GameOverScreen
 
+@export var game_over_sound : AudioStream
+
+@export var star_scene : PackedScene
+@export var empty_star : PackedScene
+
+@export_group("Nodes")
 @export var time_label : Label
 @export var damage_label : Label
 @export var time_need_label : Label
 @export var star_container : Container
-@export var star_scene : PackedScene
-@export var empty_star : PackedScene
 @export var fossil : TextureRect
 
 var _health 
 var _time
 var _texture
 
-func _ready() -> void:	
+func _ready() -> void:
+	SoundManager.play_ui_sound(game_over_sound)
 	offset.y = -2000
 	
 	var tween = get_tree().create_tween()
@@ -51,7 +56,7 @@ func set_health():
 		" very damaged ",
 		" damaged ",
 		" slightly damaged ",
-		" nearly perfect",
+		" nearly perfect ",
 		" perfect "
 	]
 	
