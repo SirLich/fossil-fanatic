@@ -1,6 +1,5 @@
-[gd_scene load_steps=20 format=3 uid="uid://dimxo0ae7osx2"]
+[gd_scene load_steps=19 format=3 uid="uid://dimxo0ae7osx2"]
 
-[ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/misc/Ground.png" id="1_bt44k"]
 [ext_resource type="PackedScene" uid="uid://c8l8bl3dignc2" path="res://scenes/fossils/fossil_bront.tscn" id="2_btoec"]
 [ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/rock/rock_4.tscn" id="3_bt44k"]
 [ext_resource type="PackedScene" uid="uid://d03q0ru1jvqdy" path="res://scenes/rock/rock_13.tscn" id="4_btoec"]
@@ -21,11 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://cs0i12ani7rxf" path="res://scenes/rock/sand_pile.tscn" id="18_oqlok"]
 
 [node name="Level1" type="Node2D"]
-
-[node name="Ground" type="Sprite2D" parent="."]
-texture = ExtResource("1_bt44k")
-centered = false
-metadata/_edit_lock_ = true
 
 [node name="Fossil_Brontosaurus" parent="." instance=ExtResource("2_btoec")]
 position = Vector2(1231, 378)

@@ -34,6 +34,19 @@ starting_tool = ExtResource("4_eow3j")
 game_over_scene = ExtResource("11_mfdv2")
 hud = NodePath("UI")
 
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Ground" type="TextureRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_215e1")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
 [node name="UI" type="CanvasLayer" parent="."]
 layer = 100
 
@@ -119,10 +132,5 @@ texture_hover = ExtResource("16_rvswv")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("17_rvswv")
-
-[node name="Ground" type="Sprite2D" parent="."]
-texture = ExtResource("14_215e1")
-centered = false
-metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="StartGame/MarginContainer/Panel/TextureButton" to="." method="_on_texture_button_pressed"]

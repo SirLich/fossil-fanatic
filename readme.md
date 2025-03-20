@@ -18,7 +18,8 @@ You can play the game on [itch.io](https://sirlich.itch.io/fossil-fanatic).
 # Release Notes
 
 ## 1.1.0
-
+ - General reorganization and cleanup from the jam version
+ - Fixed background incorrect at different screen resolutions.
 
 ## 1.0.3
 
