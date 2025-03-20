@@ -10,6 +10,7 @@ class_name Tool
 var can_hit = true
 
 @export var is_brush = false
+@export var draw_debug = false
 
 var circle_points = []
 var old_colliders = []
@@ -23,20 +24,19 @@ func _process(delta):
 	global_position = get_global_mouse_position()
 	queue_redraw()
 
-func _draw() -> void:
-	pass
-	
-	#draw_set_transform_matrix(global_transform.affine_inverse())
-#
-	#for point in circle_points:
-		#draw_circle(point, 2, Color(1, 0, 0), true)
+func _draw() -> void:	
+	if draw_debug:
+		draw_set_transform_matrix(global_transform.affine_inverse())
+
+		for point in circle_points:
+			draw_circle(point, 2, Color(1, 0, 0), true)
 		
 func _physics_process(delta: float) -> void:
 	detect_rocks()
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if can_hit:
-		if event.is_action_released("use_tool"):
+		if event.is_action_pressed("use_tool"):
 			can_hit = false
 			$AudioStreamPlayer2D.play()
 			await get_tree().create_timer(hit_delay).timeout
