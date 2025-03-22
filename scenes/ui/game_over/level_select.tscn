@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqvfh1aw5frq8"]
+
+[ext_resource type="Script" uid="uid://bb6b0e2m8vafp" path="res://scenes/ui/game_over/level_select.gd" id="1_s4j4j"]
+[ext_resource type="Texture2D" uid="uid://ttf52sedpegy" path="res://assets/textures/ui/Exitbutton.png" id="3_1w2pf"]
+[ext_resource type="Texture2D" uid="uid://b2lnhfmjx3bhk" path="res://assets/textures/ui/Fin_Background.png" id="5_46jl4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w3hxg"]
+texture = ExtResource("5_46jl4")
+
+[node name="LevelSelect" type="CanvasLayer"]
+script = ExtResource("1_s4j4j")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w3hxg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/margin_top = -50
+theme_override_constants/margin_right = -50
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_1w2pf")
+texture_hover = ExtResource("3_1w2pf")

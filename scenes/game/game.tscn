@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=25 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://scenes/game/game.gd" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://src/tool_button.gd" id="3_ryrav"]
@@ -15,9 +15,13 @@
 [ext_resource type="Texture2D" uid="uid://ckkecaqhh0y2o" path="res://assets/textures/ui/Toolbar_Brush_Hover.png" id="11_rvswv"]
 [ext_resource type="Texture2D" uid="uid://di6vgrqm8x7xl" path="res://assets/textures/ui/Start_with_Title.png" id="13_e8heu"]
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/misc/Ground.png" id="14_215e1"]
+[ext_resource type="Texture2D" uid="uid://dndgn7jrh0jua" path="res://assets/textures/ui/Toolbar_Encyclopedia.png" id="14_pg2xm"]
 [ext_resource type="Texture2D" uid="uid://4on25pim7olc" path="res://assets/textures/ui/Startbutton.png" id="15_e8heu"]
+[ext_resource type="Texture2D" uid="uid://bd8o4v1ppumim" path="res://assets/textures/ui/Toolbar_Encyclopedia_Hover.png" id="15_gc57s"]
+[ext_resource type="Script" uid="uid://b1sds75sdxxus" path="res://scenes/game/book_button.gd" id="16_gc57s"]
 [ext_resource type="Texture2D" uid="uid://beahtvmc0jjqx" path="res://assets/textures/ui/Startbutton_Hover.png" id="16_rvswv"]
 [ext_resource type="Script" uid="uid://dh0fh6o726g1h" path="res://src/button_shim.gd" id="17_rvswv"]
+[ext_resource type="AudioStream" uid="uid://cgj187eg48vp6" path="res://assets/audio/sound_effects/menu/sfx_button_forward.wav" id="22_8b66f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8heu"]
 texture = ExtResource("13_e8heu")
@@ -56,9 +60,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -127.0
+offset_left = -229.0
 offset_top = -128.0
-offset_right = 481.0
+offset_right = 583.0
 offset_bottom = 122.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -66,10 +70,10 @@ scale = Vector2(0.575, 0.575)
 size_flags_vertical = 4
 theme_override_constants/margin_bottom = 50
 
-[node name="VBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
 layout_mode = 2
 
-[node name="HammerButton" type="TextureButton" parent="UI/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
+[node name="HammerButton" type="TextureButton" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("game")]
 layout_mode = 2
 texture_normal = ExtResource("4_j5wjh")
 texture_hover = ExtResource("5_j5wjh")
@@ -77,7 +81,7 @@ script = ExtResource("3_ryrav")
 game = NodePath("../../../..")
 tool_scene = ExtResource("4_7jktm")
 
-[node name="PickButton" type="TextureButton" parent="UI/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
+[node name="PickButton" type="TextureButton" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("game")]
 layout_mode = 2
 texture_normal = ExtResource("4_vef74")
 texture_hover = ExtResource("9_vef74")
@@ -85,13 +89,29 @@ script = ExtResource("3_ryrav")
 game = NodePath("../../../..")
 tool_scene = ExtResource("4_eow3j")
 
-[node name="BrushButton" type="TextureButton" parent="UI/MarginContainer/VBoxContainer" node_paths=PackedStringArray("game")]
+[node name="BrushButton" type="TextureButton" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("game")]
 layout_mode = 2
 texture_normal = ExtResource("10_e8heu")
 texture_hover = ExtResource("11_rvswv")
 script = ExtResource("3_ryrav")
 game = NodePath("../../../..")
 tool_scene = ExtResource("10_7sc4i")
+
+[node name="BookButton" type="TextureButton" parent="UI"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.88, 0.88)
+size_flags_horizontal = 8
+texture_normal = ExtResource("14_pg2xm")
+texture_hover = ExtResource("15_gc57s")
+script = ExtResource("16_gc57s")
 
 [node name="StartGame" type="CanvasLayer" parent="."]
 
@@ -132,5 +152,6 @@ texture_hover = ExtResource("16_rvswv")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("17_rvswv")
+mouse_off_sound = ExtResource("22_8b66f")
 
 [connection signal="pressed" from="StartGame/MarginContainer/Panel/TextureButton" to="." method="_on_texture_button_pressed"]

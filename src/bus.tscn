@@ -78,7 +78,7 @@ script = ExtResource("1_jel5a")
 rock_hit_particle = ExtResource("2_rsfp0")
 menu_music = NodePath("MenuMusic")
 game_music = NodePath("GameMusic")
-button_sound = NodePath("AudioStreamPlayer2")
+button_sound = NodePath("ButtonSound")
 destroy_effect = NodePath("DestroyPlayer")
 damage_effect = NodePath("DamagePlayer")
 fossil_damage = NodePath("DamageFossil")
@@ -107,6 +107,6 @@ stream = ExtResource("7_kyr87")
 volume_db = -1.0
 max_polyphony = 2
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_6th81")
 volume_db = 1.5

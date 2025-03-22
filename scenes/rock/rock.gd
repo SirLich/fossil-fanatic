@@ -10,11 +10,12 @@ class_name Rock
 @export_group("Nodes")
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-var max_health := 3
-var health := max_health
+@export var max_health := 3
+var health
 var hovered = false
 
 func _ready() -> void:
+	health = max_health
 	await get_tree().process_frame
 	set_color()
 	animated_sprite_2d.material.set_shader_parameter("modulate", get_parent().modulate)
