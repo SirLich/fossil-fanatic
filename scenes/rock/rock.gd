@@ -40,8 +40,10 @@ func take_damage():
 			Bus.destroy_effect.play()
 			if rock_particle_scene:
 				var new_scene = rock_particle_scene.instantiate()
+				var particles = new_scene.particles as GPUParticles2D
+									
 				get_parent().add_child(new_scene)
 				new_scene.global_position = global_position
 			queue_free()
 		else:
-			Bus.damage_effect.play()
+			Bus.on_rock_hit(global_position)

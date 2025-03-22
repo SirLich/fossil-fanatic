@@ -21,7 +21,8 @@ You can play the game on [itch.io](https://sirlich.itch.io/fossil-fanatic).
  - General reorganization and cleanup from the jam version
  - Fixed background incorrect at different screen resolutions.
  - Tools now operate on-click, not on-release
- - 
+ - Integrate missing audio for when the menu appears after finishing a level
+ - Fixed dust particles highlighting together, rather then seperately
 
 ## 1.0.3
 

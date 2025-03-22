@@ -29,9 +29,9 @@ hue_variation_max = -2.23517e-08
 
 [node name="RockParticles" type="Node2D" node_paths=PackedStringArray("particles")]
 script = ExtResource("1_rb83r")
-particles = NodePath("GPUParticles2D")
+particles = [NodePath("RockChunks")]
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="RockChunks" type="GPUParticles2D" parent="."]
 emitting = false
 amount = 16
 texture = ExtResource("1_gsrsk")

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cwa0napga1sso" path="res://scenes/rock/rock_1.tscn" id="2_w75he"]
 [ext_resource type="PackedScene" uid="uid://sm48vjbd723f" path="res://scenes/rock/rock_2.tscn" id="3_udfhf"]
 [ext_resource type="PackedScene" uid="uid://fc47bpu8outc" path="res://scenes/rock/rock_3.tscn" id="4_i6od7"]
-[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/rock/rock_4.tscn" id="5_ryfpa"]
+[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/pebbles/pebbles.tscn" id="5_ryfpa"]
 [ext_resource type="PackedScene" uid="uid://ciibdpkgsh0ia" path="res://scenes/rock/rock_5.tscn" id="6_ntdhj"]
 [ext_resource type="PackedScene" uid="uid://2jh4u5s34gvq" path="res://scenes/rock/rock_6.tscn" id="7_0fu15"]
 [ext_resource type="PackedScene" uid="uid://bf3e5r1dkyedg" path="res://scenes/rock/rock_7.tscn" id="8_4knja"]

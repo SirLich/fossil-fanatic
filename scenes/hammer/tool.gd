@@ -1,6 +1,8 @@
 extends Area2D
 class_name Tool
 
+@export var hit_particles : PackedScene
+
 @export var size = 20
 @export var hit_delay = 0.1
 
@@ -43,6 +45,11 @@ func _unhandled_input(event: InputEvent) -> void:
 			anim_player.stop()
 			anim_player.play("hit", 0.0)
 			can_hit = true
+			
+			if hit_particles:
+				var new_scene = hit_particles.instantiate()
+				get_parent().add_child(new_scene)
+				new_scene.global_position = global_position
 
 func apply_damage():	
 	for object_area in get_overlapping_areas():

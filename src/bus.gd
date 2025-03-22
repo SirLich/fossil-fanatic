@@ -1,16 +1,21 @@
 extends Node
 
+@export_group("Particles")
+@export var rock_hit_particle : PackedScene
+
+@export_group("Sounds")
 @export var menu_music :AudioStreamPlayer
 @export var game_music :AudioStreamPlayer
-
 @export var button_sound : AudioStreamPlayer
-
 @export var destroy_effect : AudioStreamPlayer
 @export var damage_effect : AudioStreamPlayer
 @export var fossil_damage : AudioStreamPlayer
 
 @export var levels_in_order : Array[LevelDescription]
 var current_level = 0
+
+func on_rock_hit(location):
+	damage_effect.play()
 
 func get_current_level():
 	return levels_in_order[current_level]

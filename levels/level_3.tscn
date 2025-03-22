@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d1dnbmu1xk2a0" path="res://assets/textures/misc/Ground.png" id="1_dg2sq"]
 [ext_resource type="PackedScene" uid="uid://galc4u7g16as" path="res://levels/layers/layer_2.tscn" id="3_bqna3"]
 [ext_resource type="PackedScene" uid="uid://wtf2w4bu57wi" path="res://levels/layers/layer_1.tscn" id="4_giopq"]
-[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/rock/rock_4.tscn" id="5_4s0nf"]
+[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/pebbles/pebbles.tscn" id="5_4s0nf"]
 [ext_resource type="PackedScene" uid="uid://cs0i12ani7rxf" path="res://scenes/rock/sand_pile.tscn" id="5_wpwv8"]
 [ext_resource type="PackedScene" uid="uid://b43mar84ae45h" path="res://assets/shaders/rock_particles.tscn" id="6_46211"]
 [ext_resource type="PackedScene" uid="uid://dpy38kmegkb45" path="res://scenes/rock/rock_12.tscn" id="6_icgme"]

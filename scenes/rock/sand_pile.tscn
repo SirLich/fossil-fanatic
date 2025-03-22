@@ -15,7 +15,8 @@ shader_parameter/add_margins = true
 shader_parameter/enabled = true
 shader_parameter/modulate = Color(1, 1, 1, 1)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_cpmkv"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0jsf7"]
+resource_local_to_scene = true
 shader = ExtResource("3_0jsf7")
 shader_parameter/color = Color(1, 1, 1, 1)
 shader_parameter/width = 1.0
@@ -36,7 +37,7 @@ collision_mask = 2
 script = ExtResource("2_nm5ha")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_cpmkv")
+material = SubResource("ShaderMaterial_0jsf7")
 position = Vector2(0.999998, 6)
 scale = Vector2(0.695, 0.695)
 texture = ExtResource("3_hyrip")
