@@ -31,12 +31,12 @@ font = ExtResource("11_215e1")
 font_size = 40
 font_color = Color(0.282353, 0.203922, 0.184314, 1)
 
-[node name="Game" type="Node2D" node_paths=PackedStringArray("start_screen", "hud")]
+[node name="Game" type="Node2D" node_paths=PackedStringArray("start_screen", "hud", "user_interface_slot")]
 script = ExtResource("1_feb5d")
-start_screen = NodePath("StartGame")
+start_screen = NodePath("UserInterface/StartGame")
 starting_tool = ExtResource("4_eow3j")
-game_over_scene = ExtResource("11_mfdv2")
-hud = NodePath("UI")
+hud = NodePath("UserInterface/UI")
+user_interface_slot = NodePath("UserInterface")
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
@@ -51,10 +51,13 @@ texture = ExtResource("14_215e1")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="UI" type="CanvasLayer" parent="."]
-layer = 100
+[node name="UserInterface" type="Node" parent="."]
 
-[node name="MarginContainer" type="MarginContainer" parent="UI"]
+[node name="UI" type="CanvasLayer" parent="UserInterface"]
+layer = 100
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="UserInterface/UI"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -70,34 +73,34 @@ scale = Vector2(0.575, 0.575)
 size_flags_vertical = 4
 theme_override_constants/margin_bottom = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UserInterface/UI/MarginContainer"]
 layout_mode = 2
 
-[node name="HammerButton" type="TextureButton" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("game")]
+[node name="HammerButton" type="TextureButton" parent="UserInterface/UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("game")]
 layout_mode = 2
 texture_normal = ExtResource("4_j5wjh")
 texture_hover = ExtResource("5_j5wjh")
 script = ExtResource("3_ryrav")
-game = NodePath("../../../..")
+game = NodePath("../../../../..")
 tool_scene = ExtResource("4_7jktm")
 
-[node name="PickButton" type="TextureButton" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("game")]
+[node name="PickButton" type="TextureButton" parent="UserInterface/UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("game")]
 layout_mode = 2
 texture_normal = ExtResource("4_vef74")
 texture_hover = ExtResource("9_vef74")
 script = ExtResource("3_ryrav")
-game = NodePath("../../../..")
+game = NodePath("../../../../..")
 tool_scene = ExtResource("4_eow3j")
 
-[node name="BrushButton" type="TextureButton" parent="UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("game")]
+[node name="BrushButton" type="TextureButton" parent="UserInterface/UI/MarginContainer/HBoxContainer" node_paths=PackedStringArray("game")]
 layout_mode = 2
 texture_normal = ExtResource("10_e8heu")
 texture_hover = ExtResource("11_rvswv")
 script = ExtResource("3_ryrav")
-game = NodePath("../../../..")
+game = NodePath("../../../../..")
 tool_scene = ExtResource("10_7sc4i")
 
-[node name="BookButton" type="TextureButton" parent="UI"]
+[node name="BookButton" type="TextureButton" parent="UserInterface/UI"]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -113,20 +116,21 @@ texture_normal = ExtResource("14_pg2xm")
 texture_hover = ExtResource("15_gc57s")
 script = ExtResource("16_gc57s")
 
-[node name="StartGame" type="CanvasLayer" parent="."]
+[node name="StartGame" type="CanvasLayer" parent="UserInterface"]
+visible = false
 
-[node name="MarginContainer" type="MarginContainer" parent="StartGame"]
+[node name="MarginContainer" type="MarginContainer" parent="UserInterface/StartGame"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="StartGame/MarginContainer"]
+[node name="Panel" type="Panel" parent="UserInterface/StartGame/MarginContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_e8heu")
 
-[node name="Label" type="Label" parent="StartGame/MarginContainer/Panel"]
+[node name="Label" type="Label" parent="UserInterface/StartGame/MarginContainer/Panel"]
 layout_mode = 2
 offset_left = 83.0
 offset_top = 708.0
@@ -140,7 +144,7 @@ for PULS Game Jam 2025"
 label_settings = SubResource("LabelSettings_boyg6")
 horizontal_alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="StartGame/MarginContainer/Panel"]
+[node name="TextureButton" type="TextureButton" parent="UserInterface/StartGame/MarginContainer/Panel"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 offset_left = 643.0
@@ -154,4 +158,6 @@ stretch_mode = 4
 script = ExtResource("17_rvswv")
 mouse_off_sound = ExtResource("22_8b66f")
 
-[connection signal="pressed" from="StartGame/MarginContainer/Panel/TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="GameOverScreen" parent="UserInterface" instance=ExtResource("11_mfdv2")]
+
+[connection signal="button_up" from="UserInterface/StartGame/MarginContainer/Panel/TextureButton" to="." method="_on_texture_button_button_up"]

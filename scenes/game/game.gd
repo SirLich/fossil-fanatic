@@ -3,20 +3,29 @@ class_name Game
 
 @export var start_screen : CanvasLayer
 @export var starting_tool : PackedScene
-@export var game_over_scene : PackedScene
 @export var hud : CanvasLayer
-
-var game_over_ui
 
 var old_tool
 var start_time
 
+@export var user_interface_slot : Node
+
+enum HudSlot {HUD, MAIN_MENU_SCREEN, LEVEL_COMPLETE}
+
+func set_ui_state(slot : HudSlot):
+	for child in user_interface_slot.get_children():
+		child.visible = false
+	var child = user_interface_slot.get_child(slot)
+	child.visible = true
+	return child
+	
 var my_level
-func _ready() -> void:
-	hud.visible = false
+func _ready() -> void:	
 	Bus.on_game_over.connect(trigger_game_over)
 	Bus.on_level_selected.connect(play_level)
 	Bus.go_main_menu.connect(restart)
+	
+	set_ui_state(HudSlot.MAIN_MENU_SCREEN)
 
 func restart():
 	Bus.game_music.stop()
@@ -43,18 +52,11 @@ func trigger_game_over(health, texture):
 	my_level.queue_free()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	old_tool.queue_free()
-	hud.visible = false
-	game_over_ui = game_over_scene.instantiate()
-	
+
+	var game_over_ui = set_ui_state(HudSlot.LEVEL_COMPLETE)
 	game_over_ui.set_end_game_data(game_time, health, texture)
-	#game_over_ui.set_time(game_time)
-	#game_over_ui.set_health(health)
-	#game_over_ui.set_stars()
-	#game_over_ui.set_texture(texture)
-	add_child(game_over_ui)
 
-
-func _on_texture_button_pressed() -> void:
+func _on_texture_button_button_up() -> void:
 	start_screen.visible = false
 	Bus.game_music.play()
 	Bus.menu_music.stop()

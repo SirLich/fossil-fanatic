@@ -32,11 +32,11 @@ script = ExtResource("1_fdghx")
 game_over_sound = ExtResource("2_u3uey")
 star_scene = ExtResource("4_lqr8p")
 empty_star = ExtResource("5_r1tj2")
-time_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/MarginContainer/Time")
-damage_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/VBOx/MarginContainer2/DamageInfo")
-time_need_label = NodePath("MarginContainer/PanelContainer/VBoxContainer/VBOx/Info")
-star_container = NodePath("MarginContainer/PanelContainer/VBoxContainer/MarginContainer2/StarContainer")
-fossil = NodePath("MarginContainer/PanelContainer/VBoxContainer/Fossil")
+time_label = NodePath("MarginContainer/Panel/VBoxContainer/HBoxContainer2/MarginContainer/Time")
+damage_label = NodePath("MarginContainer/Panel/VBoxContainer/VBOx/MarginContainer2/DamageInfo")
+time_need_label = NodePath("MarginContainer/Panel/MarginContainer/HBoxContainer2/Info")
+star_container = NodePath("MarginContainer/Panel/VBoxContainer/MarginContainer2/StarContainer")
+fossil = NodePath("MarginContainer/Panel/Fossil")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -49,52 +49,71 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 200
 theme_override_constants/margin_bottom = 50
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+[node name="Panel" type="Panel" parent="MarginContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_w3hxg")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer"]
-layout_mode = 2
-
-[node name="Fossil" type="TextureRect" parent="MarginContainer/PanelContainer/VBoxContainer"]
+[node name="Fossil" type="TextureRect" parent="MarginContainer/Panel"]
 custom_minimum_size = Vector2(340, 340)
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -445.299
+offset_right = 445.299
+offset_bottom = 340.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
 texture = ExtResource("5_3dait")
-expand_mode = 1
+expand_mode = 3
 stretch_mode = 5
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_top = 50
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -650.0
+offset_top = -61.0
+offset_right = 650.0
+offset_bottom = 281.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="StarContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer2"]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="StarContainer" type="HBoxContainer" parent="MarginContainer/Panel/VBoxContainer/MarginContainer2"]
 layout_mode = 2
 alignment = 1
 
-[node name="TextureRect" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer2/StarContainer" instance=ExtResource("4_lqr8p")]
+[node name="TextureRect" parent="MarginContainer/Panel/VBoxContainer/MarginContainer2/StarContainer" instance=ExtResource("4_lqr8p")]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Panel/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_constants/margin_top = 20
 
-[node name="Time" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
+[node name="Time" type="Label" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer2/MarginContainer"]
 layout_mode = 2
 text = "Example Time"
 label_settings = ExtResource("6_r1tj2")
 
-[node name="VBOx" type="VBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
+[node name="VBOx" type="VBoxContainer" parent="MarginContainer/Panel/VBoxContainer"]
 layout_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer/VBOx"]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/Panel/VBoxContainer/VBOx"]
 layout_mode = 2
 theme_override_constants/margin_top = 40
 
-[node name="DamageInfo" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/VBOx/MarginContainer2"]
+[node name="DamageInfo" type="Label" parent="MarginContainer/Panel/VBoxContainer/VBOx/MarginContainer2"]
 custom_minimum_size = Vector2(1300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -103,48 +122,48 @@ label_settings = SubResource("LabelSettings_akil3")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Info" type="Label" parent="MarginContainer/PanelContainer/VBoxContainer/VBOx"]
-custom_minimum_size = Vector2(1000, 50)
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Testsdfds"
-label_settings = SubResource("LabelSettings_c5lb4")
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer/VBOx"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/VBoxContainer/VBOx"]
 layout_mode = 2
 theme_override_constants/margin_top = 80
 
-[node name="Control" type="Control" parent="MarginContainer/PanelContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -760.0
+offset_top = -156.0
+offset_right = 760.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer"]
 layout_mode = 2
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 100
+size_flags_vertical = 8
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer"]
-layout_mode = 2
-alignment = 2
-
-[node name="ReplayButton" type="TextureButton" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2"]
+[node name="ReplayButton" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("6_lqr8p")
 texture_hover = ExtResource("9_akil3")
 script = ExtResource("10_c5lb4")
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(1110, 0)
+[node name="Info" type="Label" parent="MarginContainer/Panel/MarginContainer/HBoxContainer2"]
 layout_mode = 2
+size_flags_horizontal = 3
+text = "Testsdfds"
+label_settings = SubResource("LabelSettings_c5lb4")
+horizontal_alignment = 1
 
-[node name="NextLevelButton" type="TextureButton" parent="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2"]
+[node name="NextLevelButton" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/HBoxContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("7_r1tj2")
 texture_hover = ExtResource("11_3dait")
 script = ExtResource("10_c5lb4")
 
-[connection signal="button_up" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/ReplayButton" to="." method="_on_replay_button_button_up"]
-[connection signal="button_up" from="MarginContainer/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/NextLevelButton" to="." method="_on_next_level_button_button_up"]
+[connection signal="button_up" from="MarginContainer/Panel/MarginContainer/HBoxContainer2/ReplayButton" to="." method="_on_replay_button_button_up"]
+[connection signal="button_up" from="MarginContainer/Panel/MarginContainer/HBoxContainer2/NextLevelButton" to="." method="_on_next_level_button_button_up"]

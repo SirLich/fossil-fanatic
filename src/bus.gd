@@ -14,6 +14,13 @@ extends Node
 @export var levels_in_order : Array[LevelDescription]
 var current_level = 0
 
+
+func get_game() -> Game:
+	for child in get_parent().get_children():
+		if child is Game:
+			return child
+	return null
+	
 func on_rock_hit(location):
 	damage_effect.play()
 
