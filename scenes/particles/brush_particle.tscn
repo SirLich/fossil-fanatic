@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://bro2jmd50jbdo"]
+
+[ext_resource type="Script" uid="uid://bxspk8m500bf3" path="res://assets/shaders/rock_particles.gd" id="1_ckici"]
+[ext_resource type="Texture2D" uid="uid://bgskyrilke1px" path="res://assets/textures/misc/dust_particle.png" id="2_eiexb"]
+[ext_resource type="Script" uid="uid://dif4k83q0pnmn" path="res://src/one_shot_particle.gd" id="3_k5o4o"]
+
+[sub_resource type="Curve" id="Curve_ra5op"]
+_data = [Vector2(0, 0.405951), 0.0, 0.0, 0, 0, Vector2(1, 0.0798787), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_vxbv6"]
+width = 32
+curve = SubResource("Curve_ra5op")
+
+[sub_resource type="Curve" id="Curve_a3pqw"]
+_data = [Vector2(0, 0.747875), 0.0, 0.0, 0, 0, Vector2(1, 0.274708), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_c80t1"]
+width = 32
+curve = SubResource("Curve_a3pqw")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ng4e5"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 82.81
+angle_min = -239.3
+angle_max = 277.7
+direction = Vector3(-1, 0, 0)
+spread = 16.895
+initial_velocity_min = 149.11
+initial_velocity_max = 301.25
+gravity = Vector3(0, 98, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = -2.23517e-06
+damping_min = 98.085
+damping_max = 100.0
+scale_min = 0.0
+scale_curve = SubResource("CurveTexture_c80t1")
+color = Color(0.77341, 0.66453, 0.578198, 1)
+alpha_curve = SubResource("CurveTexture_vxbv6")
+
+[node name="BrushParticles" type="Node2D" node_paths=PackedStringArray("particles")]
+z_as_relative = false
+script = ExtResource("1_ckici")
+particles = [NodePath("Smoke")]
+
+[node name="Smoke" type="GPUParticles2D" parent="."]
+amount = 32
+texture = ExtResource("2_eiexb")
+lifetime = 0.68
+explosiveness = 0.62
+process_material = SubResource("ParticleProcessMaterial_ng4e5")
+script = ExtResource("3_k5o4o")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://bka85843jcqhl"]
+[gd_scene load_steps=13 format=3 uid="uid://bka85843jcqhl"]
 
-[ext_resource type="Script" uid="uid://bxspk8m500bf3" path="res://assets/shaders/rock_particles.gd" id="1_ng4e5"]
-[ext_resource type="Texture2D" uid="uid://bgskyrilke1px" path="res://assets/textures/misc/dust_particle.png" id="2_1rshk"]
-[ext_resource type="Texture2D" uid="uid://bydeptond5sqj" path="res://assets/textures/stones/stone_3-3.png" id="3_ra5op"]
+[ext_resource type="Script" uid="uid://bxspk8m500bf3" path="res://assets/shaders/rock_particles.gd" id="1_0v2il"]
+[ext_resource type="Texture2D" uid="uid://bgskyrilke1px" path="res://assets/textures/misc/dust_particle.png" id="2_ovsx0"]
+[ext_resource type="Script" uid="uid://dif4k83q0pnmn" path="res://src/one_shot_particle.gd" id="3_e0fv6"]
+[ext_resource type="Texture2D" uid="uid://bydeptond5sqj" path="res://assets/textures/stones/stone_3-3.png" id="4_rqkfj"]
 
 [sub_resource type="Curve" id="Curve_ra5op"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.0798787), 0.0, 0.0, 0, 0]
@@ -62,23 +63,25 @@ scale_curve = SubResource("CurveTexture_a3pqw")
 
 [node name="RockHitParticles" type="Node2D" node_paths=PackedStringArray("particles")]
 z_as_relative = false
-script = ExtResource("1_ng4e5")
+script = ExtResource("1_0v2il")
 particles = [NodePath("Smoke"), NodePath("Stone")]
 
 [node name="Smoke" type="GPUParticles2D" parent="."]
 emitting = false
 amount = 16
-texture = ExtResource("2_1rshk")
+texture = ExtResource("2_ovsx0")
 lifetime = 0.31
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_ng4e5")
+script = ExtResource("3_e0fv6")
 
 [node name="Stone" type="GPUParticles2D" parent="."]
 emitting = false
 amount = 3
-texture = ExtResource("3_ra5op")
+texture = ExtResource("4_rqkfj")
 lifetime = 0.31
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_c80t1")
+script = ExtResource("3_e0fv6")

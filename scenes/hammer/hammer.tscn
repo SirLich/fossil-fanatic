@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://d0et4vc24oa8h"]
 
 [ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/tool.gd" id="1_qnip4"]
-[ext_resource type="PackedScene" uid="uid://bka85843jcqhl" path="res://scenes/particles/rock_hit_particles.tscn" id="2_nqvee"]
+[ext_resource type="PackedScene" uid="uid://bka85843jcqhl" path="res://scenes/particles/hammer_particles.tscn" id="2_nqvee"]
 [ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_obftq"]
 [ext_resource type="Texture2D" uid="uid://b6fd6w3uhblwf" path="res://assets/textures/tools/hammer.png" id="3_rxfdk"]
 [ext_resource type="AudioStream" uid="uid://b26al0da4l66l" path="res://assets/audio/sfx_functions/hammer_randomizer.tres" id="4_rxfdk"]

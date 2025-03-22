@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://crbe0agxb2nli"]
+[gd_scene load_steps=11 format=3 uid="uid://crbe0agxb2nli"]
 
 [ext_resource type="Script" uid="uid://d2xq2w5anyts2" path="res://scenes/hammer/tool.gd" id="1_acdsb"]
+[ext_resource type="PackedScene" uid="uid://ck07p26unpfdr" path="res://scenes/particles/pick_particles.tscn" id="2_4hcue"]
 [ext_resource type="Shader" uid="uid://fk4lmhpdtgfi" path="res://assets/shaders/tool_reticule.gdshader" id="2_f3efj"]
 [ext_resource type="Texture2D" uid="uid://dlaa3qd5eitse" path="res://assets/textures/tools/pick.png" id="3_acdsb"]
 [ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="4_4c4nw"]
@@ -97,6 +98,7 @@ _data = {
 [node name="Pick" type="Area2D" node_paths=PackedStringArray("anim_player") groups=["tool"]]
 collision_layer = 2
 script = ExtResource("1_acdsb")
+hit_particles = ExtResource("2_4hcue")
 size = 5
 hit_delay = 0.2
 anim_player = NodePath("AnimationPlayer")

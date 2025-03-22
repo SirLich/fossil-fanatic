@@ -20,6 +20,7 @@
 position = Vector2(1020, 369)
 
 [node name="Pebbles" parent="." instance=ExtResource("13_tmxu3")]
+modulate = Color(0.72872, 0.371631, 0.214912, 1)
 position = Vector2(1074, 482)
 
 [node name="Rock" parent="." instance=ExtResource("3_8itow")]

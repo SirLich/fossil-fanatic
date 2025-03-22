@@ -14,5 +14,4 @@ func _ready() -> void:
 	await get_tree().process_frame
 	
 	for particle in particles:
-		particle.emitting = true
 		particle.finished.connect(_evaluate_despawn_conditions)

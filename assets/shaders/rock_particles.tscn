@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b43mar84ae45h"]
+[gd_scene load_steps=7 format=3 uid="uid://b43mar84ae45h"]
 
 [ext_resource type="Texture2D" uid="uid://wy7f73ajuw7l" path="res://assets/textures/stones/stone_1-1.png" id="1_gsrsk"]
 [ext_resource type="Script" uid="uid://bxspk8m500bf3" path="res://assets/shaders/rock_particles.gd" id="1_rb83r"]
+[ext_resource type="Script" uid="uid://dif4k83q0pnmn" path="res://src/one_shot_particle.gd" id="3_upo78"]
 
 [sub_resource type="Curve" id="Curve_gsrsk"]
 bake_resolution = 16
@@ -13,6 +14,8 @@ curve = SubResource("Curve_gsrsk")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gsrsk"]
 particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 128.0
 angle_min = -360.7
 angle_max = -33.1
 direction = Vector3(0, 1, 0)
@@ -32,10 +35,9 @@ script = ExtResource("1_rb83r")
 particles = [NodePath("RockChunks")]
 
 [node name="RockChunks" type="GPUParticles2D" parent="."]
-emitting = false
 amount = 16
 texture = ExtResource("1_gsrsk")
 lifetime = 1.6
-one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_gsrsk")
+script = ExtResource("3_upo78")

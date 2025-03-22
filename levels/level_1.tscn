@@ -35,12 +35,14 @@ position = Vector2(1166, 460)
 position = Vector2(1328, 356)
 
 [node name="Rock3" parent="." instance=ExtResource("3_bt44k")]
+modulate = Color(0.72872, 0.371631, 0.214912, 1)
 position = Vector2(1450, 314)
 rotation = 0.315571
 color = 2
 rock_particle_scene = ExtResource("5_7nvrk")
 
 [node name="Rock" parent="." instance=ExtResource("3_bt44k")]
+modulate = Color(0.72872, 0.371631, 0.214912, 1)
 position = Vector2(761, 336)
 rotation = -2.00172
 rock_particle_scene = ExtResource("5_7nvrk")
@@ -51,6 +53,7 @@ rotation = -0.0288902
 rock_particle_scene = ExtResource("5_7nvrk")
 
 [node name="Rock4" parent="." instance=ExtResource("3_bt44k")]
+modulate = Color(0.72872, 0.371631, 0.214912, 1)
 position = Vector2(741, 545)
 rock_particle_scene = ExtResource("5_7nvrk")
 
@@ -62,6 +65,7 @@ color = 1
 rock_particle_scene = ExtResource("5_7nvrk")
 
 [node name="Rock5" parent="." instance=ExtResource("3_bt44k")]
+modulate = Color(0.72872, 0.371631, 0.214912, 1)
 position = Vector2(1016, 459)
 rock_particle_scene = ExtResource("5_7nvrk")
 
@@ -83,6 +87,7 @@ scale = Vector2(0.831241, 0.831241)
 rock_particle_scene = ExtResource("5_7nvrk")
 
 [node name="Rock2" parent="." instance=ExtResource("3_bt44k")]
+modulate = Color(0.72872, 0.371631, 0.214912, 1)
 position = Vector2(704, 731)
 rotation = -1.55604
 rock_particle_scene = ExtResource("5_7nvrk")
@@ -127,6 +132,7 @@ rotation = 0.0516144
 rock_particle_scene = ExtResource("5_7nvrk")
 
 [node name="Rock15" parent="." instance=ExtResource("3_bt44k")]
+modulate = Color(0.72872, 0.371631, 0.214912, 1)
 position = Vector2(903, 193)
 rotation = -0.939537
 rock_particle_scene = ExtResource("5_7nvrk")

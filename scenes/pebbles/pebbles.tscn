@@ -3,9 +3,9 @@
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_7nplx"]
 [ext_resource type="Script" uid="uid://dggc4gw7y48nb" path="res://scenes/rock/rock.gd" id="2_h5px7"]
 [ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_81r7u"]
+[ext_resource type="Texture2D" uid="uid://dhy3fho4kun31" path="res://assets/textures/misc/dust_p.png" id="4_nxh4p"]
 [ext_resource type="Texture2D" uid="uid://chrgmqmad2ye3" path="res://assets/textures/misc/dust_layer_1.png" id="4_yt64c"]
 [ext_resource type="Texture2D" uid="uid://dtx377sckuxms" path="res://assets/textures/misc/dust_layer_2.png" id="5_nxh4p"]
-[ext_resource type="Texture2D" uid="uid://dpvejgxacugsr" path="res://assets/textures/misc/dust_layer_3.png" id="6_3x850"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
 shader = ExtResource("1_7nplx")
@@ -17,11 +17,11 @@ shader_parameter/add_margins = true
 shader_parameter/enabled = true
 shader_parameter/modulate = Color(1, 1, 1, 1)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_xrnjw"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_hgybc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_3x850")
+"texture": ExtResource("4_nxh4p")
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_nxh4p")
@@ -46,7 +46,7 @@ script = ExtResource("2_h5px7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = ExtResource("3_81r7u")
-sprite_frames = SubResource("SpriteFrames_xrnjw")
+sprite_frames = SubResource("SpriteFrames_hgybc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_fjda0")
