@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://esvgo8trh17h" path="res://scenes/ui/game_over/game_over_screen.gd" id="1_fdghx"]
 [ext_resource type="AudioStream" uid="uid://c42c7pgfvi4s" path="res://assets/audio/sound_effects/menu/sfx_menu_appear.wav" id="2_u3uey"]
-[ext_resource type="PackedScene" uid="uid://b817wce4nifhn" path="res://levels/star.tscn" id="4_lqr8p"]
+[ext_resource type="PackedScene" uid="uid://b817wce4nifhn" path="res://scenes/ui/star.tscn" id="4_lqr8p"]
 [ext_resource type="Texture2D" uid="uid://b2lnhfmjx3bhk" path="res://assets/textures/ui/Fin_Background.png" id="4_tmhko"]
 [ext_resource type="Texture2D" uid="uid://tgbax53obl3i" path="res://assets/fossils/footprints/fossil_footprint_avaceratops-1.png" id="5_3dait"]
-[ext_resource type="PackedScene" uid="uid://bhrgkkh3oe3px" path="res://levels/empty_star.tscn" id="5_r1tj2"]
+[ext_resource type="PackedScene" uid="uid://bhrgkkh3oe3px" path="res://scenes/ui/empty_star.tscn" id="5_r1tj2"]
 [ext_resource type="Texture2D" uid="uid://qfnx17i4xto0" path="res://assets/textures/ui/Arrow_Repeat.png" id="6_lqr8p"]
 [ext_resource type="LabelSettings" uid="uid://bf23cgxfjefwf" path="res://resources/default_label.tres" id="6_r1tj2"]
 [ext_resource type="FontFile" uid="uid://coexytxldfvlm" path="res://assets/fonts/barlow/Barlow-Bold.ttf" id="7_0ccdq"]

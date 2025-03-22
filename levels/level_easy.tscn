@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cos6bp05etwh0"]
+[gd_scene load_steps=13 format=3 uid="uid://cos6bp05etwh0"]
 
 [ext_resource type="PackedScene" uid="uid://dc07jkw852rhw" path="res://scenes/fossils/fossil_velo.tscn" id="2_a8cgq"]
 [ext_resource type="PackedScene" uid="uid://fc47bpu8outc" path="res://scenes/rock/rock_3.tscn" id="3_8itow"]
@@ -12,16 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://bcxshrlu7a4rp" path="res://scenes/rock/rock_17.tscn" id="10_mp5nv"]
 [ext_resource type="PackedScene" uid="uid://dd3q00355i23t" path="res://scenes/rock/rock_10.tscn" id="11_lft2b"]
 [ext_resource type="PackedScene" uid="uid://bf3e5r1dkyedg" path="res://scenes/rock/rock_7.tscn" id="12_yj4qs"]
-[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/pebbles/pebbles.tscn" id="13_tmxu3"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Fossil_avaceratops" parent="." instance=ExtResource("2_a8cgq")]
 position = Vector2(1020, 369)
-
-[node name="Pebbles" parent="." instance=ExtResource("13_tmxu3")]
-modulate = Color(0.72872, 0.371631, 0.214912, 1)
-position = Vector2(1074, 482)
 
 [node name="Rock" parent="." instance=ExtResource("3_8itow")]
 position = Vector2(1238, 352)
@@ -32,7 +27,8 @@ position = Vector2(1525, 944)
 rock_particle_scene = ExtResource("4_tmxu3")
 
 [node name="Rock3" parent="." instance=ExtResource("5_tmxu3")]
-position = Vector2(882, 288)
+position = Vector2(867, 194)
+rotation = 0.605442
 color = 2
 rock_particle_scene = ExtResource("4_tmxu3")
 

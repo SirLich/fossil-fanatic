@@ -1,7 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://dimxo0ae7osx2"]
+[gd_scene load_steps=18 format=3 uid="uid://dimxo0ae7osx2"]
 
 [ext_resource type="PackedScene" uid="uid://c8l8bl3dignc2" path="res://scenes/fossils/fossil_bront.tscn" id="2_btoec"]
-[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/pebbles/pebbles.tscn" id="3_bt44k"]
 [ext_resource type="PackedScene" uid="uid://d03q0ru1jvqdy" path="res://scenes/rock/rock_13.tscn" id="4_btoec"]
 [ext_resource type="PackedScene" uid="uid://b43mar84ae45h" path="res://assets/shaders/rock_particles.tscn" id="5_7nvrk"]
 [ext_resource type="PackedScene" uid="uid://bcxshrlu7a4rp" path="res://scenes/rock/rock_17.tscn" id="5_gwceb"]
@@ -34,27 +33,9 @@ position = Vector2(1166, 460)
 [node name="Sand3" parent="." instance=ExtResource("18_oqlok")]
 position = Vector2(1328, 356)
 
-[node name="Rock3" parent="." instance=ExtResource("3_bt44k")]
-modulate = Color(0.72872, 0.371631, 0.214912, 1)
-position = Vector2(1450, 314)
-rotation = 0.315571
-color = 2
-rock_particle_scene = ExtResource("5_7nvrk")
-
-[node name="Rock" parent="." instance=ExtResource("3_bt44k")]
-modulate = Color(0.72872, 0.371631, 0.214912, 1)
-position = Vector2(761, 336)
-rotation = -2.00172
-rock_particle_scene = ExtResource("5_7nvrk")
-
 [node name="Rock16" parent="." instance=ExtResource("6_l53as")]
 position = Vector2(155, 240)
 rotation = -0.0288902
-rock_particle_scene = ExtResource("5_7nvrk")
-
-[node name="Rock4" parent="." instance=ExtResource("3_bt44k")]
-modulate = Color(0.72872, 0.371631, 0.214912, 1)
-position = Vector2(741, 545)
 rock_particle_scene = ExtResource("5_7nvrk")
 
 [node name="Rock33" parent="." instance=ExtResource("6_l53as")]
@@ -62,11 +43,6 @@ position = Vector2(1123, 40)
 rotation = -0.341953
 scale = Vector2(1.06307, 1.06307)
 color = 1
-rock_particle_scene = ExtResource("5_7nvrk")
-
-[node name="Rock5" parent="." instance=ExtResource("3_bt44k")]
-modulate = Color(0.72872, 0.371631, 0.214912, 1)
-position = Vector2(1016, 459)
 rock_particle_scene = ExtResource("5_7nvrk")
 
 [node name="Rock6" parent="." instance=ExtResource("4_btoec")]
@@ -84,12 +60,6 @@ rock_particle_scene = ExtResource("5_7nvrk")
 position = Vector2(458, 601)
 rotation = -2.02395
 scale = Vector2(0.831241, 0.831241)
-rock_particle_scene = ExtResource("5_7nvrk")
-
-[node name="Rock2" parent="." instance=ExtResource("3_bt44k")]
-modulate = Color(0.72872, 0.371631, 0.214912, 1)
-position = Vector2(704, 731)
-rotation = -1.55604
 rock_particle_scene = ExtResource("5_7nvrk")
 
 [node name="Rock7" parent="." instance=ExtResource("5_gwceb")]
@@ -129,12 +99,6 @@ rock_particle_scene = ExtResource("5_7nvrk")
 [node name="Rock28" parent="." instance=ExtResource("10_nmsli")]
 position = Vector2(533, 978)
 rotation = 0.0516144
-rock_particle_scene = ExtResource("5_7nvrk")
-
-[node name="Rock15" parent="." instance=ExtResource("3_bt44k")]
-modulate = Color(0.72872, 0.371631, 0.214912, 1)
-position = Vector2(903, 193)
-rotation = -0.939537
 rock_particle_scene = ExtResource("5_7nvrk")
 
 [node name="Rock17" parent="." instance=ExtResource("12_lrvbd")]
@@ -243,3 +207,18 @@ rock_particle_scene = ExtResource("5_7nvrk")
 [node name="Rock40" parent="." instance=ExtResource("17_lrvbd")]
 position = Vector2(583, 1194)
 rock_particle_scene = ExtResource("5_7nvrk")
+
+[node name="Rock" parent="." instance=ExtResource("14_7nvrk")]
+position = Vector2(1421, 336)
+
+[node name="Rock2" parent="." instance=ExtResource("10_nmsli")]
+position = Vector2(790, 323)
+
+[node name="Rock3" parent="." instance=ExtResource("5_gwceb")]
+position = Vector2(664, 546)
+
+[node name="Rock4" parent="." instance=ExtResource("12_lrvbd")]
+position = Vector2(728, 641)
+
+[node name="Rock5" parent="." instance=ExtResource("7_08mmt")]
+position = Vector2(938, 510)

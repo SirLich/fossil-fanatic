@@ -23,6 +23,9 @@ You can play the game on [itch.io](https://sirlich.itch.io/fossil-fanatic).
  - Tools now operate on-click, not on-release
  - Integrate missing audio for when the menu appears after finishing a level
  - Fixed dust particles highlighting together, rather then seperately
+ - Added particles for brush, pick, and hammer 
+ - Rebalanced levels
+ - Fixed level descriptions
 
 ## 1.0.3
 

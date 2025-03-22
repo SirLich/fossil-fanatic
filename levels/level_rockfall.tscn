@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bf3e5r1dkyedg" path="res://scenes/rock/rock_7.tscn" id="7_mhi21"]
 [ext_resource type="PackedScene" uid="uid://ciibdpkgsh0ia" path="res://scenes/rock/rock_5.tscn" id="7_s7prx"]
 [ext_resource type="PackedScene" uid="uid://cwa0napga1sso" path="res://scenes/rock/rock_1.tscn" id="9_rnbp4"]
-[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/pebbles/pebbles.tscn" id="10_8jtcb"]
+[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/pebbles/Pebbles.tscn" id="10_8jtcb"]
 [ext_resource type="PackedScene" uid="uid://bcxshrlu7a4rp" path="res://scenes/rock/rock_17.tscn" id="11_yep6y"]
 [ext_resource type="PackedScene" uid="uid://b0gkb5mp8j35l" path="res://scenes/rock/rock_14.tscn" id="12_fekep"]
 [ext_resource type="PackedScene" uid="uid://dpy38kmegkb45" path="res://scenes/rock/rock_12.tscn" id="13_d5y2l"]
@@ -112,11 +112,6 @@ rock_particle_scene = ExtResource("4_cyf5u")
 
 [node name="Rock17" parent="." instance=ExtResource("7_s7prx")]
 position = Vector2(239, 788)
-color = 1
-rock_particle_scene = ExtResource("4_cyf5u")
-
-[node name="Rock18" parent="." instance=ExtResource("10_8jtcb")]
-position = Vector2(465, 1117)
 color = 1
 rock_particle_scene = ExtResource("4_cyf5u")
 
@@ -244,3 +239,12 @@ rock_particle_scene = ExtResource("4_cyf5u")
 [node name="Rock46" parent="." instance=ExtResource("16_b7ir7")]
 position = Vector2(1005, 474)
 rock_particle_scene = ExtResource("4_cyf5u")
+
+[node name="Rock18" parent="." instance=ExtResource("12_fekep")]
+position = Vector2(469, 1043)
+
+[node name="Rock47" parent="." instance=ExtResource("4_s7prx")]
+position = Vector2(889, 1092)
+
+[node name="Rock48" parent="." instance=ExtResource("3_cyf5u")]
+position = Vector2(1007, 1154)
