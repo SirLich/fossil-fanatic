@@ -3,7 +3,7 @@
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_max5l"]
 [ext_resource type="Script" uid="uid://csced13wderwu" path="res://scenes/fossils/fossil.gd" id="2_p3368"]
 [ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_khqak"]
-[ext_resource type="Texture2D" uid="uid://j3avivwma5jm" path="res://assets/fossils/footprints/fossil_footprint_velociraptor-1.png" id="3_q5pip"]
+[ext_resource type="Texture2D" uid="uid://j3avivwma5jm" path="res://assets/fossils/skulls/fossil_footprint_velociraptor-1.png" id="3_q5pip"]
 [ext_resource type="Texture2D" uid="uid://lp1dkeg5igdi" path="res://assets/fossils/footprints/fossil_footprint_velociraptor-2.png" id="5_max5l"]
 [ext_resource type="Texture2D" uid="uid://dl8pdb6dw26fp" path="res://assets/fossils/footprints/fossil_footprint_velociraptor-3.png" id="6_p3368"]
 [ext_resource type="Texture2D" uid="uid://chmbbhb6sxv0y" path="res://assets/fossils/footprints/fossil_footprint_velociraptor-4.png" id="7_khqak"]

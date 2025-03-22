@@ -8,7 +8,6 @@ func _ready() -> void:
 	mouse_entered.connect(on_mouse_entered)
 	
 func on_pressed():
-	pass
-	
+	Bus.get_game().open_level_select_menu()
 func on_mouse_entered():
 	Bus.button_sound.play()

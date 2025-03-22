@@ -10,7 +10,16 @@ var start_time
 
 @export var user_interface_slot : Node
 
-enum HudSlot {HUD, MAIN_MENU_SCREEN, LEVEL_COMPLETE}
+enum HudSlot {HUD, MAIN_MENU_SCREEN, LEVEL_COMPLETE, LEVEL_SELECT}
+
+func open_level_select_menu():
+	set_ui_state(Game.HudSlot.LEVEL_SELECT)
+	set_mouse_mode_normal()
+	
+
+func close_level_select_menu():
+	set_ui_state(Game.HudSlot.HUD)
+	change_tool(starting_tool)
 
 func set_ui_state(slot : HudSlot):
 	for child in user_interface_slot.get_children():
@@ -34,7 +43,8 @@ func restart():
 	hud.visible = false
 	
 func play_level(level : LevelDescription):
-	hud.visible = true
+	set_ui_state(HudSlot.HUD)
+	
 	my_level = level.level_scene.instantiate()
 	add_child(my_level)
 	start_time = Time.get_ticks_msec()
@@ -50,12 +60,15 @@ func trigger_game_over(health, texture):
 	var game_time = Time.get_ticks_msec() - start_time
 	
 	my_level.queue_free()
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	old_tool.queue_free()
+	set_mouse_mode_normal()
 
 	var game_over_ui = set_ui_state(HudSlot.LEVEL_COMPLETE)
 	game_over_ui.set_end_game_data(game_time, health, texture)
 
+func set_mouse_mode_normal():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	old_tool.queue_free()
+	
 func _on_texture_button_button_up() -> void:
 	start_screen.visible = false
 	Bus.game_music.play()

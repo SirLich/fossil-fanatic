@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cnd63ikvfohxa" path="res://assets/textures/ui/Star.png" id="1_khnhu"]
 
-[node name="TextureRect" type="TextureRect"]
+[node name="StarFilled" type="TextureRect"]
 clip_contents = true
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(50, 50)
 texture = ExtResource("1_khnhu")
 expand_mode = 1

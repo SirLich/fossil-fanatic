@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://bqvfh1aw5frq8"]
+
+[ext_resource type="Script" uid="uid://bb6b0e2m8vafp" path="res://scenes/ui/level_select/level_select.gd" id="1_s4j4j"]
+[ext_resource type="Texture2D" uid="uid://ttf52sedpegy" path="res://assets/textures/ui/Exitbutton.png" id="3_1w2pf"]
+[ext_resource type="PackedScene" uid="uid://ddnvdiq7ux0b" path="res://scenes/ui/level_select_entry/level_select_entry.tscn" id="4_2apfw"]
+[ext_resource type="Texture2D" uid="uid://dpmjnd6b78cbe" path="res://assets/textures/ui/Exitbutton_Hover.png" id="4_an507"]
+[ext_resource type="Script" uid="uid://6o4iyysbwnyp" path="res://scenes/ui/level_select/level_select_close_button.gd" id="5_5qe3y"]
+[ext_resource type="Texture2D" uid="uid://b2lnhfmjx3bhk" path="res://assets/textures/ui/Fin_Background.png" id="5_46jl4"]
+[ext_resource type="AudioStream" uid="uid://cgj187eg48vp6" path="res://assets/audio/sound_effects/menu/sfx_button_forward.wav" id="6_sgptt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w3hxg"]
+texture = ExtResource("5_46jl4")
+
+[node name="LevelSelect" type="CanvasLayer" node_paths=PackedStringArray("container")]
+script = ExtResource("1_s4j4j")
+entry_scene = ExtResource("4_2apfw")
+container = NodePath("MarginContainer/PanelContainer/GridContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_w3hxg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/margin_top = -50
+theme_override_constants/margin_right = -50
+
+[node name="LevelSelectCloseButton" type="TextureButton" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_1w2pf")
+texture_hover = ExtResource("4_an507")
+script = ExtResource("5_5qe3y")
+mouse_off_sound = ExtResource("6_sgptt")
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 60
+columns = 5
+
+[node name="LevelSelectEntry" parent="MarginContainer/PanelContainer/GridContainer" instance=ExtResource("4_2apfw")]
+layout_mode = 2
+
+[node name="LevelSelectEntry2" parent="MarginContainer/PanelContainer/GridContainer" instance=ExtResource("4_2apfw")]
+layout_mode = 2
+
+[node name="LevelSelectEntry3" parent="MarginContainer/PanelContainer/GridContainer" instance=ExtResource("4_2apfw")]
+layout_mode = 2
+
+[node name="LevelSelectEntry4" parent="MarginContainer/PanelContainer/GridContainer" instance=ExtResource("4_2apfw")]
+layout_mode = 2
+
+[node name="LevelSelectEntry5" parent="MarginContainer/PanelContainer/GridContainer" instance=ExtResource("4_2apfw")]
+layout_mode = 2
+
+[node name="LevelSelectEntry6" parent="MarginContainer/PanelContainer/GridContainer" instance=ExtResource("4_2apfw")]
+layout_mode = 2
+
+[node name="LevelSelectEntry7" parent="MarginContainer/PanelContainer/GridContainer" instance=ExtResource("4_2apfw")]
+layout_mode = 2
+
+[node name="LevelSelectEntry8" parent="MarginContainer/PanelContainer/GridContainer" instance=ExtResource("4_2apfw")]
+layout_mode = 2
+
+[node name="LevelSelectEntry9" parent="MarginContainer/PanelContainer/GridContainer" instance=ExtResource("4_2apfw")]
+layout_mode = 2
+
+[node name="LevelSelectEntry10" parent="MarginContainer/PanelContainer/GridContainer" instance=ExtResource("4_2apfw")]
+layout_mode = 2

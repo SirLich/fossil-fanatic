@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tgbax53obl3i"
-path="res://.godot/imported/fossil_footprint_avaceratops-1.png-89e59547fd3ce602a4860cc666221431.ctex"
+path="res://.godot/imported/fossil_footprint_avaceratops-1.png-e0c5304161d9dc303e481571fa46578a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fossils/footprints/fossil_footprint_avaceratops-1.png"
-dest_files=["res://.godot/imported/fossil_footprint_avaceratops-1.png-89e59547fd3ce602a4860cc666221431.ctex"]
+source_file="res://assets/fossils/skulls/fossil_footprint_avaceratops-1.png"
+dest_files=["res://.godot/imported/fossil_footprint_avaceratops-1.png-e0c5304161d9dc303e481571fa46578a.ctex"]
 
 [params]
 

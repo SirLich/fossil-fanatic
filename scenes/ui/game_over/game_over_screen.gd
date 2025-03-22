@@ -26,11 +26,9 @@ func _ready() -> void:
 
 func _on_replay_button_button_up() -> void:
 	Bus.play_same_level()
-	queue_free()
 
 func _on_next_level_button_button_up() -> void:
 	Bus.play_next_level()
-	queue_free()
 
 func get_time_as_string(in_time):
 	var total_seconds = int(in_time / 1000)
@@ -72,6 +70,7 @@ func set_health():
 	
 func add_star(scene_type):
 	var new_scene = scene_type.instantiate()
+	new_scene.custom_minimum_size = Vector2(100, 100)
 	star_container.add_child(new_scene)
 
 func set_stars_count(num_stars):

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddnvdiq7ux0b"]
+
+[ext_resource type="Texture2D" uid="uid://43l8ipgig6le" path="res://assets/fossils/skulls/fossil_skull_triceratops-1.png" id="1_2lri3"]
+[ext_resource type="Script" uid="uid://3yov2usj8fxj" path="res://scenes/ui/level_select_entry/level_select_entry.gd" id="1_icgo8"]
+[ext_resource type="PackedScene" uid="uid://b817wce4nifhn" path="res://scenes/ui/star.tscn" id="2_o6xe2"]
+[ext_resource type="PackedScene" uid="uid://bhrgkkh3oe3px" path="res://scenes/ui/empty_star.tscn" id="3_4bmht"]
+
+[node name="VBoxContainer" type="VBoxContainer" node_paths=PackedStringArray("fossil_texture", "star_container")]
+offset_bottom = 40.0
+script = ExtResource("1_icgo8")
+fossil_texture = NodePath("TextureRect")
+star_container = NodePath("StarContainer")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_2lri3")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="StarContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="StarFilled" parent="StarContainer" instance=ExtResource("2_o6xe2")]
+layout_mode = 2
+
+[node name="StarFilled2" parent="StarContainer" instance=ExtResource("2_o6xe2")]
+layout_mode = 2
+
+[node name="StarEmpty" parent="StarContainer" instance=ExtResource("3_4bmht")]
+layout_mode = 2

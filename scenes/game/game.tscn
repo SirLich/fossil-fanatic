@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=26 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://scenes/game/game.gd" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://src/tool_button.gd" id="3_ryrav"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://beahtvmc0jjqx" path="res://assets/textures/ui/Startbutton_Hover.png" id="16_rvswv"]
 [ext_resource type="Script" uid="uid://dh0fh6o726g1h" path="res://src/button_shim.gd" id="17_rvswv"]
 [ext_resource type="AudioStream" uid="uid://cgj187eg48vp6" path="res://assets/audio/sound_effects/menu/sfx_button_forward.wav" id="22_8b66f"]
+[ext_resource type="PackedScene" uid="uid://bqvfh1aw5frq8" path="res://scenes/ui/level_select/level_select.tscn" id="23_3jaai"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8heu"]
 texture = ExtResource("13_e8heu")
@@ -55,7 +56,6 @@ metadata/_edit_lock_ = true
 
 [node name="UI" type="CanvasLayer" parent="UserInterface"]
 layer = 100
-visible = false
 
 [node name="MarginContainer" type="MarginContainer" parent="UserInterface/UI"]
 anchors_preset = 7
@@ -159,5 +159,8 @@ script = ExtResource("17_rvswv")
 mouse_off_sound = ExtResource("22_8b66f")
 
 [node name="GameOverScreen" parent="UserInterface" instance=ExtResource("11_mfdv2")]
+visible = false
+
+[node name="LevelSelect" parent="UserInterface" instance=ExtResource("23_3jaai")]
 
 [connection signal="button_up" from="UserInterface/StartGame/MarginContainer/Panel/TextureButton" to="." method="_on_texture_button_button_up"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://jw2jfhmwcx"]
+[gd_scene load_steps=31 format=3 uid="uid://jw2jfhmwcx"]
 
 [ext_resource type="Script" uid="uid://emtgsupplk38" path="res://src/bus.gd" id="1_jel5a"]
 [ext_resource type="Script" uid="uid://gbjidnc5cov7" path="res://src/level_description.gd" id="2_7q2qf"]
@@ -8,28 +8,37 @@
 [ext_resource type="AudioStream" uid="uid://dt4djx6077q0i" path="res://assets/audio/music/Kaput_IngameMusic_v_1.0.wav" id="4_4qkln"]
 [ext_resource type="PackedScene" uid="uid://c6oky8i2hsxh2" path="res://levels/level_pick.tscn" id="4_7q2qf"]
 [ext_resource type="AudioStream" uid="uid://ten5sj53vblp" path="res://assets/audio/sfx_functions/stone_destr_randomizer.tres" id="5_7o3tk"]
+[ext_resource type="Texture2D" uid="uid://j3avivwma5jm" path="res://assets/fossils/skulls/fossil_footprint_velociraptor-1.png" id="5_bk352"]
 [ext_resource type="PackedScene" uid="uid://dh3nr4ibfo5v6" path="res://levels/level_dust.tscn" id="5_fwtcj"]
 [ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="5_ofiws"]
 [ext_resource type="PackedScene" uid="uid://dimxo0ae7osx2" path="res://levels/level_1.tscn" id="6_hu2lu"]
 [ext_resource type="AudioStream" uid="uid://cpc0mjyvacwy5" path="res://assets/audio/sfx_functions/fossil_randomizer.tres" id="7_kyr87"]
+[ext_resource type="Texture2D" uid="uid://br1r2d1g5ce7m" path="res://assets/fossils/skulls/fossil_skull_parasaurolophus-1.png" id="7_vphjo"]
 [ext_resource type="PackedScene" uid="uid://bdxj0emtbxm4u" path="res://levels/level_3.tscn" id="8_ja42h"]
 [ext_resource type="PackedScene" uid="uid://fkotx5jd8c5s" path="res://levels/level_2.tscn" id="8_n0b7l"]
+[ext_resource type="Texture2D" uid="uid://drsujjccdesbm" path="res://assets/fossils/skulls/fossil_skull_dilophosaurus-1.png" id="9_5881v"]
 [ext_resource type="AudioStream" uid="uid://bnyt5i4ilr0hd" path="res://assets/audio/music/Kaput_MenuMusic_loop.wav" id="10_erqox"]
+[ext_resource type="Texture2D" uid="uid://wfbe4n5uomh0" path="res://assets/fossils/footprints/fossil_footprint_brontosaurus-1.png" id="11_5881v"]
+[ext_resource type="Texture2D" uid="uid://rv188jatt3t2" path="res://assets/fossils/skulls/fossil_skull_tyrannosaurus-1.png" id="13_xe577"]
 [ext_resource type="AudioStream" uid="uid://cgj187eg48vp6" path="res://assets/audio/sound_effects/menu/sfx_button_forward.wav" id="14_6th81"]
+[ext_resource type="Texture2D" uid="uid://tgbax53obl3i" path="res://assets/fossils/skulls/fossil_footprint_avaceratops-1.png" id="15_24sgd"]
+[ext_resource type="Texture2D" uid="uid://bpmcggx30q2m4" path="res://assets/fossils/footprints/fossil_footprint_tyrannosaurus-1.png" id="17_340hf"]
 
 [sub_resource type="Resource" id="Resource_kyr87"]
 script = ExtResource("2_7q2qf")
 name = "velociraptor footprint"
 description = ""
 best_time_seconds = 15
+texture = ExtResource("5_bk352")
 level_scene = ExtResource("3_nqcwp")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
 [sub_resource type="Resource" id="Resource_fwtcj"]
 script = ExtResource("2_7q2qf")
-name = "parasaurolophus footprint"
+name = "parasaurolophus skull"
 description = ""
 best_time_seconds = 30
+texture = ExtResource("7_vphjo")
 level_scene = ExtResource("4_7q2qf")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
@@ -38,14 +47,16 @@ script = ExtResource("2_7q2qf")
 name = "dilophosaurus skull"
 description = ""
 best_time_seconds = 35
+texture = ExtResource("9_5881v")
 level_scene = ExtResource("5_fwtcj")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
 [sub_resource type="Resource" id="Resource_nqcwp"]
 script = ExtResource("2_7q2qf")
-name = "brontosaurus skull"
+name = "brontosaurus footprint"
 description = ""
 best_time_seconds = 20
+texture = ExtResource("11_5881v")
 level_scene = ExtResource("6_hu2lu")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
@@ -54,6 +65,7 @@ script = ExtResource("2_7q2qf")
 name = "tyrannosaurus skull"
 description = ""
 best_time_seconds = 30
+texture = ExtResource("13_xe577")
 level_scene = ExtResource("3_hu2lu")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
@@ -62,6 +74,7 @@ script = ExtResource("2_7q2qf")
 name = "avaceratops footprint"
 description = ""
 best_time_seconds = 20
+texture = ExtResource("15_24sgd")
 level_scene = ExtResource("8_n0b7l")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
@@ -70,6 +83,7 @@ script = ExtResource("2_7q2qf")
 name = "tyrannosaurus footprint"
 description = ""
 best_time_seconds = 60
+texture = ExtResource("17_340hf")
 level_scene = ExtResource("8_ja42h")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
