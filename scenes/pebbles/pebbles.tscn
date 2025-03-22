@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://cfsivjjvsxbwc"]
+[gd_scene load_steps=12 format=3 uid="uid://cfsivjjvsxbwc"]
 
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_8u1ok"]
 [ext_resource type="Script" uid="uid://dggc4gw7y48nb" path="res://scenes/rock/rock.gd" id="2_32txk"]
-[ext_resource type="Material" uid="uid://dir2qlx2ncvvr" path="res://assets/shaders/outline.material" id="3_bo1kt"]
-[ext_resource type="Texture2D" uid="uid://dhy3fho4kun31" path="res://assets/textures/misc/dust_p.png" id="4_1h7ka"]
-[ext_resource type="Texture2D" uid="uid://dtx377sckuxms" path="res://assets/textures/misc/dust_layer_2.png" id="5_jti5s"]
-[ext_resource type="Texture2D" uid="uid://chrgmqmad2ye3" path="res://assets/textures/misc/dust_layer_1.png" id="6_bqhsi"]
+[ext_resource type="Shader" uid="uid://7cqcmhwpbqk3" path="res://assets/shaders/highlight.gdshader" id="3_32txk"]
+[ext_resource type="Texture2D" uid="uid://bhauc6wh108yr" path="res://assets/textures/misc/Dust-1.png" id="4_32txk"]
+[ext_resource type="Texture2D" uid="uid://irw3kder78kc" path="res://assets/textures/misc/Dust-2.png" id="5_bo1kt"]
+[ext_resource type="Texture2D" uid="uid://binev3smon0pj" path="res://assets/textures/misc/Dust-3.png" id="6_1h7ka"]
+[ext_resource type="Texture2D" uid="uid://bisdslbtf2aqt" path="res://assets/textures/misc/Dust-4.png" id="7_jti5s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dkytv"]
 shader = ExtResource("1_8u1ok")
@@ -17,17 +18,30 @@ shader_parameter/add_margins = true
 shader_parameter/enabled = true
 shader_parameter/modulate = Color(1, 1, 1, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bo1kt"]
+shader = ExtResource("3_32txk")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/enabled = false
+shader_parameter/modulate = Color(1, 1, 1, 1)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_hgybc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_1h7ka")
+"texture": ExtResource("4_32txk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_jti5s")
+"texture": ExtResource("5_bo1kt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_bqhsi")
+"texture": ExtResource("6_1h7ka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jti5s")
 }],
 "loop": true,
 "name": &"default",
@@ -38,14 +52,15 @@ animations = [{
 radius = 89.0505
 
 [node name="Pebbles" type="Area2D"]
-modulate = Color(0.72872, 0.371631, 0.214912, 1)
 material = SubResource("ShaderMaterial_dkytv")
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("2_32txk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-material = ExtResource("3_bo1kt")
+material = SubResource("ShaderMaterial_bo1kt")
+position = Vector2(-1, 5)
+scale = Vector2(0.692, 0.692)
 sprite_frames = SubResource("SpriteFrames_hgybc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

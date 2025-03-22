@@ -1,0 +1,91 @@
+[gd_scene load_steps=14 format=3 uid="uid://cos6bp05etwh0"]
+
+[ext_resource type="PackedScene" uid="uid://dc07jkw852rhw" path="res://scenes/fossils/fossil_velo.tscn" id="1_xl85r"]
+[ext_resource type="PackedScene" uid="uid://fc47bpu8outc" path="res://scenes/rock/rock_3.tscn" id="2_w6gcc"]
+[ext_resource type="PackedScene" uid="uid://b43mar84ae45h" path="res://assets/shaders/rock_particles.tscn" id="3_6lle6"]
+[ext_resource type="PackedScene" uid="uid://dpy38kmegkb45" path="res://scenes/rock/rock_12.tscn" id="4_vvcbt"]
+[ext_resource type="PackedScene" uid="uid://d03q0ru1jvqdy" path="res://scenes/rock/rock_13.tscn" id="5_r6fet"]
+[ext_resource type="PackedScene" uid="uid://b0gkb5mp8j35l" path="res://scenes/rock/rock_14.tscn" id="6_bvs55"]
+[ext_resource type="PackedScene" uid="uid://cjud87bnt1wt8" path="res://scenes/rock/rock_15.tscn" id="7_7vmfl"]
+[ext_resource type="PackedScene" uid="uid://dd0xxc3qf8g0s" path="res://scenes/rock/rock_16.tscn" id="8_40kvr"]
+[ext_resource type="PackedScene" uid="uid://c5om4h6stmig5" path="res://scenes/rock/rock_11.tscn" id="9_fo5x2"]
+[ext_resource type="PackedScene" uid="uid://bcxshrlu7a4rp" path="res://scenes/rock/rock_17.tscn" id="10_s4jnr"]
+[ext_resource type="PackedScene" uid="uid://dd3q00355i23t" path="res://scenes/rock/rock_10.tscn" id="11_mc5jj"]
+[ext_resource type="PackedScene" uid="uid://bf3e5r1dkyedg" path="res://scenes/rock/rock_7.tscn" id="12_ty6q8"]
+[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/pebbles/Pebbles.tscn" id="13_0cnh6"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Fossil_avaceratops" parent="." instance=ExtResource("1_xl85r")]
+position = Vector2(1020, 369)
+
+[node name="Rock" parent="." instance=ExtResource("2_w6gcc")]
+position = Vector2(1238, 352)
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock2" parent="." instance=ExtResource("4_vvcbt")]
+position = Vector2(1525, 944)
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock3" parent="." instance=ExtResource("5_r6fet")]
+position = Vector2(867, 194)
+rotation = 0.605442
+color = 2
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock4" parent="." instance=ExtResource("6_bvs55")]
+position = Vector2(732, 536)
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock5" parent="." instance=ExtResource("7_7vmfl")]
+position = Vector2(834, 804)
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock6" parent="." instance=ExtResource("8_40kvr")]
+position = Vector2(1182, 926)
+color = 1
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock7" parent="." instance=ExtResource("9_fo5x2")]
+position = Vector2(189, 239)
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock8" parent="." instance=ExtResource("7_7vmfl")]
+position = Vector2(115, 659)
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock9" parent="." instance=ExtResource("4_vvcbt")]
+position = Vector2(328, 673)
+color = 1
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock10" parent="." instance=ExtResource("10_s4jnr")]
+position = Vector2(303, 877)
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock11" parent="." instance=ExtResource("5_r6fet")]
+position = Vector2(1327, 682)
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock12" parent="." instance=ExtResource("11_mc5jj")]
+position = Vector2(1396, 124)
+color = 2
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock13" parent="." instance=ExtResource("12_ty6q8")]
+position = Vector2(1888, 384)
+color = 1
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock14" parent="." instance=ExtResource("11_mc5jj")]
+position = Vector2(1823, 852)
+color = 1
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Rock15" parent="." instance=ExtResource("12_ty6q8")]
+position = Vector2(450, 1201)
+color = 1
+rock_particle_scene = ExtResource("3_6lle6")
+
+[node name="Pebbles" parent="." instance=ExtResource("13_0cnh6")]
+position = Vector2(1080, 452)
