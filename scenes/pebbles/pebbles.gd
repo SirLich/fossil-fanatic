@@ -1,15 +1,18 @@
 extends Area2D
 class_name Pebbles
 
+@export var use_dust = true
+@export var use_pebbles = true
 
-@export var destroy_audio : AudioStream
-@export var color = 0
-@export var rock_particle_scene : PackedScene
+@export var dust_color = 0
+@export var pebble_color = 0
+
+@export var max_health := 4
 
 @export_group("Nodes")
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@export var dust_sprite: AnimatedSprite2D 
+@export var pebble_sprite : AnimatedSprite2D 
 
-@export var max_health := 3
 var health
 var hovered = false
 
@@ -17,18 +20,25 @@ func _ready() -> void:
 	health = max_health
 	await get_tree().process_frame
 	set_color()
-	animated_sprite_2d.material.set_shader_parameter("modulate", get_parent().modulate)
+	dust_sprite.material.set_shader_parameter("modulate", get_parent().modulate)
+	pebble_sprite.material.set_shader_parameter("modulate", get_parent().modulate)
+
+	dust_sprite.visible = use_dust
+	pebble_sprite.visible = use_pebbles
 
 func set_hovered():
-	animated_sprite_2d.material.set_shader_parameter("enabled", true)
+	dust_sprite.material.set_shader_parameter("enabled", true)
+	pebble_sprite.material.set_shader_parameter("enabled", true)
 	hovered = true
 	
 func set_unhovered():
-	animated_sprite_2d.material.set_shader_parameter("enabled", false)
+	dust_sprite.material.set_shader_parameter("enabled", false)
+	pebble_sprite.material.set_shader_parameter("enabled", false)
 	hovered = false
 
 func set_color():
-	animated_sprite_2d.frame = max_health - health + (3 * color)
+	dust_sprite.frame = max_health - health + (4 * dust_color)
+	pebble_sprite.frame = max_health - health + (4 * pebble_color)
 
 func take_damage():
 	if hovered:
@@ -36,11 +46,6 @@ func take_damage():
 		set_color()
 
 		if health == 0:
-			Bus.destroy_effect.play()
-			if rock_particle_scene:
-				var new_scene = rock_particle_scene.instantiate()									
-				get_parent().add_child(new_scene)
-				new_scene.global_position = global_position
 			queue_free()
 		else:
-			Bus.on_rock_hit(global_position)
+			pass

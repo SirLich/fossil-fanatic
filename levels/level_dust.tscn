@@ -28,6 +28,19 @@ centered = false
 position = Vector2(963, 367)
 scale = Vector2(0.82, 0.82)
 
+[node name="Pebbles" parent="." instance=ExtResource("17_yhogf")]
+position = Vector2(1174, 348)
+use_dust = false
+
+[node name="Pebbles2" parent="." instance=ExtResource("17_yhogf")]
+position = Vector2(1014, 217)
+use_pebbles = false
+pebble_color = 1
+
+[node name="Pebbles3" parent="." instance=ExtResource("17_yhogf")]
+position = Vector2(751, 501)
+dust_color = 1
+
 [node name="Rock" parent="." instance=ExtResource("3_iygsd")]
 position = Vector2(416, 578)
 rotation = 1.25363
@@ -178,6 +191,3 @@ rock_particle_scene = ExtResource("5_yhogf")
 position = Vector2(1833, 72)
 rotation = 1.65889
 rock_particle_scene = ExtResource("5_yhogf")
-
-[node name="Pebbles" parent="." instance=ExtResource("17_yhogf")]
-position = Vector2(1174, 348)
