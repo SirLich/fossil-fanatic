@@ -10,7 +10,7 @@ var start_time
 
 @export var user_interface_slot : Node
 
-enum HudSlot {HUD, MAIN_MENU_SCREEN, LEVEL_COMPLETE, LEVEL_SELECT}
+enum HudSlot {HUD, MAIN_MENU_SCREEN, LEVEL_COMPLETE, LEVEL_SELECT, GAME_OVER}
 
 func open_level_select_menu():
 	set_ui_state(Game.HudSlot.LEVEL_SELECT)

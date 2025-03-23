@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=43 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://scenes/game/game.gd" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://src/tool_button.gd" id="3_ryrav"]
@@ -34,6 +34,10 @@
 [ext_resource type="Texture2D" uid="uid://iodvf43x021u" path="res://assets/textures/stones/stone_7-5.png" id="30_af6p5"]
 [ext_resource type="Texture2D" uid="uid://cr6ykllgkmokx" path="res://assets/textures/stones/stone_13-4.png" id="31_af6p5"]
 [ext_resource type="Texture2D" uid="uid://c0d6tuy0ysdat" path="res://assets/textures/stones/stone_13-5.png" id="32_mumkj"]
+[ext_resource type="Texture2D" uid="uid://db5aqeoceblv0" path="res://assets/textures/ui/end_screen_no_text.png" id="35_2vph8"]
+[ext_resource type="Script" uid="uid://6llmakm62rpw" path="res://scenes/game/end_screen.gd" id="35_tyhjx"]
+[ext_resource type="Texture2D" uid="uid://c0l0i8ug6rht3" path="res://assets/textures/ui/Continuebutton.png" id="36_6ehwc"]
+[ext_resource type="Texture2D" uid="uid://cwt6ptm3mw410" path="res://assets/textures/ui/Continuebutton_Hover.png" id="37_tyhjx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8heu"]
 texture = ExtResource("13_e8heu")
@@ -46,6 +50,11 @@ font_color = Color(0.182598, 0.12211, 0.0767958, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_wdnak"]
 font = ExtResource("11_215e1")
 font_size = 55
+font_color = Color(0.182598, 0.12211, 0.0767958, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ehwc"]
+font = ExtResource("11_215e1")
+font_size = 60
 font_color = Color(0.182598, 0.12211, 0.0767958, 1)
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("start_screen", "hud", "user_interface_slot")]
@@ -134,6 +143,7 @@ texture_hover = ExtResource("15_gc57s")
 script = ExtResource("16_gc57s")
 
 [node name="StartGame" type="CanvasLayer" parent="UserInterface"]
+visible = false
 
 [node name="MarginContainer" type="MarginContainer" parent="UserInterface/StartGame"]
 anchors_preset = 15
@@ -166,21 +176,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -897.0
-offset_top = 35.0
-offset_right = -358.0
-offset_bottom = 134.0
+offset_left = -911.0
+offset_top = 41.0
+offset_right = -372.0
+offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Originally created in 48 hours for Puls Game Jam 2025"
 label_settings = SubResource("LabelSettings_firvq")
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="SirLich" type="TextureButton" parent="UserInterface/StartGame"]
-offset_left = 259.0
-offset_top = 699.0
-offset_right = 576.0
-offset_bottom = 991.0
+offset_left = 277.0
+offset_top = 698.527
+offset_right = 594.0
+offset_bottom = 990.527
 rotation = -0.0413043
 scale = Vector2(0.575, 0.575)
 texture_normal = ExtResource("24_4vuph")
@@ -210,10 +221,10 @@ text = "SirLich"
 label_settings = SubResource("LabelSettings_wdnak")
 
 [node name="Tanja" type="TextureButton" parent="UserInterface/StartGame"]
-offset_left = 512.0
-offset_top = 765.0
-offset_right = 829.0
-offset_bottom = 1057.0
+offset_left = 530.0
+offset_top = 764.527
+offset_right = 847.0
+offset_bottom = 1056.53
 rotation = 0.982859
 scale = Vector2(0.575, 0.575)
 texture_normal = ExtResource("25_mumkj")
@@ -243,10 +254,10 @@ text = "Tanja"
 label_settings = SubResource("LabelSettings_wdnak")
 
 [node name="Neon" type="TextureButton" parent="UserInterface/StartGame"]
-offset_left = 8.0
-offset_top = 800.0
-offset_right = 325.0
-offset_bottom = 1092.0
+offset_left = 26.0
+offset_top = 799.527
+offset_right = 343.0
+offset_bottom = 1091.53
 rotation = -0.486967
 scale = Vector2(0.69, 0.69)
 texture_normal = ExtResource("27_firvq")
@@ -276,10 +287,10 @@ text = "Neon Flores"
 label_settings = SubResource("LabelSettings_firvq")
 
 [node name="Phil" type="TextureButton" parent="UserInterface/StartGame"]
-offset_left = 393.0
-offset_top = 818.0
-offset_right = 710.0
-offset_bottom = 1110.0
+offset_left = 411.0
+offset_top = 817.527
+offset_right = 728.0
+offset_bottom = 1109.53
 rotation = 1.03862
 scale = Vector2(0.69, 0.69)
 texture_normal = ExtResource("29_fydea")
@@ -309,10 +320,10 @@ text = "PhilsHarmony"
 label_settings = SubResource("LabelSettings_firvq")
 
 [node name="Prior" type="TextureButton" parent="UserInterface/StartGame"]
-offset_left = 42.0
-offset_top = 949.0
-offset_right = 359.0
-offset_bottom = 1241.0
+offset_left = 60.0
+offset_top = 948.527
+offset_right = 377.0
+offset_bottom = 1240.53
 rotation = -0.547731
 scale = Vector2(0.535, 0.535)
 texture_normal = ExtResource("31_af6p5")
@@ -346,5 +357,34 @@ visible = false
 
 [node name="LevelSelect" parent="UserInterface" instance=ExtResource("23_3jaai")]
 visible = false
+
+[node name="EndScreen" type="CanvasLayer" parent="UserInterface" node_paths=PackedStringArray("continue_button")]
+script = ExtResource("35_tyhjx")
+continue_button = NodePath("TextureButton")
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/EndScreen"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("35_2vph8")
+
+[node name="TextureButton" type="TextureButton" parent="UserInterface/EndScreen"]
+offset_left = 1416.0
+offset_top = 721.0
+offset_right = 2253.0
+offset_bottom = 1336.0
+scale = Vector2(0.57, 0.57)
+texture_normal = ExtResource("36_6ehwc")
+texture_hover = ExtResource("37_tyhjx")
+script = ExtResource("17_rvswv")
+
+[node name="Label" type="Label" parent="UserInterface/EndScreen"]
+offset_left = 472.0
+offset_top = 564.0
+offset_right = 1360.0
+offset_bottom = 786.0
+text = "You have collected all fossils! Thank you for playing."
+label_settings = SubResource("LabelSettings_6ehwc")
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [connection signal="button_up" from="UserInterface/StartGame/MarginContainer/Panel/TextureButton" to="." method="_on_texture_button_button_up"]

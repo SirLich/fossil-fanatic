@@ -30,13 +30,13 @@ func get_level_index():
 	return levels_in_order.find(current_level)
 	
 func has_next_level():
-	return get_level_index() >= 0
+	return get_level_index() + 1 < levels_in_order.size()
 	
 func play_next_level():
 	if has_next_level():
 		play_level_by_index(get_level_index() + 1)
 	else:
-		play_level_by_index(0)
+		get_game().set_ui_state(Game.HudSlot.GAME_OVER)
 
 func play_level_by_index(index):
 	play_level(levels_in_order[index])
