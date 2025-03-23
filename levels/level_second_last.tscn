@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cjud87bnt1wt8" path="res://scenes/rock/rock_15.tscn" id="7_8nt5h"]
 [ext_resource type="PackedScene" uid="uid://dd0xxc3qf8g0s" path="res://scenes/rock/rock_16.tscn" id="8_evap0"]
 [ext_resource type="PackedScene" uid="uid://c5om4h6stmig5" path="res://scenes/rock/rock_11.tscn" id="9_wax44"]
-[ext_resource type="PackedScene" uid="uid://bcxshrlu7a4rp" path="res://scenes/rock/rock_17.tscn" id="10_npdse"]
+[ext_resource type="PackedScene" uid="uid://bcxshrlu7a4rp" path="res://scenes/pebbles/rock_17.tscn" id="10_npdse"]
 [ext_resource type="PackedScene" uid="uid://dd3q00355i23t" path="res://scenes/rock/rock_10.tscn" id="11_1kllm"]
 [ext_resource type="PackedScene" uid="uid://bf3e5r1dkyedg" path="res://scenes/rock/rock_7.tscn" id="12_r4bdy"]
 [ext_resource type="PackedScene" uid="uid://2jh4u5s34gvq" path="res://scenes/rock/rock_6.tscn" id="13_hfre4"]
@@ -22,6 +22,33 @@
 [node name="Fossil_avaceratops" parent="." instance=ExtResource("1_bjxrk")]
 position = Vector2(1739, 113)
 scale = Vector2(0.175, 0.175)
+
+[node name="Pebbles12" parent="." instance=ExtResource("16_4sucx")]
+position = Vector2(828, 891)
+
+[node name="Pebbles11" parent="." instance=ExtResource("16_4sucx")]
+position = Vector2(1356, 406)
+
+[node name="Pebbles10" parent="." instance=ExtResource("16_4sucx")]
+position = Vector2(879, 194)
+
+[node name="Pebbles9" parent="." instance=ExtResource("16_4sucx")]
+position = Vector2(460, 965)
+
+[node name="Pebbles3" parent="." instance=ExtResource("16_4sucx")]
+position = Vector2(1525, 928)
+dust_color = 1
+pebble_color = 1
+
+[node name="Pebbles" parent="." instance=ExtResource("16_4sucx")]
+position = Vector2(338, 657)
+
+[node name="Pebbles2" parent="." instance=ExtResource("16_4sucx")]
+position = Vector2(1093, 453)
+pebble_color = 1
+
+[node name="Pebbles4" parent="." instance=ExtResource("16_4sucx")]
+position = Vector2(1730, 108)
 
 [node name="Rock10" parent="." instance=ExtResource("10_npdse")]
 position = Vector2(1739, 106)
@@ -128,21 +155,6 @@ position = Vector2(733, -313)
 position = Vector2(1180, 288)
 rotation = 1.90115
 
-[node name="Pebbles" parent="." instance=ExtResource("16_4sucx")]
-position = Vector2(338, 657)
-
-[node name="Pebbles2" parent="." instance=ExtResource("16_4sucx")]
-position = Vector2(1093, 453)
-pebble_color = 1
-
-[node name="Pebbles3" parent="." instance=ExtResource("16_4sucx")]
-position = Vector2(1525, 928)
-dust_color = 1
-pebble_color = 1
-
-[node name="Pebbles4" parent="." instance=ExtResource("16_4sucx")]
-position = Vector2(1730, 108)
-
 [node name="Pebbles5" parent="." instance=ExtResource("16_4sucx")]
 position = Vector2(294, 256)
 pebble_color = 1
@@ -157,3 +169,9 @@ position = Vector2(1749, 447)
 [node name="Pebbles8" parent="." instance=ExtResource("16_4sucx")]
 position = Vector2(1379, 117)
 dust_color = 1
+
+[node name="Pebbles13" parent="." instance=ExtResource("16_4sucx")]
+position = Vector2(390, 977)
+
+[node name="Pebbles14" parent="." instance=ExtResource("16_4sucx")]
+position = Vector2(117, 110)
