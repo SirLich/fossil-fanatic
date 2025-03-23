@@ -1,13 +1,18 @@
-[gd_scene load_steps=44 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=49 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://scenes/game/game.gd" id="1_feb5d"]
 [ext_resource type="AudioStream" uid="uid://c42c7pgfvi4s" path="res://assets/audio/sound_effects/menu/sfx_menu_appear.wav" id="2_5q2xh"]
 [ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://src/tool_button.gd" id="3_ryrav"]
 [ext_resource type="PackedScene" uid="uid://crbe0agxb2nli" path="res://scenes/hammer/pick.tscn" id="4_7jktm"]
 [ext_resource type="PackedScene" uid="uid://d0et4vc24oa8h" path="res://scenes/hammer/hammer.tscn" id="4_eow3j"]
+[ext_resource type="PackedScene" uid="uid://b43mar84ae45h" path="res://assets/shaders/rock_particles.tscn" id="4_fba2n"]
 [ext_resource type="Texture2D" uid="uid://1j0dnkd0801w" path="res://assets/textures/ui/Toolbar_Pickaxe.png" id="4_j5wjh"]
 [ext_resource type="Texture2D" uid="uid://dxh4sr01tyhlw" path="res://assets/textures/ui/Toolbar_Hammer.png" id="4_vef74"]
 [ext_resource type="Texture2D" uid="uid://dgt0vpytp3jke" path="res://assets/textures/ui/Toolbar_Pickaxe_Hover.png" id="5_j5wjh"]
+[ext_resource type="PackedScene" uid="uid://bro2jmd50jbdo" path="res://scenes/particles/brush_particle.tscn" id="5_teoly"]
+[ext_resource type="PackedScene" uid="uid://bka85843jcqhl" path="res://scenes/particles/hammer_particles.tscn" id="6_b7fhm"]
+[ext_resource type="PackedScene" uid="uid://ck07p26unpfdr" path="res://scenes/particles/pick_particles.tscn" id="7_i600x"]
+[ext_resource type="PackedScene" uid="uid://dalt2gxbj485l" path="res://scenes/particles/pick_particle_hit.tscn" id="8_35t1a"]
 [ext_resource type="Texture2D" uid="uid://bjhywp2ay0v5s" path="res://assets/textures/ui/Toolbar_Hammer_Hover.png" id="9_vef74"]
 [ext_resource type="PackedScene" uid="uid://c38en28qudhof" path="res://scenes/hammer/brush.tscn" id="10_7sc4i"]
 [ext_resource type="Texture2D" uid="uid://c7doo2r6uo5y8" path="res://assets/textures/ui/Toolbar_Brush.png" id="10_e8heu"]
@@ -66,6 +71,19 @@ starting_tool = ExtResource("4_eow3j")
 hud = NodePath("UserInterface/UI")
 user_interface_slot = NodePath("UserInterface")
 
+[node name="ParticleNonsense" type="Node2D" parent="."]
+position = Vector2(666, 364)
+
+[node name="RockParticles" parent="ParticleNonsense" instance=ExtResource("4_fba2n")]
+
+[node name="BrushParticles" parent="ParticleNonsense" instance=ExtResource("5_teoly")]
+
+[node name="RockHitParticles" parent="ParticleNonsense" instance=ExtResource("6_b7fhm")]
+
+[node name="PickParticles" parent="ParticleNonsense" instance=ExtResource("7_i600x")]
+
+[node name="RockHitParticles2" parent="ParticleNonsense" instance=ExtResource("8_35t1a")]
+
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
 
@@ -83,7 +101,6 @@ metadata/_edit_lock_ = true
 
 [node name="UI" type="CanvasLayer" parent="UserInterface"]
 layer = 100
-visible = false
 
 [node name="MarginContainer" type="MarginContainer" parent="UserInterface/UI"]
 anchors_preset = 7
@@ -145,7 +162,6 @@ texture_hover = ExtResource("15_gc57s")
 script = ExtResource("16_gc57s")
 
 [node name="StartGame" type="CanvasLayer" parent="UserInterface"]
-visible = false
 
 [node name="MarginContainer" type="MarginContainer" parent="UserInterface/StartGame"]
 anchors_preset = 15
@@ -355,10 +371,8 @@ text = "PriorBlue"
 label_settings = SubResource("LabelSettings_firvq")
 
 [node name="GameOverScreen" parent="UserInterface" instance=ExtResource("11_mfdv2")]
-visible = false
 
 [node name="LevelSelect" parent="UserInterface" instance=ExtResource("23_3jaai")]
-visible = false
 
 [node name="EndScreen" type="CanvasLayer" parent="UserInterface" node_paths=PackedStringArray("continue_button")]
 script = ExtResource("35_tyhjx")
