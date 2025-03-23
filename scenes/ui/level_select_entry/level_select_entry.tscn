@@ -1,13 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddnvdiq7ux0b"]
+[gd_scene load_steps=6 format=3 uid="uid://ddnvdiq7ux0b"]
 
 [ext_resource type="Texture2D" uid="uid://43l8ipgig6le" path="res://assets/fossils/skulls/fossil_skull_triceratops-1.png" id="1_2lri3"]
 [ext_resource type="Script" uid="uid://3yov2usj8fxj" path="res://scenes/ui/level_select_entry/level_select_entry.gd" id="1_icgo8"]
+[ext_resource type="AudioStream" uid="uid://cgj187eg48vp6" path="res://assets/audio/sound_effects/menu/sfx_button_forward.wav" id="2_6efw0"]
 [ext_resource type="PackedScene" uid="uid://b817wce4nifhn" path="res://scenes/ui/star.tscn" id="2_o6xe2"]
 [ext_resource type="PackedScene" uid="uid://bhrgkkh3oe3px" path="res://scenes/ui/empty_star.tscn" id="3_4bmht"]
 
 [node name="VBoxContainer" type="VBoxContainer" node_paths=PackedStringArray("fossil_texture", "star_container")]
 offset_bottom = 40.0
 script = ExtResource("1_icgo8")
+dark_color = Color(0.60933, 0.60933, 0.60933, 1)
+button_hover_sound = ExtResource("2_6efw0")
 fossil_texture = NodePath("TextureRect")
 star_container = NodePath("StarContainer")
 

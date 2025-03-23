@@ -12,7 +12,6 @@ extends Node
 @export var fossil_damage : AudioStreamPlayer
 
 @export var levels_in_order : Array[LevelDescription]
-var current_level_num = 0
 var current_level : LevelDescription
 
 func get_game() -> Game:
@@ -25,22 +24,25 @@ func on_rock_hit(location):
 	damage_effect.play()
 
 func get_current_level():
-	return levels_in_order[current_level_num]
+	return current_level
+
+func get_level_index():
+	return levels_in_order.find(current_level)
+	
+func has_next_level():
+	return get_level_index() >= 0
 	
 func play_next_level():
-	if current_level_num > levels_in_order.size():
-		pass
-	
-	
-	current_level_num += 1
-	if levels_in_order.size() > current_level_num:
-		play_level(levels_in_order[current_level_num])
+	if has_next_level():
+		play_level_by_index(get_level_index() + 1)
 	else:
-		current_level_num = 0
-		go_main_menu.emit()
+		play_level_by_index(0)
+
+func play_level_by_index(index):
+	play_level(levels_in_order[index])
 	
 func play_same_level():
-	play_level(levels_in_order[current_level_num])
+	play_level(current_level)
 
 func play_level(level : LevelDescription):
 	current_level = level

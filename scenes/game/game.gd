@@ -45,6 +45,8 @@ func restart():
 func play_level(level : LevelDescription):
 	set_ui_state(HudSlot.HUD)
 	
+	if my_level:
+		my_level.queue_free()
 	my_level = level.level_scene.instantiate()
 	add_child(my_level)
 	start_time = Time.get_ticks_msec()
@@ -57,9 +59,7 @@ func change_tool(scene : PackedScene):
 	add_child(old_tool)
 	
 func trigger_game_over(health, texture):
-	var game_time = Time.get_ticks_msec() - start_time
-	
-	my_level.queue_free()
+	var game_time = Time.get_ticks_msec() - start_time	
 	set_mouse_mode_normal()
 
 	var game_over_ui = set_ui_state(HudSlot.LEVEL_COMPLETE)
@@ -73,4 +73,4 @@ func _on_texture_button_button_up() -> void:
 	start_screen.visible = false
 	Bus.game_music.play()
 	Bus.menu_music.stop()
-	Bus.play_same_level()
+	Bus.play_level_by_index(0)
