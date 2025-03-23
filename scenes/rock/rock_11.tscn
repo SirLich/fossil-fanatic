@@ -23,7 +23,7 @@ shader_parameter/add_margins = true
 shader_parameter/enabled = true
 shader_parameter/modulate = Color(1, 1, 1, 1)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_bevhd"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_h31tc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -68,4 +68,4 @@ polygon = PackedVector2Array(-44.5, -303.9, -81.2, -305, -84.5, -305, -84.5, -30
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = ExtResource("3_mqr5u")
-sprite_frames = SubResource("SpriteFrames_bevhd")
+sprite_frames = SubResource("SpriteFrames_h31tc")

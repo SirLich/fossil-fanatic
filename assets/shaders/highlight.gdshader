@@ -17,7 +17,7 @@ void vertex() {
 }
 
 void fragment() {
-	if (enabled) {		
+	if (enabled) {
 		COLOR.rgb = COLOR.rgb * vec3(1.3, 1.3, 1.3);
 	}
 }
