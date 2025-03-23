@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b4dh87ymrg6i3"]
+[gd_scene load_steps=38 format=3 uid="uid://b4dh87ymrg6i3"]
 
 [ext_resource type="Script" uid="uid://dqjfy253vey4n" path="res://scenes/game/game.gd" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://b38jpbypqtqcj" path="res://src/tool_button.gd" id="3_ryrav"]
@@ -23,14 +23,30 @@
 [ext_resource type="Script" uid="uid://dh0fh6o726g1h" path="res://src/button_shim.gd" id="17_rvswv"]
 [ext_resource type="AudioStream" uid="uid://cgj187eg48vp6" path="res://assets/audio/sound_effects/menu/sfx_button_forward.wav" id="22_8b66f"]
 [ext_resource type="PackedScene" uid="uid://bqvfh1aw5frq8" path="res://scenes/ui/level_select/level_select.tscn" id="23_3jaai"]
+[ext_resource type="Texture2D" uid="uid://cawvm38ag5r7a" path="res://assets/textures/stones/stone_4-4.png" id="24_4vuph"]
+[ext_resource type="Script" uid="uid://bglunu7tey20l" path="res://scenes/game/url_button.gd" id="24_wdnak"]
+[ext_resource type="Texture2D" uid="uid://d0heos265fx32" path="res://assets/textures/stones/stone_6-4.png" id="25_mumkj"]
+[ext_resource type="Texture2D" uid="uid://dbdlnv8mvekbf" path="res://assets/textures/stones/stone_4-5.png" id="25_wdnak"]
+[ext_resource type="Texture2D" uid="uid://5rsdr8ag1g75" path="res://assets/textures/stones/stone_6-5.png" id="26_2vph8"]
+[ext_resource type="Texture2D" uid="uid://cr2g6tk7b1xrg" path="res://assets/textures/stones/stone_11-4.png" id="27_firvq"]
+[ext_resource type="Texture2D" uid="uid://bhy82aumwo2kd" path="res://assets/textures/stones/stone_11-5.png" id="28_8krtj"]
+[ext_resource type="Texture2D" uid="uid://8pvxyikxdbuq" path="res://assets/textures/stones/stone_7-4.png" id="29_fydea"]
+[ext_resource type="Texture2D" uid="uid://iodvf43x021u" path="res://assets/textures/stones/stone_7-5.png" id="30_af6p5"]
+[ext_resource type="Texture2D" uid="uid://cr6ykllgkmokx" path="res://assets/textures/stones/stone_13-4.png" id="31_af6p5"]
+[ext_resource type="Texture2D" uid="uid://c0d6tuy0ysdat" path="res://assets/textures/stones/stone_13-5.png" id="32_mumkj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8heu"]
 texture = ExtResource("13_e8heu")
 
-[sub_resource type="LabelSettings" id="LabelSettings_boyg6"]
+[sub_resource type="LabelSettings" id="LabelSettings_firvq"]
 font = ExtResource("11_215e1")
 font_size = 40
-font_color = Color(0.282353, 0.203922, 0.184314, 1)
+font_color = Color(0.182598, 0.12211, 0.0767958, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wdnak"]
+font = ExtResource("11_215e1")
+font_size = 55
+font_color = Color(0.182598, 0.12211, 0.0767958, 1)
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("start_screen", "hud", "user_interface_slot")]
 script = ExtResource("1_feb5d")
@@ -130,20 +146,6 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_e8heu")
 
-[node name="Label" type="Label" parent="UserInterface/StartGame/MarginContainer/Panel"]
-layout_mode = 2
-offset_left = 83.0
-offset_top = 708.0
-offset_right = 531.0
-offset_bottom = 1011.0
-text = "Created by
-Liam, Flores, Philipp,
-Tanja, and Marcus
-
-for PULS Game Jam 2025"
-label_settings = SubResource("LabelSettings_boyg6")
-horizontal_alignment = 1
-
 [node name="TextureButton" type="TextureButton" parent="UserInterface/StartGame/MarginContainer/Panel"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
@@ -157,6 +159,187 @@ ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("17_rvswv")
 mouse_off_sound = ExtResource("22_8b66f")
+
+[node name="Label" type="Label" parent="UserInterface/StartGame"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -897.0
+offset_top = 35.0
+offset_right = -358.0
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Originally created in 48 hours for Puls Game Jam 2025"
+label_settings = SubResource("LabelSettings_firvq")
+autowrap_mode = 2
+
+[node name="SirLich" type="TextureButton" parent="UserInterface/StartGame"]
+offset_left = 259.0
+offset_top = 699.0
+offset_right = 576.0
+offset_bottom = 991.0
+rotation = -0.0413043
+scale = Vector2(0.575, 0.575)
+texture_normal = ExtResource("24_4vuph")
+texture_hover = ExtResource("25_wdnak")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("24_wdnak")
+url = "https://sirlich.dev/"
+button_audio = ExtResource("22_8b66f")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="UserInterface/StartGame/SirLich"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.587
+offset_top = 5.30438
+offset_right = 68.4131
+offset_bottom = 71.3044
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.45779
+text = "SirLich"
+label_settings = SubResource("LabelSettings_wdnak")
+
+[node name="Tanja" type="TextureButton" parent="UserInterface/StartGame"]
+offset_left = 512.0
+offset_top = 765.0
+offset_right = 829.0
+offset_bottom = 1057.0
+rotation = 0.982859
+scale = Vector2(0.575, 0.575)
+texture_normal = ExtResource("25_mumkj")
+texture_hover = ExtResource("26_2vph8")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("24_wdnak")
+url = "https://tanjawurm2.artstation.com/"
+button_audio = ExtResource("22_8b66f")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="UserInterface/StartGame/Tanja"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.6739
+offset_top = -6.86963
+offset_right = 82.3261
+offset_bottom = 59.1304
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.560203
+text = "Tanja"
+label_settings = SubResource("LabelSettings_wdnak")
+
+[node name="Neon" type="TextureButton" parent="UserInterface/StartGame"]
+offset_left = 8.0
+offset_top = 800.0
+offset_right = 325.0
+offset_bottom = 1092.0
+rotation = -0.486967
+scale = Vector2(0.69, 0.69)
+texture_normal = ExtResource("27_firvq")
+texture_hover = ExtResource("28_8krtj")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("24_wdnak")
+url = "https://www.neonflores.com/"
+button_audio = ExtResource("22_8b66f")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="UserInterface/StartGame/Neon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.3986
+offset_top = -89.4782
+offset_right = 274.601
+offset_bottom = -23.4782
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.606608
+text = "Neon Flores"
+label_settings = SubResource("LabelSettings_firvq")
+
+[node name="Phil" type="TextureButton" parent="UserInterface/StartGame"]
+offset_left = 393.0
+offset_top = 818.0
+offset_right = 710.0
+offset_bottom = 1110.0
+rotation = 1.03862
+scale = Vector2(0.69, 0.69)
+texture_normal = ExtResource("29_fydea")
+texture_hover = ExtResource("30_af6p5")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("24_wdnak")
+url = "https://philsharmony.com/"
+button_audio = ExtResource("22_8b66f")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="UserInterface/StartGame/Phil"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.37
+offset_top = 35.1595
+offset_right = 216.63
+offset_bottom = 101.159
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.55314
+text = "PhilsHarmony"
+label_settings = SubResource("LabelSettings_firvq")
+
+[node name="Prior" type="TextureButton" parent="UserInterface/StartGame"]
+offset_left = 42.0
+offset_top = 949.0
+offset_right = 359.0
+offset_bottom = 1241.0
+rotation = -0.547731
+scale = Vector2(0.535, 0.535)
+texture_normal = ExtResource("31_af6p5")
+texture_hover = ExtResource("32_mumkj")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("24_wdnak")
+url = "https://priorblue.itch.io/"
+button_audio = ExtResource("22_8b66f")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="UserInterface/StartGame/Prior"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5657
+offset_top = -85.6511
+offset_right = 276.434
+offset_bottom = -19.6511
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.580845
+text = "PriorBlue"
+label_settings = SubResource("LabelSettings_firvq")
 
 [node name="GameOverScreen" parent="UserInterface" instance=ExtResource("11_mfdv2")]
 visible = false
