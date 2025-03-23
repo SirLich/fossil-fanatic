@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://jw2jfhmwcx"]
+[gd_scene load_steps=40 format=3 uid="uid://jw2jfhmwcx"]
 
 [ext_resource type="Script" uid="uid://emtgsupplk38" path="res://src/bus.gd" id="1_jel5a"]
 [ext_resource type="Script" uid="uid://gbjidnc5cov7" path="res://src/level_description.gd" id="2_7q2qf"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://j3avivwma5jm" path="res://assets/fossils/skulls/fossil_footprint_velociraptor-1.png" id="5_bk352"]
 [ext_resource type="PackedScene" uid="uid://dh3nr4ibfo5v6" path="res://levels/level_dust.tscn" id="5_fwtcj"]
 [ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="5_ofiws"]
-[ext_resource type="PackedScene" uid="uid://dimxo0ae7osx2" path="res://levels/level_1.tscn" id="6_hu2lu"]
+[ext_resource type="PackedScene" uid="uid://dimxo0ae7osx2" path="res://levels/level_hidden.tscn" id="6_hu2lu"]
 [ext_resource type="AudioStream" uid="uid://cpc0mjyvacwy5" path="res://assets/audio/sfx_functions/fossil_randomizer.tres" id="7_kyr87"]
 [ext_resource type="Texture2D" uid="uid://br1r2d1g5ce7m" path="res://assets/fossils/skulls/fossil_skull_parasaurolophus-1.png" id="7_vphjo"]
 [ext_resource type="PackedScene" uid="uid://bdxj0emtbxm4u" path="res://levels/level_3.tscn" id="8_ja42h"]
@@ -23,6 +23,12 @@
 [ext_resource type="AudioStream" uid="uid://cgj187eg48vp6" path="res://assets/audio/sound_effects/menu/sfx_button_forward.wav" id="14_6th81"]
 [ext_resource type="Texture2D" uid="uid://tgbax53obl3i" path="res://assets/fossils/skulls/fossil_footprint_avaceratops-1.png" id="15_24sgd"]
 [ext_resource type="Texture2D" uid="uid://bpmcggx30q2m4" path="res://assets/fossils/footprints/fossil_footprint_tyrannosaurus-1.png" id="17_340hf"]
+[ext_resource type="PackedScene" uid="uid://c73k2brr5ohwk" path="res://scenes/rock/level_pick_2.tscn" id="18_340hf"]
+[ext_resource type="Texture2D" uid="uid://43l8ipgig6le" path="res://assets/fossils/skulls/fossil_skull_triceratops-1.png" id="19_gy1ai"]
+[ext_resource type="PackedScene" uid="uid://do5ban71cf5rl" path="res://levels/level_second_last.tscn" id="20_118vg"]
+[ext_resource type="Texture2D" uid="uid://6ni1spfmtosl" path="res://assets/fossils/footprints/fossil_footprint_triceratops-1.png" id="21_jpw4g"]
+[ext_resource type="PackedScene" uid="uid://icb24f411r7b" path="res://levels/level_last.tscn" id="22_2an3i"]
+[ext_resource type="Texture2D" uid="uid://bif1ewckh2amb" path="res://assets/fossils/skulls/fossil_skull_pteranodon-1.png" id="23_2s48e"]
 
 [sub_resource type="Resource" id="Resource_kyr87"]
 script = ExtResource("2_7q2qf")
@@ -78,6 +84,15 @@ texture = ExtResource("15_24sgd")
 level_scene = ExtResource("8_n0b7l")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
+[sub_resource type="Resource" id="Resource_118vg"]
+script = ExtResource("2_7q2qf")
+name = "triceratops skull"
+description = ""
+best_time_seconds = 40
+texture = ExtResource("19_gy1ai")
+level_scene = ExtResource("18_340hf")
+metadata/_custom_type_script = "uid://gbjidnc5cov7"
+
 [sub_resource type="Resource" id="Resource_6th81"]
 script = ExtResource("2_7q2qf")
 name = "tyrannosaurus footprint"
@@ -85,6 +100,24 @@ description = ""
 best_time_seconds = 60
 texture = ExtResource("17_340hf")
 level_scene = ExtResource("8_ja42h")
+metadata/_custom_type_script = "uid://gbjidnc5cov7"
+
+[sub_resource type="Resource" id="Resource_340hf"]
+script = ExtResource("2_7q2qf")
+name = "baby triceratops footprint"
+description = ""
+best_time_seconds = 20
+texture = ExtResource("21_jpw4g")
+level_scene = ExtResource("20_118vg")
+metadata/_custom_type_script = "uid://gbjidnc5cov7"
+
+[sub_resource type="Resource" id="Resource_gy1ai"]
+script = ExtResource("2_7q2qf")
+name = "pteranodon skull"
+description = ""
+best_time_seconds = 20
+texture = ExtResource("23_2s48e")
+level_scene = ExtResource("22_2an3i")
 metadata/_custom_type_script = "uid://gbjidnc5cov7"
 
 [node name="Bus" type="Node2D" node_paths=PackedStringArray("menu_music", "game_music", "button_sound", "destroy_effect", "damage_effect", "fossil_damage")]
@@ -96,7 +129,7 @@ button_sound = NodePath("ButtonSound")
 destroy_effect = NodePath("DestroyPlayer")
 damage_effect = NodePath("DamagePlayer")
 fossil_damage = NodePath("DamageFossil")
-levels_in_order = Array[ExtResource("2_7q2qf")]([SubResource("Resource_kyr87"), SubResource("Resource_fwtcj"), SubResource("Resource_hu2lu"), SubResource("Resource_nqcwp"), SubResource("Resource_ja42h"), SubResource("Resource_n0b7l"), SubResource("Resource_6th81")])
+levels_in_order = Array[ExtResource("2_7q2qf")]([SubResource("Resource_kyr87"), SubResource("Resource_fwtcj"), SubResource("Resource_hu2lu"), SubResource("Resource_nqcwp"), SubResource("Resource_ja42h"), SubResource("Resource_n0b7l"), SubResource("Resource_118vg"), SubResource("Resource_6th81"), SubResource("Resource_340hf"), SubResource("Resource_gy1ai")])
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_erqox")
