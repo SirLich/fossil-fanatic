@@ -19,10 +19,6 @@ var _texture
 
 func _ready() -> void:
 	SoundManager.play_ui_sound(game_over_sound)
-	#offset.y = -2000
-	#
-	#var tween = get_tree().create_tween()
-	#tween.tween_property(self, "offset:y", 0, 0.4)
 
 func _on_replay_button_button_up() -> void:
 	Bus.play_same_level()

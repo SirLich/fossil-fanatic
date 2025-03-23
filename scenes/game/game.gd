@@ -1,6 +1,7 @@
 extends Node2D
 class_name Game
 
+@export var menu_appear_sound : AudioStream
 @export var start_screen : CanvasLayer
 @export var starting_tool : PackedScene
 @export var hud : CanvasLayer
@@ -13,18 +14,27 @@ var start_time
 enum HudSlot {HUD, MAIN_MENU_SCREEN, LEVEL_COMPLETE, LEVEL_SELECT, GAME_OVER}
 
 func open_level_select_menu():
-	set_ui_state(Game.HudSlot.LEVEL_SELECT)
+	set_ui_state(Game.HudSlot.LEVEL_SELECT, true)
 	set_mouse_mode_normal()
+	
+
 	
 
 func close_level_select_menu():
 	set_ui_state(Game.HudSlot.HUD)
 	change_tool(starting_tool)
 
-func set_ui_state(slot : HudSlot):
+func set_ui_state(slot : HudSlot, use_animation = false):
 	for child in user_interface_slot.get_children():
 		child.visible = false
 	var child = user_interface_slot.get_child(slot)
+	
+	if use_animation:
+		SoundManager.play_ui_sound(menu_appear_sound)
+		child.offset.y = -2000
+		var tween = get_tree().create_tween()
+		tween.tween_property(child, "offset:y", 0, 0.4)
+	
 	child.visible = true
 	return child
 	
@@ -65,7 +75,7 @@ func trigger_game_over(health, texture):
 	var game_time = Time.get_ticks_msec() - start_time	
 	set_mouse_mode_normal()
 
-	var game_over_ui = set_ui_state(HudSlot.LEVEL_COMPLETE)
+	var game_over_ui = set_ui_state(HudSlot.LEVEL_COMPLETE, true)
 	game_over_ui.set_end_game_data(game_time, health, texture)
 
 func set_mouse_mode_normal():
