@@ -74,6 +74,8 @@ func add_star(scene_type):
 	star_container.add_child(new_scene)
 
 func set_stars_count(num_stars):
+	Bus.on_stars.emit(num_stars)
+	
 	for child in star_container.get_children():
 		star_container.remove_child(child)
 	

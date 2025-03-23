@@ -59,6 +59,9 @@ func change_tool(scene : PackedScene):
 	add_child(old_tool)
 	
 func trigger_game_over(health, texture):
+	if my_level:
+		my_level.queue_free()
+		
 	var game_time = Time.get_ticks_msec() - start_time	
 	set_mouse_mode_normal()
 
@@ -67,7 +70,8 @@ func trigger_game_over(health, texture):
 
 func set_mouse_mode_normal():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	old_tool.queue_free()
+	if old_tool:
+		old_tool.queue_free()
 	
 func _on_texture_button_button_up() -> void:
 	start_screen.visible = false

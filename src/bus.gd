@@ -51,3 +51,4 @@ func play_level(level : LevelDescription):
 signal go_main_menu
 signal on_level_selected(level)
 signal on_game_over(health, texture)
+signal on_stars(num_stars)
