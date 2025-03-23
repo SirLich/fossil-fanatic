@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dd0xxc3qf8g0s" path="res://scenes/rock/rock_16.tscn" id="14_q48br"]
 [ext_resource type="PackedScene" uid="uid://br8ixtwjnim2t" path="res://scenes/rock/rock_18.tscn" id="15_0rgya"]
 [ext_resource type="PackedScene" uid="uid://bcxshrlu7a4rp" path="res://scenes/rock/rock_17.tscn" id="16_6uoi1"]
-[ext_resource type="PackedScene" uid="uid://cs0i12ani7rxf" path="res://scenes/rock/sand_pile.tscn" id="17_e5v1o"]
+[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/pebbles/Pebbles.tscn" id="17_yhogf"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -25,147 +25,159 @@ texture = ExtResource("1_yso2b")
 centered = false
 
 [node name="Fossil_avaceratops" parent="." instance=ExtResource("2_crnu2")]
-position = Vector2(961, 431)
-
-[node name="Sand" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(642, 418)
-
-[node name="Sand2" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(636, 290)
-
-[node name="Sand3" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(545, 427)
-
-[node name="Sand4" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(777, 160)
-
-[node name="Sand5" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(945, 101)
-
-[node name="Sand6" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(1096, 141)
-
-[node name="Sand7" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(772, 309)
-
-[node name="Sand8" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(1224, 220)
-
-[node name="Sand9" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(1326, 294)
-
-[node name="Sand10" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(1175, 178)
-
-[node name="Sand11" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(1033, 108)
-
-[node name="Sand12" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(1078, 362)
-
-[node name="Sand13" parent="." instance=ExtResource("17_e5v1o")]
-position = Vector2(1233, 512)
+position = Vector2(963, 367)
+scale = Vector2(0.82, 0.82)
 
 [node name="Rock" parent="." instance=ExtResource("3_iygsd")]
-position = Vector2(478, 755)
+position = Vector2(416, 578)
+rotation = 1.25363
+rock_particle_scene = ExtResource("5_yhogf")
+
+[node name="Rock31" parent="." instance=ExtResource("3_iygsd")]
+position = Vector2(1461, 1083)
 rotation = 1.25363
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock2" parent="." instance=ExtResource("4_xd5je")]
-position = Vector2(823, 800)
+position = Vector2(761, 623)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock3" parent="." instance=ExtResource("5_sut0e")]
-position = Vector2(1072, 793)
+position = Vector2(1010, 616)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock4" parent="." instance=ExtResource("3_iygsd")]
-position = Vector2(249, 976)
+position = Vector2(187, 799)
+rock_particle_scene = ExtResource("5_yhogf")
+
+[node name="Rock27" parent="." instance=ExtResource("3_iygsd")]
+position = Vector2(812, 1098)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock5" parent="." instance=ExtResource("6_mje3s")]
-position = Vector2(590, 1067)
+position = Vector2(528, 890)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock6" parent="." instance=ExtResource("4_xd5je")]
-position = Vector2(111, 657)
+position = Vector2(49, 480)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock7" parent="." instance=ExtResource("7_qcmi1")]
-position = Vector2(221, 465)
+position = Vector2(159, 288)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock8" parent="." instance=ExtResource("8_4okeo")]
-position = Vector2(322, 420)
+position = Vector2(260, 243)
+
+[node name="Rock37" parent="." instance=ExtResource("8_4okeo")]
+position = Vector2(649, 83)
 
 [node name="Rock9" parent="." instance=ExtResource("8_4okeo")]
-position = Vector2(129, 355)
+position = Vector2(67, 178)
+
+[node name="Rock38" parent="." instance=ExtResource("8_4okeo")]
+position = Vector2(67, 178)
 
 [node name="Rock11" parent="." instance=ExtResource("10_llhsf")]
-position = Vector2(964, 1032)
+position = Vector2(902, 855)
+rock_particle_scene = ExtResource("5_yhogf")
+
+[node name="Rock30" parent="." instance=ExtResource("10_llhsf")]
+position = Vector2(423, 1114)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock12" parent="." instance=ExtResource("11_yfgqe")]
-position = Vector2(1154, 936)
+position = Vector2(1092, 759)
+rock_particle_scene = ExtResource("5_yhogf")
+
+[node name="Rock29" parent="." instance=ExtResource("11_yfgqe")]
+position = Vector2(1092, 759)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock13" parent="." instance=ExtResource("3_iygsd")]
-position = Vector2(1540, 752)
+position = Vector2(1478, 575)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock14" parent="." instance=ExtResource("12_w5jv0")]
-position = Vector2(1224, 717)
+position = Vector2(1162, 540)
+rock_particle_scene = ExtResource("5_yhogf")
+
+[node name="Rock36" parent="." instance=ExtResource("12_w5jv0")]
+position = Vector2(787, 1137)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock15" parent="." instance=ExtResource("10_llhsf")]
-position = Vector2(1521, 472)
+position = Vector2(1459, 295)
+rock_particle_scene = ExtResource("5_yhogf")
+
+[node name="Rock35" parent="." instance=ExtResource("10_llhsf")]
+position = Vector2(1879, 1078)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock16" parent="." instance=ExtResource("13_th3ni")]
-position = Vector2(1783, 346)
+position = Vector2(1721, 169)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock17" parent="." instance=ExtResource("14_q48br")]
-position = Vector2(1617, 165)
+position = Vector2(1555, -12)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock18" parent="." instance=ExtResource("13_th3ni")]
-position = Vector2(1407, 77)
+position = Vector2(1305, 60)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock19" parent="." instance=ExtResource("15_0rgya")]
-position = Vector2(1278, 1126)
+position = Vector2(1216, 949)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock20" parent="." instance=ExtResource("16_6uoi1")]
-position = Vector2(1473, 1013)
+position = Vector2(1411, 836)
+rock_particle_scene = ExtResource("5_yhogf")
+
+[node name="Rock32" parent="." instance=ExtResource("16_6uoi1")]
+position = Vector2(1774, 1086)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock21" parent="." instance=ExtResource("4_xd5je")]
-position = Vector2(1731, 1011)
+position = Vector2(1669, 834)
+rock_particle_scene = ExtResource("5_yhogf")
+
+[node name="Rock28" parent="." instance=ExtResource("4_xd5je")]
+position = Vector2(153, 1115)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock22" parent="." instance=ExtResource("5_sut0e")]
-position = Vector2(1855, 837)
+position = Vector2(1793, 660)
+rock_particle_scene = ExtResource("5_yhogf")
+
+[node name="Rock33" parent="." instance=ExtResource("5_sut0e")]
+position = Vector2(1911, 834)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock23" parent="." instance=ExtResource("10_llhsf")]
-position = Vector2(1925, 586)
+position = Vector2(1863, 409)
+rock_particle_scene = ExtResource("5_yhogf")
+
+[node name="Rock34" parent="." instance=ExtResource("10_llhsf")]
+position = Vector2(1163, 1204)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock24" parent="." instance=ExtResource("7_qcmi1")]
-position = Vector2(927, 253)
+position = Vector2(754, 210)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock10" parent="." instance=ExtResource("16_6uoi1")]
-position = Vector2(164, 118)
+position = Vector2(102, -59)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock25" parent="." instance=ExtResource("15_0rgya")]
-position = Vector2(491, -128)
+position = Vector2(446, -27)
 rock_particle_scene = ExtResource("5_yhogf")
 
 [node name="Rock26" parent="." instance=ExtResource("14_q48br")]
-position = Vector2(1907, 34)
+position = Vector2(1833, 72)
 rotation = 1.65889
 rock_particle_scene = ExtResource("5_yhogf")
+
+[node name="Pebbles" parent="." instance=ExtResource("17_yhogf")]
+position = Vector2(1174, 348)

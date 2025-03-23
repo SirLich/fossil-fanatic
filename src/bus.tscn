@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://gbjidnc5cov7" path="res://src/level_description.gd" id="2_7q2qf"]
 [ext_resource type="PackedScene" uid="uid://bka85843jcqhl" path="res://scenes/particles/hammer_particles.tscn" id="2_rsfp0"]
 [ext_resource type="PackedScene" uid="uid://c64ipsc0n66jh" path="res://levels/level_rockfall.tscn" id="3_hu2lu"]
-[ext_resource type="PackedScene" uid="uid://cos6bp05etwh0" path="res://scenes/pebbles/level_easy.tscn" id="3_nqcwp"]
+[ext_resource type="PackedScene" uid="uid://cos6bp05etwh0" path="res://levels/level_easy.tscn" id="3_nqcwp"]
 [ext_resource type="AudioStream" uid="uid://dt4djx6077q0i" path="res://assets/audio/music/Kaput_IngameMusic_v_1.0.wav" id="4_4qkln"]
 [ext_resource type="PackedScene" uid="uid://c6oky8i2hsxh2" path="res://levels/level_pick.tscn" id="4_7q2qf"]
 [ext_resource type="AudioStream" uid="uid://ten5sj53vblp" path="res://assets/audio/sfx_functions/stone_destr_randomizer.tres" id="5_7o3tk"]

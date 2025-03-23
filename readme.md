@@ -26,6 +26,10 @@ You can play the game on [itch.io](https://sirlich.itch.io/fossil-fanatic).
  - Added particles for brush, pick, and hammer 
  - Rebalanced levels
  - Fixed level descriptions
+ - Added end screen
+ - Added level select screen
+ - Added links to socials on start screen
+ - Added improved sand system
 
 ## 1.0.3
 

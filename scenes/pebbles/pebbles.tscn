@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cfsivjjvsxbwc"]
 
 [ext_resource type="Shader" uid="uid://duum0xyy8x462" path="res://assets/shaders/outline.gdshader" id="1_8u1ok"]
-[ext_resource type="Script" uid="uid://dggc4gw7y48nb" path="res://scenes/rock/rock.gd" id="2_32txk"]
+[ext_resource type="Script" uid="uid://dco67rkmgfemv" path="res://scenes/pebbles/pebbles.gd" id="2_bo1kt"]
 [ext_resource type="Shader" uid="uid://7cqcmhwpbqk3" path="res://assets/shaders/highlight.gdshader" id="3_32txk"]
 [ext_resource type="Texture2D" uid="uid://bhauc6wh108yr" path="res://assets/textures/misc/Dust-1.png" id="4_32txk"]
 [ext_resource type="Texture2D" uid="uid://irw3kder78kc" path="res://assets/textures/misc/Dust-2.png" id="5_bo1kt"]
@@ -59,8 +59,7 @@ radius = 89.0505
 material = SubResource("ShaderMaterial_dkytv")
 collision_layer = 4
 collision_mask = 2
-script = ExtResource("2_32txk")
-max_health = 5
+script = ExtResource("2_bo1kt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_bo1kt")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cos6bp05etwh0"]
+[gd_scene load_steps=13 format=3 uid="uid://cos6bp05etwh0"]
 
 [ext_resource type="PackedScene" uid="uid://dc07jkw852rhw" path="res://scenes/fossils/fossil_velo.tscn" id="1_xl85r"]
 [ext_resource type="PackedScene" uid="uid://fc47bpu8outc" path="res://scenes/rock/rock_3.tscn" id="2_w6gcc"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://bcxshrlu7a4rp" path="res://scenes/rock/rock_17.tscn" id="10_s4jnr"]
 [ext_resource type="PackedScene" uid="uid://dd3q00355i23t" path="res://scenes/rock/rock_10.tscn" id="11_mc5jj"]
 [ext_resource type="PackedScene" uid="uid://bf3e5r1dkyedg" path="res://scenes/rock/rock_7.tscn" id="12_ty6q8"]
-[ext_resource type="PackedScene" uid="uid://cfsivjjvsxbwc" path="res://scenes/pebbles/Pebbles.tscn" id="13_0cnh6"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -86,6 +85,3 @@ rock_particle_scene = ExtResource("3_6lle6")
 position = Vector2(450, 1201)
 color = 1
 rock_particle_scene = ExtResource("3_6lle6")
-
-[node name="Pebbles" parent="." instance=ExtResource("13_0cnh6")]
-position = Vector2(1080, 452)
