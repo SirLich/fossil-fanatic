@@ -8,32 +8,32 @@
 [ext_resource type="AudioStream" uid="uid://dt4djx6077q0i" path="res://assets/audio/music/Kaput_IngameMusic_v_1.0.wav" id="4_4qkln"]
 [ext_resource type="PackedScene" uid="uid://c6oky8i2hsxh2" path="res://levels/level_pick.tscn" id="4_7q2qf"]
 [ext_resource type="AudioStream" uid="uid://ten5sj53vblp" path="res://assets/audio/sfx_functions/stone_destr_randomizer.tres" id="5_7o3tk"]
-[ext_resource type="Texture2D" uid="uid://j3avivwma5jm" path="res://assets/fossils/skulls/fossil_footprint_velociraptor-1.png" id="5_bk352"]
+[ext_resource type="Texture2D" uid="uid://j3avivwma5jm" path="res://assets/fossils/Skulls/fossil_footprint_velociraptor-1.png" id="5_bk352"]
 [ext_resource type="PackedScene" uid="uid://dh3nr4ibfo5v6" path="res://levels/level_dust.tscn" id="5_fwtcj"]
 [ext_resource type="AudioStream" uid="uid://c3fgpx6xsl0ee" path="res://assets/audio/sfx_functions/pickaxe_randomizer.tres" id="5_ofiws"]
 [ext_resource type="PackedScene" uid="uid://dimxo0ae7osx2" path="res://levels/level_hidden.tscn" id="6_hu2lu"]
 [ext_resource type="AudioStream" uid="uid://cpc0mjyvacwy5" path="res://assets/audio/sfx_functions/fossil_randomizer.tres" id="7_kyr87"]
-[ext_resource type="Texture2D" uid="uid://br1r2d1g5ce7m" path="res://assets/fossils/skulls/fossil_skull_parasaurolophus-1.png" id="7_vphjo"]
+[ext_resource type="Texture2D" uid="uid://br1r2d1g5ce7m" path="res://assets/fossils/Skulls/fossil_skull_parasaurolophus-1.png" id="7_vphjo"]
 [ext_resource type="PackedScene" uid="uid://bdxj0emtbxm4u" path="res://levels/level_3.tscn" id="8_ja42h"]
 [ext_resource type="PackedScene" uid="uid://fkotx5jd8c5s" path="res://levels/level_2.tscn" id="8_n0b7l"]
-[ext_resource type="Texture2D" uid="uid://drsujjccdesbm" path="res://assets/fossils/skulls/fossil_skull_dilophosaurus-1.png" id="9_5881v"]
+[ext_resource type="Texture2D" uid="uid://drsujjccdesbm" path="res://assets/fossils/Skulls/fossil_skull_dilophosaurus-1.png" id="9_5881v"]
 [ext_resource type="AudioStream" uid="uid://bnyt5i4ilr0hd" path="res://assets/audio/music/Kaput_MenuMusic_loop.wav" id="10_erqox"]
-[ext_resource type="Texture2D" uid="uid://wfbe4n5uomh0" path="res://assets/fossils/footprints/fossil_footprint_brontosaurus-1.png" id="11_5881v"]
-[ext_resource type="Texture2D" uid="uid://rv188jatt3t2" path="res://assets/fossils/skulls/fossil_skull_tyrannosaurus-1.png" id="13_xe577"]
+[ext_resource type="Texture2D" uid="uid://wfbe4n5uomh0" path="res://assets/fossils/Footprints/fossil_footprint_brontosaurus-1.png" id="11_5881v"]
+[ext_resource type="Texture2D" uid="uid://rv188jatt3t2" path="res://assets/fossils/Skulls/fossil_skull_tyrannosaurus-1.png" id="13_xe577"]
 [ext_resource type="AudioStream" uid="uid://cgj187eg48vp6" path="res://assets/audio/sound_effects/menu/sfx_button_forward.wav" id="14_6th81"]
-[ext_resource type="Texture2D" uid="uid://tgbax53obl3i" path="res://assets/fossils/skulls/fossil_footprint_avaceratops-1.png" id="15_24sgd"]
-[ext_resource type="Texture2D" uid="uid://bpmcggx30q2m4" path="res://assets/fossils/footprints/fossil_footprint_tyrannosaurus-1.png" id="17_340hf"]
+[ext_resource type="Texture2D" uid="uid://tgbax53obl3i" path="res://assets/fossils/Skulls/fossil_footprint_avaceratops-1.png" id="15_24sgd"]
+[ext_resource type="Texture2D" uid="uid://bpmcggx30q2m4" path="res://assets/fossils/Footprints/fossil_footprint_tyrannosaurus-1.png" id="17_340hf"]
 [ext_resource type="PackedScene" uid="uid://c73k2brr5ohwk" path="res://scenes/rock/level_pick_2.tscn" id="18_340hf"]
-[ext_resource type="Texture2D" uid="uid://43l8ipgig6le" path="res://assets/fossils/skulls/fossil_skull_triceratops-1.png" id="19_gy1ai"]
+[ext_resource type="Texture2D" uid="uid://43l8ipgig6le" path="res://assets/fossils/Skulls/fossil_skull_triceratops-1.png" id="19_gy1ai"]
 [ext_resource type="PackedScene" uid="uid://do5ban71cf5rl" path="res://levels/level_second_last.tscn" id="20_118vg"]
-[ext_resource type="Texture2D" uid="uid://6ni1spfmtosl" path="res://assets/fossils/footprints/fossil_footprint_triceratops-1.png" id="21_jpw4g"]
+[ext_resource type="Texture2D" uid="uid://6ni1spfmtosl" path="res://assets/fossils/Footprints/fossil_footprint_triceratops-1.png" id="21_jpw4g"]
 [ext_resource type="PackedScene" uid="uid://icb24f411r7b" path="res://levels/level_last.tscn" id="22_2an3i"]
-[ext_resource type="Texture2D" uid="uid://bif1ewckh2amb" path="res://assets/fossils/skulls/fossil_skull_pteranodon-1.png" id="23_2s48e"]
+[ext_resource type="Texture2D" uid="uid://bif1ewckh2amb" path="res://assets/fossils/Skulls/fossil_skull_pteranodon-1.png" id="23_2s48e"]
 
 [sub_resource type="Resource" id="Resource_kyr87"]
 script = ExtResource("2_7q2qf")
 name = "velociraptor footprint"
-description = ""
+description = "He was a fairly small dinosaur with a hip height of about 60 cm, but fast and agile. His long, stiff tail helped with stability. (85 - 70 mio. years ago) "
 best_time_seconds = 15
 texture = ExtResource("5_bk352")
 level_scene = ExtResource("3_nqcwp")
@@ -42,7 +42,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 [sub_resource type="Resource" id="Resource_fwtcj"]
 script = ExtResource("2_7q2qf")
 name = "parasaurolophus skull"
-description = ""
+description = "A characteristic feature is the bone tooth, up to 1,5 meters long on his head, which he likely used to make sounds. He also had a duck-like beak. (76 - 73 mio. years ago)"
 best_time_seconds = 30
 texture = ExtResource("7_vphjo")
 level_scene = ExtResource("4_7q2qf")
@@ -51,7 +51,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 [sub_resource type="Resource" id="Resource_hu2lu"]
 script = ExtResource("2_7q2qf")
 name = "dilophosaurus skull"
-description = ""
+description = "The double crest on his head was a distinctive feature, for example, during mating. He grew up to 2,5 meters and weighed up to 500 kg, making him a very light dinosaur. (195 - 183 mio. years ago)"
 best_time_seconds = 30
 texture = ExtResource("9_5881v")
 level_scene = ExtResource("5_fwtcj")
@@ -60,7 +60,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 [sub_resource type="Resource" id="Resource_nqcwp"]
 script = ExtResource("2_7q2qf")
 name = "brontosaurus footprint"
-description = ""
+description = "His name also means \"thunder lizard\". Due to his size and weight, he was very slow. However,, he used his long tail for defense, whipping away his enemies. (156 - 146 mio. years ago)"
 best_time_seconds = 20
 texture = ExtResource("11_5881v")
 level_scene = ExtResource("6_hu2lu")
@@ -69,7 +69,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 [sub_resource type="Resource" id="Resource_ja42h"]
 script = ExtResource("2_7q2qf")
 name = "tyrannosaurus skull"
-description = ""
+description = "With his powerful jaw and teeth up to 20 cm long, capable of an incredible bite force, he was the most dangerous dinosaur. When the young hatched, they were about half a meter tall. (68 - 66 mio. years ago)"
 best_time_seconds = 25
 texture = ExtResource("13_xe577")
 level_scene = ExtResource("3_hu2lu")
@@ -78,7 +78,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 [sub_resource type="Resource" id="Resource_n0b7l"]
 script = ExtResource("2_7q2qf")
 name = "avaceratops footprint"
-description = ""
+description = "His name also means \"Ava´s horned face\" and he resembled a smaller version of the triceraopts with his frill. (76 - 72 mio. years ago)"
 best_time_seconds = 10
 texture = ExtResource("15_24sgd")
 level_scene = ExtResource("8_n0b7l")
@@ -87,7 +87,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 [sub_resource type="Resource" id="Resource_118vg"]
 script = ExtResource("2_7q2qf")
 name = "triceratops skull"
-description = ""
+description = "He was also called \"three-horned-face\" or \"dinosaur rhino\" because of his three facial horns. The horns and the frill were used for defense against carnivores, decoration and communication. (70 - 65 mio. years ago)"
 best_time_seconds = 35
 texture = ExtResource("19_gy1ai")
 level_scene = ExtResource("18_340hf")
@@ -96,7 +96,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 [sub_resource type="Resource" id="Resource_6th81"]
 script = ExtResource("2_7q2qf")
 name = "tyrannosaurus footprint"
-description = ""
+description = "With his powerful jaw and teeth up to 20 cm long, capable of an incredible bite force, he was the most dangerous dinosaur. When the young hatched, they were about half a meter tall. (68 - 66 mio. years ago)"
 best_time_seconds = 40
 texture = ExtResource("17_340hf")
 level_scene = ExtResource("8_ja42h")
@@ -105,7 +105,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 [sub_resource type="Resource" id="Resource_340hf"]
 script = ExtResource("2_7q2qf")
 name = "baby triceratops footprint"
-description = ""
+description = "He was also called \"three-horned-face\" or \"dinosaur rhino\" because of his three facial horns. The horns and the frill were used for defense against carnivores, decoration and communication. (70 - 65 mio. years ago)"
 best_time_seconds = 20
 texture = ExtResource("21_jpw4g")
 level_scene = ExtResource("20_118vg")
@@ -114,7 +114,7 @@ metadata/_custom_type_script = "uid://gbjidnc5cov7"
 [sub_resource type="Resource" id="Resource_gy1ai"]
 script = ExtResource("2_7q2qf")
 name = "pteranodon skull"
-description = ""
+description = "He was a pterosaur but to take flight he would drop from high places or cliffs. He had a beak but no teeth. (85 -75 mio. years ago)"
 best_time_seconds = 45
 texture = ExtResource("23_2s48e")
 level_scene = ExtResource("22_2an3i")
